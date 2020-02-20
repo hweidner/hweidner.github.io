@@ -686,6 +686,15 @@ Weitere Kanäle zur direkten Kontaktaufnahme (zur Nutzung dieser Anbieter ist gg
     </item>
     
     <item>
+      <title>Posts</title>
+      <link>http://hweidner.de/post/</link>
+      <pubDate>Wed, 23 Apr 2014 00:00:07 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Gogs - ein Git Frontend in Go</title>
       <link>http://hweidner.de/post/2014/Gogs_-_ein_Git_Frontend_in_Go/</link>
       <pubDate>Tue, 22 Apr 2014 12:12:51 +0200</pubDate>

@@ -348,6 +348,11 @@
   </url>
   
   <url>
+    <loc>http://hweidner.de/post/</loc>
+    <lastmod>2014-04-23T00:00:07+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://hweidner.de/post/2014/Gogs_-_ein_Git_Frontend_in_Go/</loc>
     <lastmod>2014-04-22T12:12:51+02:00</lastmod>
   </url>
