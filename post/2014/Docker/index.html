@@ -23,6 +23,7 @@
 
 <p>Über die Popularität von Docker und einen Performancevergleich zwischen
 Docker und KVM.</p>
+
 <p><a href="https://www.docker.com/">Docker</a> ist ein Tool, mit dem man mittels
 einer einfachen, textbasierten Konfiguration einen
 Linux-Applikationscontainer bauen kann. Docker basiert dabei auf der
@@ -32,6 +33,7 @@ allen wichtigen Linux-Distributionen aktiviert ist. Über den <a href="https://r
 Hub</a> lassen sich Basis-Container
 beziehen und schichtweise mit individuellen Anpassungen versehen, die
 effizient über ein Overlay-Filesystem gespeichert werden.</p>
+
 <p>Die Technik hinter Docker ist eigentlich nicht neu. Container gibt es
 schon lange, das Projekt <a href="http://linux-vserver.org/">Linux-VServer</a> ist
 bereits 15 Jahre alt. Eine Container-taugliche Installation der
@@ -39,6 +41,7 @@ wichtigsten Linux-Distributionen kann man mittels
 <a href="https://wiki.debian.org/Debootstrap">debootstrap</a> in wenigen Minuten
 herstellen, und zur Anwendungsintegration genügen ein paar
 Shell-Befehle, wget-Downloads oder Git-Checkouts.</p>
+
 <p><a href="http://www.silicon.de/41602277/docker-container-zukunft-moderner-applikationen-und-multi-cloud-deployments/">Dieser
 Artikel</a>
 macht deutlich, warum Docker dennoch zu Recht sehr erfolgreich ist. Es
@@ -46,6 +49,7 @@ ermöglicht eine <strong>einfache</strong> und <strong>einheitliche</strong> Def
 Applikationscontainers und unterstützt nicht nur den produktiven
 Betrieb, sondern den gesamten Lebenszyklus einer Anwendung und ihrer
 Entwicklung.</p>
+
 <p>Wer jetzt denkt, dass es das alles in Form fertiger VM-Images von
 <a href="http://www.turnkeylinux.org/">TurnKey Linux</a> oder
 <a href="http://virtualboximages.com/">VirtualBoxImages</a> bereits gibt, dem sei
@@ -53,6 +57,7 @@ Entwicklung.</p>
 Studie</a>
 von IBM empfohlen. Sie vergleicht KVM und Docker-Container in
 verschiedenen Performancemessungen miteinander.</p>
+
 <p>Die Studie stellt fest, dass Docker und KVM bei Rechenleistung und
 Memory Durchsatz nahezu äquivalent zur Bare Metal Performance sind. Bei
 Messungen der Latenzzeit ist aber KVM deutlich weniger performant als
@@ -62,6 +67,7 @@ sehr nahe bei der Bare Metal Performance. Lediglich eine
 Netzwerkanbindung mittels NAT und die Verwendung des Overlay-Filesystems
 AUFS haben hier negative Effekte; beides kann aber abgeschaltet werden,
 wenn extreme Performance wichtig ist.</p>
+
 <p>Es wurden explizit Docker und KVM getestet, weil diese in der Praxis
 eine große Rolle spielen. Die Studie stellt zutreffend fest, dass Docker
 häufig bei PaaS Cloud Diensten genutzt wird, während KVM in IaaS Clouds

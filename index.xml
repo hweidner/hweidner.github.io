@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hweidner.de</title>
@@ -6,7 +6,7 @@
     <description>Recent content on hweidner.de</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 23 Apr 2014 00:00:07 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 01:54:00 +0100</lastBuildDate>
     
 	<atom:link href="http://hweidner.de/index.xml" rel="self" type="application/rss+xml" />
     
@@ -226,7 +226,7 @@ ist der legendäre Rechtsstreit der Firma SCO gegen Linux beendet.&lt;/p&gt;</de
       <pubDate>Sun, 28 Feb 2016 18:32:45 +0100</pubDate>
       
       <guid>http://hweidner.de/post/2016/Relaunch/</guid>
-      <description>&lt;p&gt;Fast 4 1/2 Jahre nach der Eröffnung dieser Site gibt es heute den ersten Relaunch.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Fast 4 &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; Jahre nach der Eröffnung dieser Site gibt es heute den ersten Relaunch.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -281,6 +281,7 @@ ist der legendäre Rechtsstreit der Firma SCO gegen Linux beendet.&lt;/p&gt;</de
       
       <guid>http://hweidner.de/post/2015/OpenRheinRuhr_2015/</guid>
       <description>&lt;p&gt;Am letzten Wochenende fand in Oberhausen die &lt;a href=&#34;http://www.openrheinruhr.de/&#34;&gt;OpenRheinRuhr&lt;/a&gt; statt.&lt;/p&gt;
+
 &lt;p&gt;Nachdem im letzten Jahr viele Vorträge wegen einer Grippewelle und eines Lokführerstreiks ausfallen mussten, gab es in diesem Jahr fast gar keine Ausfälle. Dazu kam eine perfekte Organisation und ein gelungener Social Event mit vielen bekannten Gesichtern am Samstag Abend. Wie 2013 hatte ich selber wieder einen Beitrag eingereicht, genauer sogar zwei Vorträge, von denen einer angenommen wurde. Daneben besuchte ich wie immer viele Vorträge.&lt;/p&gt;</description>
     </item>
     
@@ -667,7 +668,7 @@ Während sich die meisten URLs auf SSH Konfigurationen, Shell-Dateien oder Crypt
       <pubDate>Wed, 23 Apr 2014 00:15:56 +0200</pubDate>
       
       <guid>http://hweidner.de/post/2014/Linkspam/</guid>
-      <description>Gut 2 1/2 Jahre nach Eröffnung dieser Website bekam ich vor ein paar Tagen den ersten Spam an die im Impressum genannte Kontaktadresse. Der Spam ist plump, aber durchaus bemerkenswert. Einerseits hat sich der der Spammer sehr wohl die Mühe gemacht, das Impressum zu lesen und die Mailadresse geeignet zusammen zu setzen. Auch orthographisch ist die Mail in Ordnung.
+      <description>Gut 2 1&amp;frasl;2 Jahre nach Eröffnung dieser Website bekam ich vor ein paar Tagen den ersten Spam an die im Impressum genannte Kontaktadresse. Der Spam ist plump, aber durchaus bemerkenswert. Einerseits hat sich der der Spammer sehr wohl die Mühe gemacht, das Impressum zu lesen und die Mailadresse geeignet zusammen zu setzen. Auch orthographisch ist die Mail in Ordnung.
 Warum aber andererseits eine thematisch vollkommen unpassende Wiki-Seite ausgesucht wurde, um seinen Spam zu platzieren, bleibt unverständlich.</description>
     </item>
     
@@ -738,8 +739,7 @@ Der Support wird nicht vom Debian Security Team geleistet, sondern von Drittfirm
       <pubDate>Sat, 01 Mar 2014 01:29:51 +0100</pubDate>
       
       <guid>http://hweidner.de/post/2014/Raspberry_Pi_interaktiv/</guid>
-      <description>Diese interaktive Karte des Raspberry Pi (Modell B) erklärt alle Komponenten, wenn man mit der Maus darüber fährt
- vom Widerstand bis zum ARM Prozessor.  </description>
+      <description>Diese interaktive Karte des Raspberry Pi (Modell B) erklärt alle Komponenten, wenn man mit der Maus darüber fährt - vom Widerstand bis zum ARM Prozessor.</description>
     </item>
     
     <item>
@@ -1062,7 +1062,7 @@ Auf dieser Webseite gibt es Tipps zur Optimierung der Schrifteneinstellung bei D
       
       <guid>http://hweidner.de/post/2012/Ubuntu_12.04_LTS_Precise_Pangolin/</guid>
       <description>Als ich noch Ubuntu auf dem Desktop genutzt habe, habe ich nur ein einziges Mal eine neue Version auf dem produktiven Arbeitsplatzrechner installiert, bevor sie offiziell freigegeben wurde. Das war Ubuntu 12.04 LTS Precise Pangolin. Hier einige Anmerkungen in Bezug auf den Installationsbericht zur Version 11.10.
-  Unity ist weiterhin der Standard-Desktop, es stehen aber die Gnome 3 Shell und der Gnome 3 Classic Mode zur Auswahl. Beides funktioniert mit und ohne 3D-Unterstützung seitens der Grafikkarte.</description>
+ Unity ist weiterhin der Standard-Desktop, es stehen aber die Gnome 3 Shell und der Gnome 3 Classic Mode zur Auswahl. Beides funktioniert mit und ohne 3D-Unterstützung seitens der Grafikkarte.</description>
     </item>
     
     <item>

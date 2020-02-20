@@ -26,8 +26,10 @@ vertraulichen Inhalten oder angreifbarer Software zum Alltag. Meistens
 beschränken sich die Scanner aber auf einige wenige URLs und suchen nach
 Anzeichen für das Vorhandensein bekannter Software, z.B. Wordpress oder
 phpMyAdmin.</p>
+
 <p>Heute wollte es aber mal jemand ganz genau wissen. (Die IP-Adresse wurde
 von mir anonymisiert.)</p>
+
 <p>Während sich die meisten URLs auf SSH Konfigurationen, Shell-Dateien
 oder Cryptowährungen beziehen, ist der Dateiname <code>checknfurl123</code>
 rätselhaft. Mein erster Gedanke war, dass ein vom Hersteller dieses Tool
@@ -36,8 +38,10 @@ erledigt kennzeichnet. Eine andere Erklärung wird in <a href="https://isc.sans.
 Diskussion</a> gegeben:
 die Abfrage dient zur Prüfung, wie der Webserver auf file-not-found
 Fehler reagiert; damit könnten False Positives erkannt werden.</p>
+
 <p>Vielleicht sollte ich einfach mal ein paar der gewünschten Dateien auf
 dem Webserver anlegen und kucken, was der Scanner dann macht…</p>
+
 <pre><code>127.127.127.127 - - [30/Jun/2014:05:37:52 +0200] &quot;HEAD /checknfurl123 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
 127.127.127.127 - - [30/Jun/2014:05:37:52 +0200] &quot;HEAD /.ssh/id_rsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
 127.127.127.127 - - [30/Jun/2014:05:37:52 +0200] &quot;HEAD /.ssh/id_dsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;

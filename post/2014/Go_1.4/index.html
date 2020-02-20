@@ -26,6 +26,7 @@
 Änderung in der Sprache, die eine Sonderform der <code>for range</code> Schleife
 ermöglicht, enthält das Release diverse <a href="https://golang.org/doc/go1.4">Bugfixes und
 Detailverbesserungen</a>.</p>
+
 <p>Die wesentlichen Änderungen betreffen Interna. So wurden viele Teile der
 Runtime, die bisher in C oder Assembler geschrieben waren, in Go neu
 implementiert. Das Ziel ist eine vollständige Implementierung der
@@ -38,14 +39,17 @@ Speicherstrukturen, die nicht mehr in Benutzung sind und gelöscht werden
 können. Der initiale Stack einer Goroutine ist nun nur noch 2kB groß, es
 werden also nur noch 2 GB RAM für eine Million (kleiner) Goroutinen
 benötigt.</p>
+
 <p>Go 1.4 unterstützt nun offiziell die Plattformen Android, Googles Native
 Client (NaCl) Technologie auf ARM sowie Plan9 mit AMD64 Prozessoren.</p>
+
 <p>Eine weitere Neuerung sind interne Packages; das sind eigenständige Go
 Module (Packages), die nur von der Bibliothek benützt werden können, zu
 deren Lieferumfang sie gehören, aber nicht direkt von anderen Programmen
 oder Bibliotheken. Die Änderung gilt zunächst nur für die Go
 Standardbibliothek, ab Go 1.5 soll sie für alle Bibliotheken gültig
 sein.</p>
+
 <p>Die Go Toolchain wurde um das Kommando <code>go generate</code> erweitert. Es
 erlaubt die Einbindung von Code-Generatoren, die Go Sourcecode erzeugen,
 in den Quelltext mittels Build-Tags. Damit können Aufrufe von Tools wie
@@ -55,6 +59,7 @@ oder <a href="https://github.com/jessevdk/go-operators">go-operators</a> zum
 Buildprozess integriert werden. <code>go generate</code> wird explizit aufgerufen.
 Ein impliziter Aufruf durch <code>go build</code> ist nicht vorgesehen, da die
 benötigten Tools nicht zwingend in jeder Installation vorhanden sind.</p>
+
 <p><a href="https://groups.google.com/forum/#!msg/golang-dev/sckirqOWepg/YmyT7dWJiocJ">Wie
 angekündigt</a>,
 zieht das Entwickler-Repository von Go von Google Code nach GitHub und
@@ -63,9 +68,11 @@ Sub-Repositories</a>.
 Das sind Bibliotheken, die vom Go Team entwickelt werden, aber nicht zum
 offiziellen Lieferumfang von Go gehören. Auch das <a href="https://github.com/golang/go/wiki">Go
 Wiki</a> ist zu GitHub umgezogen.</p>
+
 <p>Kurz nach dem Release wurde eine neue Version der Entwicklungsumgebung
 <a href="http://sourceforge.net/projects/liteide/files/X25.1/">LiteIDE 25.1</a>
 veröffentlicht, die an Go 1.4 angepasst ist.</p>
+
 <p>Meldung bei Heise: <a href="http://www.heise.de/newsticker/meldung/Programmiersprachen-Googles-C-Konkurrent-Go-in-Version-1-4-erschienen-2487013.html">Programmiersprachen: Googles C-Konkurrent Go in
 Version 1.4
 erschienen</a>.</p>
