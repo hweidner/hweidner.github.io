@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Relaunch und Servermigration -hweidner.de</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="hweidner.de">
+<meta name="author" content="Harald Weidner">
+<meta name="keywords" content="keywords">
+<link rel="stylesheet" href="/css/styles.css" type="text/css">
+</head>
+<body>
+<p class="logo">hweidner.de<br>
+<span class="subtitle">Harald Weidner explaining the world.</span>
+</p>
+<div class="content">
+
+
+
+
+  <p class="date">2020-02-20 21:18</p>
+<h1>Relaunch und Servermigration</h1>
+
+
+<p>Das neue Jahr beginnt mit einem Umzug des Webservers und einem (kleinen)
+Relaunch der Webseiten.
+TL;DR: Die Seiten zur <a href="https://github.com/hweidner/golang-de/wiki">Programmiersprache Go</a>
+und meine <a href="https://github.com/hweidner/talks/">Vorträge</a> haben nun eigene
+Projekte bei Github, das persönliche Blog liegt auf Github Pages.</p>
+
+<h2 id="was-war">Was war?</h2>
+
+<p>Meine Site lief bisher auf einem Mietserver vom Typ
+<a href="https://www.euserv.com/de/dedizierte-server/misurfi-rootserver/v7/misurfi-lc10.php">Misurfi LC10</a>
+beim Provider <a href="https://www.euserv.com/">EUserv</a>.
+Darin steckt ein Intel Celeron J1800 Prozessor mit zwei Cores ohne
+Hyperthreading, 4 GB RAM und eine 1 TB Festplatte. Die Leistung ist nicht
+mehr ganz zeitgemäß, war aber für den Webserver sowie den ebenfalls darauf
+laufenden E-Mail-Server völlig ausreichend.</p>
+
+<p>Der Server lief jahrelang stabil, bis auf einen Festplattendefekt gab es
+keine nennenswerten Störungen am Server selbst. Allerdings war die
+Netzwerkanbindung des Providers häufig recht langsam oder gar nicht
+verfügbar. Ein Ping von meinem DSL-Anschluss zum Server war mit ca. 40-45 ms
+eher langsam, dementsprechend fühlten sich interaktive Sessions recht träge
+an.
+Außerdem bereitete mir Auslegung mit nur einer Festplatte Sorgen; wenn diese
+Defekt ist, fällt der Server aus. Der Provider stellt mir zwar zeitnah eine
+neue Festplatte oder gleich einen neuen Server zur Verfügung. Ich habe aber
+eine Menge Arbeit damit, alles wieder so einzurichten, wie es sein soll, und
+das zu einem unplanbaren Zeitpunkt.</p>
+
+<p>Zudem hat der physische Server keine Remote-Console. Wenn er nach einem
+Kernelupdate nicht mehr bootet oder nach einer Konfigurationsänderung der
+SSH-Dienst nicht mehr verfügbar ist, bin ich ausgesperrt und muss einen
+Reinstall auslösen. Dann sind auch die in der Zwischenzeit eingegangenen
+E-Mails verloren. Last not least ist ein eigener physischer Server vom
+Energie- und Ressourcenbedarf und den Kosten auch nicht mehr zeitgemäß.
+Weder die CPU-Leistung noch den Festplattenplatz habe ich auch nur
+ansatzweise ausgelastet.</p>
+
+<p>Auch mit den Webseiten war ich nicht mehr zufrieden. Es war zu viel
+unterschiedlicher Inhalt an einem Ort. Insbesondere waren mir die Webseiten
+über die Programmiesprache Go, die eigentlich am aktivsten gepflegt wurden,
+als Unterseite des privaten Blogs zu versteckt.</p>
+
+<h2 id="was-wird">Was wird!</h2>
+
+<p>Mein neuer E-Mail Server ist eine
+<a href="https://active-servers.com/vserver_nvme.php">virtuelle Maschine mit KVM</a>.
+Er hat ebenfalls 4 GB RAM, aber nur einen CPU-Kern und deutlich weniger
+Festplattenplatz. Für meine E-Mails ist das vollkommen ausreichend. Dank
+NVM-SSDs, Ceph und einer sehr schnellen Netzwerkanbindung ist er ordentlich
+flott und von der Verfügbarkeit und Datensicherheit her wahrscheinlich
+deutlich besser als der alte; die Zeit wird zeigen, ob das stimmt.</p>
+
+<p>Der Ping von zu Hause zum Server benötigt nur ca. 15 ms. Daher fühlt er sich
+beim Arbeiten mit SSH sehr flott an. Die Virtualisierung ist bei dem Provider
+mit Proxmox VE gelöst, so dass ich mich über den Browser in die virtuelle
+Konsole aufschalten kann, wenn der Server über SSH mal nicht erreichbar
+ist. Updates und Konfigurationsänderungen sind so deutlich weniger
+abenteuerlich. Last not least ist ein virtueller Server auch ökologisch und
+ökonomisch sinnvoller.</p>
+
+<p>Die Webseiten wollte ich nicht mehr auf dem E-Mail-Server mitlaufen
+lassen. Angebote wie Github Pages sind mittlerweile von der Verfügbarkeit
+und Netzwerk-Performance her einem privaten Mietserver deutlich überlegen.
+Meine Site basiert seit längerer Zeit aus rein statischen HTML-Seiten,
+die mit dem Website-Generator <a href="https://gohugo.io/">Hugo</a> erzeugt werden.</p>
+
+<p>Speziell die Seiten über die Programmiersprache Go hatten ohnehin
+quasi Wiki-Struktur, so dass sie auch in einem &ldquo;echten&rdquo; Wiki gut
+aufgehoben sind. Da auch das offizielle
+<a href="https://github.com/golang/go/wiki">Go-Wiki</a> als Wiki in einem
+Github-Projekt realisiert ist, haben meine deutschsprachigen Seiten es nun
+gleichgetan. Man findet sie ab sofort
+<a href="https://github.com/hweidner/golang-de/wiki">hier</a>.</p>
+
+<p>Im Dokumentenbereich störte mich der zunehmende Wildwuchs zwischen meinen
+Vorträgen, zusammenhanglosen Artikeln und Links in die weite Welt. Um das
+besser zu sortieren, haben nun auch die Vorträge ein
+<a href="https://github.com/hweidner/talks/">eigenes Github-Projekt</a>. Ein weiterer
+Vorteil ist, dass man die Vorträge nun einfacher clonen kann. Die restlichen
+Dokumente habe ich weitgehend depubliziert; das meiste war ohnehin veraltet und
+nicht mehr sonderlich relevant. Dank Git sind die Inhalte natürlich nicht
+gelöscht und können bei Bedarf wieder hervorgeholt werden.</p>
+
+<p>Übrig blieb der schlanke Kern meines persönlichen Blogs. Dieser befindet sich
+nun auf <a href="https://pages.github.com/">Github Pages</a>. Dank meines eigenen
+Layouts und meines Domainnamens bleibt er individuell. Aber den Serverbetrieb,
+DoS Angriffe und dergleichen kümmert sich nun Github.</p>
+
+<p class="footer"><a href="/impressum/">Impressum</a></p>
+</div>
+</body>
+</html>
+
+
+

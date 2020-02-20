@@ -6,10 +6,23 @@
     <description>Recent content in Posts on hweidner.de</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 31 Dec 2019 01:54:00 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 20 Feb 2020 21:18:30 +0100</lastBuildDate>
     
 	<atom:link href="http://hweidner.de/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Relaunch und Servermigration</title>
+      <link>http://hweidner.de/post/2020/relaunch-und-servermigration/</link>
+      <pubDate>Thu, 20 Feb 2020 21:18:30 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2020/relaunch-und-servermigration/</guid>
+      <description>&lt;p&gt;Das neue Jahr beginnt mit einem Umzug des Webservers und einem (kleinen)
+Relaunch der Webseiten.
+TL;DR: Die Seiten zur &lt;a href=&#34;https://github.com/hweidner/golang-de/wiki&#34;&gt;Programmiersprache Go&lt;/a&gt;
+und meine &lt;a href=&#34;https://github.com/hweidner/talks/&#34;&gt;Vorträge&lt;/a&gt; haben nun eigene
+Projekte bei Github, das persönliche Blog liegt auf Github Pages.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Mein Jahr 2019</title>
