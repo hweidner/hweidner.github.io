@@ -1,0 +1,1294 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on hweidner.de</title>
+    <link>http://hweidner.de/post/</link>
+    <description>Recent content in Posts on hweidner.de</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
+    <lastBuildDate>Tue, 31 Dec 2019 01:54:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://hweidner.de/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mein Jahr 2019</title>
+      <link>http://hweidner.de/post/2019/mein-jahr-2019/</link>
+      <pubDate>Tue, 31 Dec 2019 01:54:00 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2019/mein-jahr-2019/</guid>
+      <description>&lt;p&gt;Angeregt von &lt;a href=&#34;https://www.deimeke.net/&#34;&gt;Dirk&lt;/a&gt; und seinem
+&lt;a href=&#34;https://www.deimeke.net/dirk/blog/index.php?/archives/3965-Mein-2019,-die-positive-Seite.html&#34;&gt;Blogpost&lt;/a&gt;
+über die positiven Aspekte des (fast) vergangenen Jahres, möchte ich
+ebenfalls eine kleine Chronologie der für mich wichtigen Ereignisse verfassen.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>15 Jahre Ubuntu</title>
+      <link>http://hweidner.de/post/2019/15-jahre-ubuntu/</link>
+      <pubDate>Tue, 22 Oct 2019 19:58:51 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2019/15-jahre-ubuntu/</guid>
+      <description>&lt;p&gt;Vor 15 Jahren, am 20. Oktober 2004, erschien die erste Version der Desktop-Linux Distribution
+Ubuntu.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Vorträge über R und Bruteforce Attacks</title>
+      <link>http://hweidner.de/post/2019/vortraege-juli/</link>
+      <pubDate>Sat, 29 Jun 2019 00:09:51 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2019/vortraege-juli/</guid>
+      <description>&lt;p&gt;Am 2. Juli findet im Rahmen des &lt;a href=&#34;ttps://www.uni-koeln.de/themen/linux&#34;&gt;Linux-Workshop Köln&lt;/a&gt;
+ein einführender Vortrag über die
+&lt;a href=&#34;https://www.r-project.org/&#34;&gt;Statistiksoftware R&lt;/a&gt; statt.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu stellt i386 ein</title>
+      <link>http://hweidner.de/post/2019/ubuntu-stellt-i386-ein/</link>
+      <pubDate>Tue, 18 Jun 2019 17:50:55 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2019/ubuntu-stellt-i386-ein/</guid>
+      <description>&lt;p&gt;Wie Canonical heute
+&lt;a href=&#34;https://lists.ubuntu.com/archives/ubuntu-announce/2019-June/000245.html&#34;&gt;bekannt gegeben hat&lt;/a&gt;,
+stellt Ubuntu nun endgültig die Unterstützung für die Architektur i386 ein.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux/x32</title>
+      <link>http://hweidner.de/post/2018/linux-x32/</link>
+      <pubDate>Sat, 15 Dec 2018 02:20:37 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2018/linux-x32/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.pro-linux.de&#34;&gt;Pro-Linux&lt;/a&gt; berichtet heute von Bestrebungen, die Unterstützung für das
+&lt;a href=&#34;https://www.pro-linux.de/news/1/26603/entfernung-der-x32-subarchitektur-aus-linux-vorgeschlagen.html&#34;&gt;x32 ABI aus Linux zu entfernen&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Die Container-Revolution frisst ihre Kinder</title>
+      <link>http://hweidner.de/post/2018/container-revolution/</link>
+      <pubDate>Sat, 01 Dec 2018 14:55:14 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2018/container-revolution/</guid>
+      <description>&lt;p&gt;Container unter Unix/Linux gibt es schon sehr lange. Schon 1979 zog mit dem
+chroot System Call die Grundlage für den Bau isolierter Umgebungen in Unix
+System V ein.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Minix vs. Linux</title>
+      <link>http://hweidner.de/post/2018/minix-vs-linux/</link>
+      <pubDate>Mon, 29 Jan 2018 22:36:39 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2018/minix-vs-linux/</guid>
+      <description>&lt;p&gt;Erinnert sich noch jemand an die
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Tanenbaum%E2%80%93Torvalds_debate&#34;&gt;Minix-vs-Linux Debatte&lt;/a&gt;?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GoKrazy - ein Linux-Userland in Go</title>
+      <link>http://hweidner.de/post/2017/go-userland/</link>
+      <pubDate>Sun, 05 Mar 2017 11:38:39 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2017/go-userland/</guid>
+      <description>&lt;p&gt;Seit der Veröffentlichung der ersten Go-Version kommt immer wieder der Vorschlag auf,
+das komplette GNU-Userland von/für Linux in Go neu zu schreiben. Nun hat das mal
+jemand gemacht.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Go zur Programmiersprache des Jahres 2016 gekürt</title>
+      <link>http://hweidner.de/post/2017/go-programmiersprache-des-jahres-2016/</link>
+      <pubDate>Sun, 08 Jan 2017 17:30:32 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2017/go-programmiersprache-des-jahres-2016/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.tiobe.com/&#34;&gt;Tiobe&lt;/a&gt; hat &lt;a href=&#34;http://hweidner.de/golang/&#34;&gt;Go&lt;/a&gt; zur Programmiersprache des Jahres 2016 gekürt.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Adventskalender</title>
+      <link>http://hweidner.de/post/2016/adventskalender/</link>
+      <pubDate>Fri, 02 Dec 2016 00:56:30 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2016/adventskalender/</guid>
+      <description>&lt;p&gt;Der Brauch, die Tage bis Weihnachten mit einem Adventskalender zu zählen,
+hat endgültig auch die IT erreicht.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Neuerungen in XFS</title>
+      <link>http://hweidner.de/post/2016/neuerungen-in-xfs/</link>
+      <pubDate>Mon, 17 Oct 2016 12:37:39 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2016/neuerungen-in-xfs/</guid>
+      <description>&lt;p&gt;Unter Linux gelten die Dateisysteme BtrFS und ZFS als modern, haben sich aber nie
+wirklich durchgesetzt. XFS könnte in die Lücke springen.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>5 Jahre hweidner.de</title>
+      <link>http://hweidner.de/post/2016/5-jahre-hweidner-de/</link>
+      <pubDate>Wed, 21 Sep 2016 22:42:27 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2016/5-jahre-hweidner-de/</guid>
+      <description>&lt;p&gt;Heute vor fünf Jahren habe ich unter der Domain hweidner.de, die ich schon länger
+besaß und bis dahin nur für E-Mail verwendet habe, diese Webseiten eingerichtet.
+Geplant war eine einfache Hompage mit zwei Rubriken: einem Blog-ähnlichen
+&lt;a href=&#34;http://hweidner.de/post/&#34;&gt;Nachrichtenbereich&lt;/a&gt; und einer Informationssammlung in Form eines &lt;a href=&#34;http://hweidner.de/docs/&#34;&gt;Wiki&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>25 Jahre Linux</title>
+      <link>http://hweidner.de/post/2016/25-jahre-linux/</link>
+      <pubDate>Sun, 28 Aug 2016 15:58:36 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2016/25-jahre-linux/</guid>
+      <description>&lt;p&gt;Am 25. August 1991 schrieb der damals unbekannte finnische Student
+&lt;a href=&#34;https://de.wikipedia.org/wiki/Linus_Torvalds&#34;&gt;Linus Torvalds&lt;/a&gt; ein
+&lt;a href=&#34;https://groups.google.com/forum/#!msg/comp.os.minix/dlNtH7RRrGA/SwRavCzVE7gJ&#34;&gt;Posting&lt;/a&gt;
+in der Newsgroup &lt;code&gt;comp.os.minix&lt;/code&gt;, in der er seine Arbeit an einem
+freien, Unix-ähnlichen Betriebssystem erstmals der Öffentlichkeit vorstellte.
+Nur vier Wochen später gab es den ersten Quelltext zum Herunterladen; kurze
+Zeit später wurde das Werk unter die GPLv2 gestellt und erhielt den Namen
+Linux.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>FrOSCon 2016</title>
+      <link>http://hweidner.de/post/2016/FrOSCon_2016/</link>
+      <pubDate>Sun, 28 Aug 2016 13:15:40 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2016/FrOSCon_2016/</guid>
+      <description>&lt;p&gt;Letztes Wochenende fand in St. Augustin die
+&lt;a href=&#34;http://www.froscon.de/&#34;&gt;11. Konferenz über Freie und Open Source Software (FrOSCon)&lt;/a&gt;
+statt. Wie immer habe ich zahlreiche Vorträge besucht und alte Bekannte wieder
+getroffen.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Scrum in der Kritik</title>
+      <link>http://hweidner.de/post/2016/scrum-in-der-kritik/</link>
+      <pubDate>Wed, 13 Jul 2016 16:51:12 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2016/scrum-in-der-kritik/</guid>
+      <description>&lt;p&gt;Vor wenigen Tagen wurde das &lt;a href=&#34;https://programm.froscon.de/2016/schedule/0.html&#34;&gt;Programm&lt;/a&gt;
+der diesjährigen &lt;a href=&#34;http://www.froscon.de/&#34;&gt;FrOSCon 11&lt;/a&gt; veröffentlicht. Darin fällt auf,
+dass es mehrere Vorträge über Kritik an dem agilen Entwicklungs-Framework
+&lt;a href=&#34;https://de.wikipedia.org/wiki/Scrum&#34;&gt;Scrum&lt;/a&gt; gibt.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Bitkeeper wird Open Source</title>
+      <link>http://hweidner.de/post/2016/bitkeeper-open-source/</link>
+      <pubDate>Tue, 10 May 2016 22:07:57 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2016/bitkeeper-open-source/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.phoronix.com/scan.php?page=news_item&amp;amp;px=BitKeeper-Open-Source&#34;&gt;Phoronix meldet heute&lt;/a&gt;,
+dass das verteilte Versionsverwaltungssystem Bitkeeper als Open Source Software unter der
+Apache 2.0 Lizenz veröffentlicht wurde.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>IPv6</title>
+      <link>http://hweidner.de/post/2016/ipv6/</link>
+      <pubDate>Sat, 02 Apr 2016 22:31:03 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2016/ipv6/</guid>
+      <description>&lt;p&gt;Vor einigen Wochen wurde mein DSL-Anschluss zu Hause auf einen neuen Tarif umgestellt,
+der auch IPv6 beinhaltet. Seither experimentiere ich ein wenig mit IPv6.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Chemnitzer Linuxtage 2016</title>
+      <link>http://hweidner.de/post/2016/clt2016/</link>
+      <pubDate>Mon, 21 Mar 2016 23:52:02 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2016/clt2016/</guid>
+      <description>&lt;p&gt;Am 19. und 20. März 2016 fanden die Chemnitzer Linuxtage statt. Für mich war es der zweite Besuch
+dieser mittlerweile größten deutschsprachigen Veranstaltung über Freie und Open Source Software.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SCO gegen Linux</title>
+      <link>http://hweidner.de/post/2016/sco-gegen-linux/</link>
+      <pubDate>Tue, 01 Mar 2016 17:16:49 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2016/sco-gegen-linux/</guid>
+      <description>&lt;p&gt;Laut eines
+&lt;a href=&#34;http://www.pro-linux.de/news/1/23306/rechtsstreit-zwischen-sco-und-ibm-nach-13-jahren-wohl-endgueltig-beendet.html&#34;&gt;Artikels auf Pro-Linux&lt;/a&gt;
+ist der legendäre Rechtsstreit der Firma SCO gegen Linux beendet.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Relaunch von hweidner.de</title>
+      <link>http://hweidner.de/post/2016/Relaunch/</link>
+      <pubDate>Sun, 28 Feb 2016 18:32:45 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2016/Relaunch/</guid>
+      <description>&lt;p&gt;Fast 4 1/2 Jahre nach der Eröffnung dieser Site gibt es heute den ersten Relaunch.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Go 1.6</title>
+      <link>http://hweidner.de/post/2016/Go_1.6/</link>
+      <pubDate>Thu, 18 Feb 2016 09:27:58 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2016/Go_1.6/</guid>
+      <description>&lt;p&gt;Heute Nacht wurde &lt;a href=&#34;https://blog.golang.org/go1.6&#34;&gt;Go 1.6 freigegeben&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VMware Workstation bald Geschichte?</title>
+      <link>http://hweidner.de/post/2016/VMware_WS_bald_Geschichte/</link>
+      <pubDate>Fri, 29 Jan 2016 23:21:49 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2016/VMware_WS_bald_Geschichte/</guid>
+      <description>&lt;p&gt;Laut &lt;a href=&#34;http://blog.chipx86.com/2016/01/26/a-tribute-to-vmware-workstation-fusion-and-hosted-ui/&#34;&gt;diesem Blogpost&lt;/a&gt; eines ehemaligen VMware Mitarbeiters hat VMware im Rahmen seines &lt;a href=&#34;http://www.heise.de/newsticker/meldung/VMware-baut-800-Arbeitsplaetze-ab-3085308.html&#34;&gt;Stellenabbaus&lt;/a&gt; auch die Teams, die für die Entwicklung der Desktop-Produkte VMware Workstation, Player und Fusion zuständig waren, entlassen.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Oracle schafft Java Applets ab</title>
+      <link>http://hweidner.de/post/2016/Oracle_schafft_Java_Applets_ab/</link>
+      <pubDate>Thu, 28 Jan 2016 01:02:54 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2016/Oracle_schafft_Java_Applets_ab/</guid>
+      <description>&lt;p&gt;Java Applets sind die wohl älteste Plugin-Technologie in der Geschichte des WWW. Während es in den 90er Jahren durchaus sinnvolle Anwendungen dafür gab, sind sie heute aus dem offenen Web weitgehend verschwunden &amp;ndash; leider oft abgelöst duch Flash Applets. In Unternehmensanwendungen halten sie sich dagegen weiterhin hartnäckig.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Das Git-Buch</title>
+      <link>http://hweidner.de/post/2016/Git_Buch/</link>
+      <pubDate>Tue, 05 Jan 2016 09:14:52 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2016/Git_Buch/</guid>
+      <description>&lt;p&gt;Leider hat der Verlag Open Source Press zu Ende Dezember 2015 die Verlagstätigkeit eingestellt. Das ist doppelt schade, erstens weil es ein renommierter deutschsprachiger Verlag mit vielen interessanten Titel war, und zweitens, weil er als erster Verlag einen wirklich modernen crossmedialen Publikationsprozess auf Basis von &lt;a href=&#34;http://hweidner.de/post/2013/AsciiDoc/&#34;&gt;AsciiDoc&lt;/a&gt; etabliert hatte.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>KDE  Plasma 5</title>
+      <link>http://hweidner.de/post/2015/KDE_Plasma_5/</link>
+      <pubDate>Sat, 21 Nov 2015 20:51:50 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/KDE_Plasma_5/</guid>
+      <description>&lt;p&gt;Seit der Gründung des KDE Projektes 1996 war ich begeisterter Nutzer und habe jede neue Version, sobald sie irgendwie benutzbar war, auf meine Debian-Desktopsysteme gebracht.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>OpenRheinRuhr 2015</title>
+      <link>http://hweidner.de/post/2015/OpenRheinRuhr_2015/</link>
+      <pubDate>Mon, 09 Nov 2015 22:11:45 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/OpenRheinRuhr_2015/</guid>
+      <description>&lt;p&gt;Am letzten Wochenende fand in Oberhausen die &lt;a href=&#34;http://www.openrheinruhr.de/&#34;&gt;OpenRheinRuhr&lt;/a&gt; statt.&lt;/p&gt;
+&lt;p&gt;Nachdem im letzten Jahr viele Vorträge wegen einer Grippewelle und eines Lokführerstreiks ausfallen mussten, gab es in diesem Jahr fast gar keine Ausfälle. Dazu kam eine perfekte Organisation und ein gelungener Social Event mit vielen bekannten Gesichtern am Samstag Abend. Wie 2013 hatte ich selber wieder einen Beitrag eingereicht, genauer sogar zwei Vorträge, von denen einer angenommen wurde. Daneben besuchte ich wie immer viele Vorträge.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Optische Täuschungen</title>
+      <link>http://hweidner.de/post/2015/Optische_T%C3%A4uschungen/</link>
+      <pubDate>Tue, 06 Oct 2015 12:12:36 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/Optische_T%C3%A4uschungen/</guid>
+      <description>Eine gute Zusammenstellung optischer Täuschungen gibt es hier.</description>
+    </item>
+    
+    <item>
+      <title>Software Freedom Day 2015</title>
+      <link>http://hweidner.de/post/2015/Software_Freedom_Day_2015/</link>
+      <pubDate>Sat, 26 Sep 2015 00:18:24 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/Software_Freedom_Day_2015/</guid>
+      <description>Zur diesjährigen Veranstaltung am Software Freedom Day in Köln berichtet Rechtsanwalt Michael Stehmann in seinem Blog.</description>
+    </item>
+    
+    <item>
+      <title>FrOSCon 2015</title>
+      <link>http://hweidner.de/post/2015/FrOSCon_2015/</link>
+      <pubDate>Wed, 26 Aug 2015 19:24:37 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/FrOSCon_2015/</guid>
+      <description>&lt;p&gt;Am letzten Wochenende fand die Jubiläumsausgabe der Konferenz zu Freier
+und Open Source Software (&lt;a href=&#34;http://www.froscon.de&#34;&gt;FrOSCon&lt;/a&gt;) in St.
+Augustin statt. Es war nämlich die zehnte Veranstaltung. Neben einer gut
+gefüllten Ausstellungsfläche, wo freie Projekte und Firmen gleichermaßen
+vertreten waren, gab es wieder ein reichhaltiges Vortragsprogramm, und
+die Auswahl unter den parallel stattfindenen Vorträgen fiel oft schwer.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Go 1.5</title>
+      <link>http://hweidner.de/post/2015/Go_1.5/</link>
+      <pubDate>Thu, 20 Aug 2015 01:04:05 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/Go_1.5/</guid>
+      <description>&lt;p&gt;Heute wurde wie geplant die neue Version &lt;a href=&#34;https://blog.golang.org/go1.5&#34;&gt;Go 1.5
+veröffentlicht&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Es lebe der Mainframe</title>
+      <link>http://hweidner.de/post/2015/Es_lebe_der_Mainframe/</link>
+      <pubDate>Wed, 19 Aug 2015 01:05:35 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/Es_lebe_der_Mainframe/</guid>
+      <description>In den letzten Tagen häufen sich die Neuigkeiten über die schon oft totgesagtem Großrechner (Mainframes), teilweise im Zusammenhang mit Linux.
+IBM stellt neue Mainframes für den Einsatz mit Linux vor. Diese unterscheiden sind technisch nicht stark von der aktuellen Großrechner-Generation IBM z13, aber durch den Verzicht auf z/OS entfallen die happigen Lizenzkosten und das Preismodell soll speziell Neukunden anlocken. Fast zeitgleich gibt die Linux Foundation die Gründung eines Open Mainframe Projektes bekannt und versammelt dort große Namen wie IBM, RedHat und Canonical.</description>
+    </item>
+    
+    <item>
+      <title>Software Freedom Day 2015 in Köln</title>
+      <link>http://hweidner.de/post/2015/Software_Freedom_Day_2015_in_K%C3%B6ln/</link>
+      <pubDate>Thu, 06 Aug 2015 16:03:11 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/Software_Freedom_Day_2015_in_K%C3%B6ln/</guid>
+      <description>Auch in diesem Jahr gibt es wieder eine Veranstaltung zum Software Freedom Day in Köln. Sie findet wie im letzten Jahr in der Dingfabrik in Köln-Nippes statt. Das vorläufige Programm umfasst Vorträge zur Perl, Unit-Testing mit Python, E-Book-Erstellung mit LaTeX und Website-Erstellung mit Hugo.
+Update: Es gibt zwei kurzfristige Programmänderungen. Wenn ihr wegen eines bestimmten Vortrags kommen wollt, beachtet bitte, dass der Vortrag über E-Book-Erstellung mit LaTeX durch einen allgemeinen LaTeX Vortrag ersetzt und die Reihenfolge der Nachmittagsvorträge geändert wurde.</description>
+    </item>
+    
+    <item>
+      <title>Weg mit Flash</title>
+      <link>http://hweidner.de/post/2015/Weg_mit_Flash/</link>
+      <pubDate>Fri, 17 Jul 2015 11:49:02 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/Weg_mit_Flash/</guid>
+      <description>Heise fordert in einem Kommentar die Website-Betreiber mal wieder dazu auf, sich von der veralteten und konzeptionell unsicheren Technologie Flash zu verabschieden.
+Ich unterstütze diese Aufforderung ausdrücklich, auch wenn ich an den Erfolg noch nicht so richtig glauben kann.</description>
+    </item>
+    
+    <item>
+      <title>Go 1.5 Beta 1</title>
+      <link>http://hweidner.de/post/2015/Go_1.5_Beta_1/</link>
+      <pubDate>Tue, 14 Jul 2015 09:41:37 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/Go_1.5_Beta_1/</guid>
+      <description>Es gibt eine erste Betaversion von Go 1.5.</description>
+    </item>
+    
+    <item>
+      <title>Schaltsekunde</title>
+      <link>http://hweidner.de/post/2015/Schaltsekunde/</link>
+      <pubDate>Wed, 01 Jul 2015 08:53:13 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/Schaltsekunde/</guid>
+      <description>Du weißt, dass dein Linux-Server die Schaltsekunde überlebt hat, wenn die Anwendungen noch funktionieren und im kern.log die Meldung erscheint:
+Jul 1 01:59:59 jadis kernel: [361764.175466] Clock: inserting leap second 23:59:60 UTC  </description>
+    </item>
+    
+    <item>
+      <title>MySQL räumt auf</title>
+      <link>http://hweidner.de/post/2015/MySQL_r%C3%A4umt_auf/</link>
+      <pubDate>Tue, 30 Jun 2015 14:01:56 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/MySQL_r%C3%A4umt_auf/</guid>
+      <description>Jede neue MySQL Major-Version bringt neue Features, erklärt aber auch ein paar alte als veraltet (deprecated). Bisher war es üblich, dass die veralteten Features dann in der übernächsten Version aus MySQL entfernt werden.
+Mit dem anstehenden Release von MySQL 5.7 zeigt man sich progressiver. Einige Funktionen, die mit MySQL 5.6 deprecated wurden, stehen in 5.7 bereits nicht mehr zur Verfügung. Eine Übersicht gibt der Artikel Removal and Deprecation in MySQL 5.</description>
+    </item>
+    
+    <item>
+      <title>Effektives modernes C&#43;&#43;</title>
+      <link>http://hweidner.de/post/2015/Effektives_modernes_C&#43;&#43;/</link>
+      <pubDate>Sun, 28 Jun 2015 23:45:52 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/Effektives_modernes_C&#43;&#43;/</guid>
+      <description>C++ wird gerne als Dinosaurier unter den Programmiersprachen bezeichnet, was sich sowohl auf das Alter als auch den Umfang der Sprache und Standardbibliothek bezieht. Mit den jüngsten Sprachstandards C++11 und C++14 rückt die Sprache näher an moderne Paradigmen und Erfordernisse, wird aber auch noch umfangreicher.
+Mit Effektives modernes C++ erschien im O’Reilly Verlag der vierte Band der Effektiv C++ Reihe, in der der Autor Scott Meyers praxisnahe Programmiertechniken vorstellt, mit denen die Möglichkeiten von C++11 und C++14 effektiv genutzt und eigene Programme bezüglich Effizienz, Fehlerarmut und Wartbarkeit verbessert werden können.</description>
+    </item>
+    
+    <item>
+      <title>30 Jahre Atari ST</title>
+      <link>http://hweidner.de/post/2015/30_Jahre_Atari_ST/</link>
+      <pubDate>Mon, 15 Jun 2015 17:05:03 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/30_Jahre_Atari_ST/</guid>
+      <description>Heise erinnert heute an die erste Vorstellung des Atari ST auf der Hannover-Messe 1985. Geplant waren damals die Modelle 260ST und 520ST mit 256 bzw. 512 kB RAM. Das klingt für heutige Verhältnisse wenig, stellte aber gegenüber den bislang vorherrschenden 8-Bit Heimcomputern mindestens eine Vervierfachung dar. Dennoch stellte Atari fest, dass ein Modell mit 256 kB nicht sinnvoll ist, benötigt doch alleine das Betriebssystem TOS 192 kB und war bei den ersten Modellen noch nicht in ROM Chips fest verbaut, sondern musste von Diskette ins RAM geladen werden.</description>
+    </item>
+    
+    <item>
+      <title>Chemnitzer Linuxtage 2015</title>
+      <link>http://hweidner.de/post/2015/Chemnitzer_Linuxtage_2015/</link>
+      <pubDate>Tue, 24 Mar 2015 16:49:38 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/Chemnitzer_Linuxtage_2015/</guid>
+      <description>Am Wochenende fanden die Chemnitzer Linuxtage 2015 statt. Das ist eine der ältesten Veranstaltungen in Deutschland zum Thema Linux und Open Source Software; es waren bereits die 17. CLT seit 1999. Wegen der Absage des LinuxTag in Berlin war es in diesem Jahr wohl auch der größte Event in Deutschland.
+Die CLT sind außerordentlich professionell organisiert. Vor allem die Beschriftungen, Wegweiser und per Beamer an die Wand gebrachten Informationen zeigen eine große Liebe zum Detail.</description>
+    </item>
+    
+    <item>
+      <title>SQL lernen</title>
+      <link>http://hweidner.de/post/2015/SQL_lernen/</link>
+      <pubDate>Fri, 20 Feb 2015 15:25:58 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/SQL_lernen/</guid>
+      <description>Auf t3n gibt es heute einen Artikel SQL für Einsteiger: Die besten interaktiven Tutorials im Web.</description>
+    </item>
+    
+    <item>
+      <title>Go to X86 Assembler</title>
+      <link>http://hweidner.de/post/2015/Go_to_X86_Assembler/</link>
+      <pubDate>Fri, 20 Feb 2015 13:33:51 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/Go_to_X86_Assembler/</guid>
+      <description>Der interaktive Go to X86 Assembler Viewer zeigt, wie eine Go-Funktion in X86 Assembler übersetzt wird. Genutzt wird derzeit nur der Compiler GccGo 4.9.1.</description>
+    </item>
+    
+    <item>
+      <title>Prometheus</title>
+      <link>http://hweidner.de/post/2015/Prometheus/</link>
+      <pubDate>Tue, 27 Jan 2015 21:21:08 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/Prometheus/</guid>
+      <description>Die Liste eindrucksvoller Anwendungen, die in der freien Programmiersprache Go geschrieben sind, ist wieder um einen Eintrag länger geworden: die Berliner Firma Soundcloud hat ihr Monitoring-System Prometheus unter der Apache-Lizenz veröffentlicht.</description>
+    </item>
+    
+    <item>
+      <title>Deine nächste native Programmiersprache</title>
+      <link>http://hweidner.de/post/2015/Deine_n%C3%A4chste_native_Programmiersprache/</link>
+      <pubDate>Sun, 18 Jan 2015 18:42:40 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2015/Deine_n%C3%A4chste_native_Programmiersprache/</guid>
+      <description>InfoHQ stellt die Frage What’s Your Next Native Language und liefert eine Liste von neun potenziellen Antworten gleich mit. Interessant an dieser Liste ist vor allem das, was sie nicht enthält. Denn es geht hier nur um Sprachen, deren Standard-Entwicklungsumgebung direkt native Binaries ausspuckt. Hier sind keine klassischen Skriptsprachen, keine Sprachen mit JVM Zielplattform und auch keine, die nach Javascript compilieren, gefragt; für letztere beide Kategorien gab es bereits separate Umfragen.</description>
+    </item>
+    
+    <item>
+      <title>Go 1.4</title>
+      <link>http://hweidner.de/post/2014/Go_1.4/</link>
+      <pubDate>Thu, 11 Dec 2014 10:10:06 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Go_1.4/</guid>
+      <description>Heute wurde die Programmiersprache Go in der Version 1.4 veröffentlicht. Neben einer minimalen Änderung in der Sprache, die eine Sonderform der for range Schleife ermöglicht, enthält das Release diverse Bugfixes und Detailverbesserungen.
+Die wesentlichen Änderungen betreffen Interna. So wurden viele Teile der Runtime, die bisher in C oder Assembler geschrieben waren, in Go neu implementiert. Das Ziel ist eine vollständige Implementierung der Runtime in Go. Der Garbage Collector wurde umgeschrieben, um eine Änderung vorzubereiten, die voraussichtlich mit Go 1.</description>
+    </item>
+    
+    <item>
+      <title>Wikipedia Spendenaufruf</title>
+      <link>http://hweidner.de/post/2014/Wikipedia_Spendenaufruf/</link>
+      <pubDate>Wed, 03 Dec 2014 15:35:33 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Wikipedia_Spendenaufruf/</guid>
+      <description>Alle Jahre wieder finden nicht nur diverse Adventskalender Einzug in meine News. Es kommt auch der jährliche Wikipedia-Spendenaufruf und sorgt dafür, dass mein Artikel Wikipedia Spendenaufruf blocken von vor drei Jahren zum meistgesuchten Beitrag dieser Site wird.
+Für diejenigen, die sich genervt fühlen: das Pattern für Adblock Plus ist dieses Mal
+de.wikipedia.org###WMDE_FR2014_Banner  Auch wenn ich generell dafür bin, dass sich unabhängige Projekte durch Spenden finanzieren, tut sich Wikipedia mit dieser aufdringlichen Kampagne keinen Gefallen.</description>
+    </item>
+    
+    <item>
+      <title>QEMU Adventskalender</title>
+      <link>http://hweidner.de/post/2014/QEMU_Adventskalender/</link>
+      <pubDate>Tue, 02 Dec 2014 11:15:12 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/QEMU_Adventskalender/</guid>
+      <description>Es ist wieder Dezember und die Zeit der Adventskalender. Einer davon ist der QEMU Adventskalender, der jeden Tag eine besondere virtuelle Maschine bieten will. Den Anfang macht eine VM mit einer historischen Version von Slackware, der ältesten noch aktiv gepflegten Linux-Distribution.</description>
+    </item>
+    
+    <item>
+      <title>Visualisierung von GitHub Statistik</title>
+      <link>http://hweidner.de/post/2014/Visualisierung_von_GitHub_Statistik/</link>
+      <pubDate>Sat, 22 Nov 2014 00:41:32 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Visualisierung_von_GitHub_Statistik/</guid>
+      <description>Auf GitHut gibt es eine interessante Visualisierung statistischer Daten zur Entwickler-Plattform GitHub.</description>
+    </item>
+    
+    <item>
+      <title>Go Birthday Bash</title>
+      <link>http://hweidner.de/post/2014/Go_Birthday_Bash/</link>
+      <pubDate>Tue, 11 Nov 2014 20:02:10 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Go_Birthday_Bash/</guid>
+      <description>Anlässlich des fünften Geburtstags von Go gibt es diesen Monat einen Birthday Bash bei der Goper Acedemy. Jeden Tag soll ein Gastautor einen Artikel über ein Projekt, in dem Go eingesetzt wird, beisteuern.</description>
+    </item>
+    
+    <item>
+      <title>Totgesagte leben länger...</title>
+      <link>http://hweidner.de/post/2014/Totgesagte_leben_l%C3%A4nger.../</link>
+      <pubDate>Mon, 10 Nov 2014 22:59:23 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Totgesagte_leben_l%C3%A4nger.../</guid>
+      <description>…und wenn sie mal nicht mehr leben, erstehen sie womöglich wieder auf.
+Zehn Jahre nach der Einstellung der legendären Atari ST Zeitschrift “ST-Magazin” gibt es sie wieder. Zeitgemäß online als PDF Dokumente, man kann aber auch für einen kurzen Zeitraum eine gedruckte Ausgabe bestellen, die dann eigens in Kleinstauflage produziert wird.</description>
+    </item>
+    
+    <item>
+      <title>OpenRheinRuhr 2014</title>
+      <link>http://hweidner.de/post/2014/OpenRheinRuhr_2014/</link>
+      <pubDate>Mon, 10 Nov 2014 00:36:05 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/OpenRheinRuhr_2014/</guid>
+      <description>Am Wochenende fand in Oberhausen die OpenRheinRuhr 2014 statt. Diese kleine aber feine Veranstaltung ist im Kalender der Events zu Freier und Open Source Software mittlerweile fest etabliert und hat eine treue Fangemeinde. Auch in diesem Jahr gab es wieder ein interessantes Vortragsprogramm.
+Leider fielen mehrere Vorträge aus, auf die ich mich gefreut hatte - teilweise wegen Krankheit der Referenten, teilweise aber auch wegen des Streiks der Lokomotivführer-Gewerkschaft. Dies bot allerdings auch die Möglichkeit, spontan in andere Vorträge zu gehen, die ich sonst nicht besucht hätte, obwohl sie ebenfalls interessant und unterhaltsam waren.</description>
+    </item>
+    
+    <item>
+      <title>Seven Concurrency Models in Seven Weeks</title>
+      <link>http://hweidner.de/post/2014/Seven_Concurrency_Models_in_Seven_Weeks/</link>
+      <pubDate>Thu, 30 Oct 2014 01:35:07 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Seven_Concurrency_Models_in_Seven_Weeks/</guid>
+      <description>Jeder Programmierer, der die Möglichkeiten eines aktuellen Computers ausschöpfen möchte, kommt um eine Beschäftigung mit Parallelprogrammierung nicht herum. Während Betriebssysteme die Ausnutzung mehrere CPU-Kerne seit vielen Jahren ermöglichen, gibt es in den letzten Jahren immer mehr Programmiersprachen mit direkter Unterstützung für nebenläufige/parallele Programmierung.
+Welche Modelle und Paradigmen dabei verwendet werden, beschreibt das Buch Seven Concurrency Models in Seven Weeks aus dem O’Reilly Verlag. Der Verlag hat mir freundlicherweise ein Rezensionsexemplar zur Verfügung gestellt.</description>
+    </item>
+    
+    <item>
+      <title>Open Source Audio Meeting Cologne</title>
+      <link>http://hweidner.de/post/2014/Open_Source_Audio_Meeting_Cologne/</link>
+      <pubDate>Fri, 24 Oct 2014 09:57:20 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Open_Source_Audio_Meeting_Cologne/</guid>
+      <description>In Köln gibt es jetzt ein Open Source Audio Meeting Cologne. Die Treffen finden regelmäßig an jedem dritten Mittwoch im Monat im C4 statt. Es geht um alles, was mit Audioproduktion und freier Software zu tun hat: Soundserver, Synthesizer, Effektgeräte, Mixer, Studioproduktion etc.</description>
+    </item>
+    
+    <item>
+      <title>Software Freedom Day 2014 in Köln</title>
+      <link>http://hweidner.de/post/2013/Software_Freedom_Day_2014_in_K%C3%B6ln/</link>
+      <pubDate>Fri, 19 Sep 2014 00:24:01 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/Software_Freedom_Day_2014_in_K%C3%B6ln/</guid>
+      <description>Am kommenden Samstag (20. September) findet in Köln die diesjährige Veranstaltung zum Software Freedom Day statt.
+Wir haben dieses Mal sechs Vorträge von 30-45 Minuten Dauer. Nachdem im letzten Jahr schwerpunktmäßig die Programmierung in verschiedenen Sprachen behandelt wurde, ist das Programm diesmal gemischter. Vormittags geht es um Open Source Lizenzen und Big Data. Nachmittags stehen Verschlüsselung, elektronische Steuererklärung, Hacks mit digitalen Kameras und Freie Software in der Arztpraxis auf dem Programm.</description>
+    </item>
+    
+    <item>
+      <title>Videos der FrOSCon 2014</title>
+      <link>http://hweidner.de/post/2014/Videos_der_FrOSCon_2014/</link>
+      <pubDate>Mon, 25 Aug 2014 21:06:13 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Videos_der_FrOSCon_2014/</guid>
+      <description>Wer wie ich in diesem Jahr nicht zur FrOSCon gehen konnte, kann hier die Videos der Vorträge anschauen.</description>
+    </item>
+    
+    <item>
+      <title>Welche Sprachen sollte man lernen?</title>
+      <link>http://hweidner.de/post/2014/Welche_Sprachen_sollte_man_lernen/</link>
+      <pubDate>Fri, 08 Aug 2014 17:18:30 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Welche_Sprachen_sollte_man_lernen/</guid>
+      <description>Die IEEE hat Statistik über Programmiersprachen, die es sich zu lernen lohnt aktualisiert. Zur Bestimmung des Rankings werden zahlreiche Quellen herangezogen, u.a. Suchergebnisse im Web, Erwähnung in Fachmagazinen, Aktivität auf Open Source Plattformen und gewünschten Skills in Stellenanzeigen.
+Als jüngste Sprache hat es Go, bekanntlich meine Empfehlung als Einstiegssprache, auf Platz 20 der Liste geschafft; nur gut zwei Jahre nach Veröffentlichung der ersten stabilen Version ein Achtungserfolg.
+Dass sich auf den vorderen drei Plätzen Java, C und C++ etabliert haben, ist keine Überraschung.</description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>http://hweidner.de/post/2014/Docker/</link>
+      <pubDate>Thu, 07 Aug 2014 18:57:29 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Docker/</guid>
+      <description>Über die Popularität von Docker und einen Performancevergleich zwischen Docker und KVM.
+Docker ist ein Tool, mit dem man mittels einer einfachen, textbasierten Konfiguration einen Linux-Applikationscontainer bauen kann. Docker basiert dabei auf der Container-Technik LXC, die seit einigen Jahren Bestandteil des offiziellen Linux-Kernels und mittlerweile in allen wichtigen Linux-Distributionen aktiviert ist. Über den Docker Hub lassen sich Basis-Container beziehen und schichtweise mit individuellen Anpassungen versehen, die effizient über ein Overlay-Filesystem gespeichert werden.</description>
+    </item>
+    
+    <item>
+      <title>Programm der FrOSCon 2014 veröffentlicht</title>
+      <link>http://hweidner.de/post/2014/Programm_der_FrOSCon_2014_ver%C3%B6ffentlicht/</link>
+      <pubDate>Thu, 17 Jul 2014 11:23:34 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Programm_der_FrOSCon_2014_ver%C3%B6ffentlicht/</guid>
+      <description>Seit gestern ist die erste Version des Vortragsprogrammes der FrOSCon 2014 online verfügbar. Neben der HTML-Ansicht gibt es das Programm als PDF sowie in diversen Kalenderformaten zum importieren.</description>
+    </item>
+    
+    <item>
+      <title>Neues Raspberry Pi Modell B&#43;</title>
+      <link>http://hweidner.de/post/2014/Neues_Raspberry_Pi_Modell_B&#43;/</link>
+      <pubDate>Mon, 14 Jul 2014 14:38:14 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Neues_Raspberry_Pi_Modell_B&#43;/</guid>
+      <description>Am Wochenende wurde ein neues Modell des beliebten Lern- und Bastelrechners Raspberry Pi vorgestellt. Es trägt die Bezeichnung B+. Die hauptsächlichen Unterschiede gegenüber dem bisher angebotenen Modell B sind
+ vier statt zwei USB-Ports Micro-SD statt SD Kartenslot 40 statt 26 GPIO Pins  Daneben wurde die Leistungsaufnahme verringert und die Klangqualität am analogen Audioausgang verbessert. Die Form hat sich geringfügig geändert, so dass die für den B angebotenen Gehäuse nicht mit dem B+ verwendbar sind.</description>
+    </item>
+    
+    <item>
+      <title>Gründlichkeit</title>
+      <link>http://hweidner.de/post/2014/Gr%C3%BCndlichkeit/</link>
+      <pubDate>Mon, 30 Jun 2014 13:44:14 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Gr%C3%BCndlichkeit/</guid>
+      <description>Wenn man einen eigenen Webserver betreibt, gehören Scans nach vertraulichen Inhalten oder angreifbarer Software zum Alltag. Meistens beschränken sich die Scanner aber auf einige wenige URLs und suchen nach Anzeichen für das Vorhandensein bekannter Software, z.B. Wordpress oder phpMyAdmin.
+Heute wollte es aber mal jemand ganz genau wissen. (Die IP-Adresse wurde von mir anonymisiert.)
+Während sich die meisten URLs auf SSH Konfigurationen, Shell-Dateien oder Cryptowährungen beziehen, ist der Dateiname checknfurl123 rätselhaft.</description>
+    </item>
+    
+    <item>
+      <title>Fußball WM Spielplan importieren</title>
+      <link>http://hweidner.de/post/2014/Fu%C3%9Fball_WM_Spielplan_importieren/</link>
+      <pubDate>Wed, 11 Jun 2014 11:19:48 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Fu%C3%9Fball_WM_Spielplan_importieren/</guid>
+      <description>Wer einen ical - fähigen Kalender benutzt und sich für Fußball interessiert, kann hier den Spielplan der WM 2014 importieren.</description>
+    </item>
+    
+    <item>
+      <title>The Golang Magazine</title>
+      <link>http://hweidner.de/post/2014/The_Golang_Magazine/</link>
+      <pubDate>Wed, 28 May 2014 15:11:23 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/The_Golang_Magazine/</guid>
+      <description>Hübsch: The Golang Magazine bringt interessante Infos über Go in ansprechendem HTML-Design.</description>
+    </item>
+    
+    <item>
+      <title>Offizielle MySQL Paketquellen für Debian und Ubuntu</title>
+      <link>http://hweidner.de/post/2014/Offizielle_MySQL_Paketquellen_f%C3%BCr_Debian_und_Ubuntu/</link>
+      <pubDate>Mon, 26 May 2014 14:39:49 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Offizielle_MySQL_Paketquellen_f%C3%BCr_Debian_und_Ubuntu/</guid>
+      <description>Gute Nachrichten für alle, die den MySQL Datenbankserver auf Debian oder Ubuntu Linux einsetzen und die offiziellen Releases vom Hersteller nutzen: ab sofort gibt es offizielle Paketquellen der MySQL Versionen 5.6 und 5.7 für Debian 7 sowie Ubuntu 12.04 und 14.04.</description>
+    </item>
+    
+    <item>
+      <title>Welcher Mini-PC ist der richtige?</title>
+      <link>http://hweidner.de/post/2014/Welcher_Mini-PC_ist_der_richtige/</link>
+      <pubDate>Sun, 11 May 2014 12:15:10 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Welcher_Mini-PC_ist_der_richtige/</guid>
+      <description>Wer eine Entscheidungshilfe bei der Auswahl eines Mini-PCs auf ARM-Basis braucht, findet hier einen Vergleich zwischen Arduino Yun, Beaglebone Black, Intel Galileo und Raspberry Pi.</description>
+    </item>
+    
+    <item>
+      <title>BASIC wird 50</title>
+      <link>http://hweidner.de/post/2014/BASIC_wird_50/</link>
+      <pubDate>Fri, 02 May 2014 11:05:24 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/BASIC_wird_50/</guid>
+      <description>Für Tausende von Computerfans war die Programmiersprache BASIC als fest eingebaute Sprache vieler Heimcomputer der Einstieg in die Programmierung. Bei mir war es zunächst das vergleichsweise spartanische Commodore BASIC V2 auf dem Commodore 64, aber für anspruchsvollere Aufgaben wechselte ich schon bald zu SIMONS’ BASIC, das auch die graphischen Möglichkeiten des C64 unterstützte. Zwei Jahre später wechselte ich vom C64 zum Atari ST und programmierte fortan überwiegend in GFA BASIC. Auch unter Linux kann mit X11 Basic in einem GFA-BASIC-ähnlichen Dialekt programmiert werden.</description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheets für Webentwickler</title>
+      <link>http://hweidner.de/post/2014/Cheat_Sheets_f%C3%BCr_Webentwickler/</link>
+      <pubDate>Mon, 28 Apr 2014 14:47:05 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Cheat_Sheets_f%C3%BCr_Webentwickler/</guid>
+      <description>Dieser Artikel auf t3n.de liefert einen umfangreichen Überblick über verfügbare Cheat Sheets zu Themen der Webentwicklung.</description>
+    </item>
+    
+    <item>
+      <title>Linkspam</title>
+      <link>http://hweidner.de/post/2014/Linkspam/</link>
+      <pubDate>Wed, 23 Apr 2014 00:15:56 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Linkspam/</guid>
+      <description>Gut 2 1/2 Jahre nach Eröffnung dieser Website bekam ich vor ein paar Tagen den ersten Spam an die im Impressum genannte Kontaktadresse. Der Spam ist plump, aber durchaus bemerkenswert. Einerseits hat sich der der Spammer sehr wohl die Mühe gemacht, das Impressum zu lesen und die Mailadresse geeignet zusammen zu setzen. Auch orthographisch ist die Mail in Ordnung.
+Warum aber andererseits eine thematisch vollkommen unpassende Wiki-Seite ausgesucht wurde, um seinen Spam zu platzieren, bleibt unverständlich.</description>
+    </item>
+    
+    <item>
+      <title>Gogs - ein Git Frontend in Go</title>
+      <link>http://hweidner.de/post/2014/Gogs_-_ein_Git_Frontend_in_Go/</link>
+      <pubDate>Tue, 22 Apr 2014 12:12:51 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Gogs_-_ein_Git_Frontend_in_Go/</guid>
+      <description>Zu den nützlichen Anwendungen, die in der Sprache Go geschrieben wurden, gehört mit Gogs jetzt auch ein webbasiertes Git Frontend.</description>
+    </item>
+    
+    <item>
+      <title>Debian 6.0 LTS</title>
+      <link>http://hweidner.de/post/2014/Debian_6.0_LTS/</link>
+      <pubDate>Wed, 16 Apr 2014 21:43:11 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Debian_6.0_LTS/</guid>
+      <description>In einer Ankündigung hat das Debian-Projekt heute bekannt gegeben, dass es für Debian 6.0 (Squeeze) einen Long Term Support (LTS) geben wird. Security Updates werden bis Februar 2016 bereit gestellt, also 5 Jahre seit dem Erscheinen. Das wird reichen, um Debian 7 (wheezy) zu überspringen und 2015 oder 2016 direkt zu Debian 8 wechseln zu können.
+Der Support wird nicht vom Debian Security Team geleistet, sondern von Drittfirmen organisiert, die selber auf eine lange Unterstützung von Debian 6.</description>
+    </item>
+    
+    <item>
+      <title>Modern Perl Edition 2014</title>
+      <link>http://hweidner.de/post/2014/Modern_Perl_Edition_2014/</link>
+      <pubDate>Sun, 06 Apr 2014 00:29:15 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Modern_Perl_Edition_2014/</guid>
+      <description>Gute Nachrichten für Perl-Entwickler: das Buch Modern Perl wurde aktualisiert und steht als 2014 Edition online und gedruckt zur Verfügung.</description>
+    </item>
+    
+    <item>
+      <title>ARM und Arduino in einem</title>
+      <link>http://hweidner.de/post/2014/ARM_und_Arduino_in_einem/</link>
+      <pubDate>Thu, 20 Mar 2014 15:46:36 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/ARM_und_Arduino_in_einem/</guid>
+      <description>Wer sich nicht entscheiden kann, ob er für seinen nächstes Projekt einen ARM-basierten MiniPC wie dem Raspberry Pi nehmen soll, oder ob ein Arduino-Board ausreichend ist, oder wer beides benötigt, sollte einen Blick auf Udoo werfen. Das ist ein Mini-PC mit ARM i.MX6 Prozessor und einem Arduino DUO-kompatiblen Microcontroller-Subsystem. Darauf laufen diverse Linux-Distributionen (Debian, Ubuntu, Arch) sowie Android.</description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi interaktiv</title>
+      <link>http://hweidner.de/post/2014/Raspberry_Pi_interaktiv/</link>
+      <pubDate>Sat, 01 Mar 2014 01:29:51 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Raspberry_Pi_interaktiv/</guid>
+      <description>Diese interaktive Karte des Raspberry Pi (Modell B) erklärt alle Komponenten, wenn man mit der Maus darüber fährt
+ vom Widerstand bis zum ARM Prozessor.  </description>
+    </item>
+    
+    <item>
+      <title>Vergleich von Paketsystem-Tools</title>
+      <link>http://hweidner.de/post/2014/Vergleich_von_Paketsystem-Tools/</link>
+      <pubDate>Thu, 20 Feb 2014 13:11:17 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Vergleich_von_Paketsystem-Tools/</guid>
+      <description>Im Wiki von Arch Linux gibt es eine vergleichende Übersicht über die Kommandos verschiedener Paketmanager für Aufgaben wie Paketinstallationen, Updates, Paketsuche etc. Verglichen werden die Tools von Arch (pacman), RedHat (yum), Debian (apt-get, aptitude, dpkg), SUSE (zypper) und Gentoo (emerge).</description>
+    </item>
+    
+    <item>
+      <title>Generate Data</title>
+      <link>http://hweidner.de/post/2014/Generate_Data/</link>
+      <pubDate>Mon, 10 Feb 2014 13:38:32 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Generate_Data/</guid>
+      <description>GenerateData erstellt Testdaten zum Testen von Anwendungen mit relationalen Datenbanken.</description>
+    </item>
+    
+    <item>
+      <title>Git lernen</title>
+      <link>http://hweidner.de/post/2014/Git_lernen/</link>
+      <pubDate>Fri, 03 Jan 2014 10:47:20 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2014/Git_lernen/</guid>
+      <description>Das Versionsverwaltungssystem Git wurde von Linus Torvalds geschrieben, nachdem das vorher für die Kernelentwicklung genutzte Bitkeeper nicht mehr zur Verfügung stand. Es erfreute sich von Anfang an einer großen Beliebtheit im Open Source Umfeld. Dementsprechend gibt es viel Dokumentation dazu online. Hier eine Auswahl.
+ Git - der einfache Einstieg Git Tutorial Git Magic Pro Git Webcast: The Basics of Git and Github  Um Git zu nutzen, kann man auf öffentliche Git Hosting Dienste zurückgreifen oder Dienste wie GitWeb, GitPrep oder GitLab auf einem eigenen Server installieren.</description>
+    </item>
+    
+    <item>
+      <title>LXC Blog Post Series</title>
+      <link>http://hweidner.de/post/2013/LXC_Blog_Post_Series/</link>
+      <pubDate>Sat, 21 Dec 2013 14:20:34 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/LXC_Blog_Post_Series/</guid>
+      <description>Und nochmal etwas ähnliches wie ein Adventskalender sind die LXC Blog Post Series, eine Reihe von voraussichtlich 10 Artikel über die Container-Technologie LXC (Linux Containers).</description>
+    </item>
+    
+    <item>
+      <title>Web Performance Adventskalender</title>
+      <link>http://hweidner.de/post/2013/Web_Performance_Adventskalender/</link>
+      <pubDate>Mon, 02 Dec 2013 14:30:46 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/Web_Performance_Adventskalender/</guid>
+      <description>Im Web Performance Adventskalender soll ab sofort ein täglicher Artikel über Performance-Analyse und Optimierung in webbasierten Anwendungen erscheinen. Den Einstieg bietet der unterhaltsame Artikel Why is the Web so Slow?</description>
+    </item>
+    
+    <item>
+      <title>OpenRheinRuhr 2013</title>
+      <link>http://hweidner.de/post/2013/OpenRheinRuhr_2013/</link>
+      <pubDate>Sat, 23 Nov 2013 00:01:13 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/OpenRheinRuhr_2013/</guid>
+      <description>Am vorletzten Wochenende fand in Oberhausen die OpenRheinRuhr 2013 statt. Neben den üblichen Ständen bekannter Open Source Projekte gab es ein interessantes Vortragsprogramm, zu dem ich erstmals auch selber beitragen konnte.
+Samstag
+Leider konnte ich am Samstag erst mittags anreisen und verpasste somit die ersten beiden Vortragsslots. Mein erster Vortrag war The Renaissance of Perl, in dem es um jüngere Entwicklungen in und um Perl ging. Behandelt wurde u.a. Objektorientierung mit Moose, Webprogrammierung mit Mojolicious und das toolunterstützte Paketieren von Perl-Modulen.</description>
+    </item>
+    
+    <item>
+      <title>The Linux Kernel</title>
+      <link>http://hweidner.de/post/2013/The_Linux_Kernel/</link>
+      <pubDate>Tue, 12 Nov 2013 16:20:08 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/The_Linux_Kernel/</guid>
+      <description>In der längeren Artikelserie The Linux Kernel wird beschrieben, wie der Kernel aufgebaut ist und was die vielen Konfigurationsoptionen bedeuten.</description>
+    </item>
+    
+    <item>
+      <title>Vortrag über Go auf der OpenRheinRuhr 2013</title>
+      <link>http://hweidner.de/post/2013/Vortrag_%C3%BCber_Go_auf_der_OpenRheinRuhr_2013/</link>
+      <pubDate>Sat, 19 Oct 2013 14:54:30 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/Vortrag_%C3%BCber_Go_auf_der_OpenRheinRuhr_2013/</guid>
+      <description>Wer meinen Vortrag Programmieren in Go auf dem Software Freedom Day 2013 verpasst hat, kann ihn in leicht modifierter Form auf der OpenRheinRuhr nochmal hören. Die ORR findet am 9. und 10. November 2013 in Oberhausen statt.</description>
+    </item>
+    
+    <item>
+      <title>Referenzsemantik in Go</title>
+      <link>http://hweidner.de/post/2013/Referenzsemantik_in_Go/</link>
+      <pubDate>Wed, 02 Oct 2013 01:03:14 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/Referenzsemantik_in_Go/</guid>
+      <description>Ein Thema, das Go-Einsteigern manchmal Kopfzerbrechen bereitet, ist die Referenzsemantik. Wann wird bei Zuweisungen und Funktionsaufrufen Call by value, wann Call by reference verwendet? Ein neuer Artikel im Wiki versucht dies zu erläutern.</description>
+    </item>
+    
+    <item>
+      <title>Go Syntax in Beispielen</title>
+      <link>http://hweidner.de/post/2013/Go_Syntax_in_Beispielen/</link>
+      <pubDate>Fri, 20 Sep 2013 16:03:17 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/Go_Syntax_in_Beispielen/</guid>
+      <description>Im Wiki gibt es ab sofort einen längeren Artikel, der die Syntax der Programmiersprache Go in Beispielen vorstellt und erläutert.
+Betrachtet werden das Modulkonzept, einfache (skalare) Datentypen, Funktionen, Kontrollstrukturen, zusammengesetzte Datentypen, Nebenäufigkeit mit Goroutinen und Channels sowie die Möglichkeiten der Reflection.</description>
+    </item>
+    
+    <item>
+      <title>Hello World Quiz</title>
+      <link>http://hweidner.de/post/2013/Hello_World_Quiz/</link>
+      <pubDate>Tue, 17 Sep 2013 15:27:17 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/Hello_World_Quiz/</guid>
+      <description>Beim Hello World Quiz muss man anhand kurzer Programme raten, um welche Programmiersprache es geht. Es stehen jeweils zwei bis drei Antwortmöglichkeiten zur Auswahl und man hat fünf Fehlversuche. Gut gemacht!</description>
+    </item>
+    
+    <item>
+      <title>Nachlese zur FrOSCon 2013</title>
+      <link>http://hweidner.de/post/2013/Nachlese_zur_FrOSCon_2013/</link>
+      <pubDate>Mon, 26 Aug 2013 21:19:00 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/Nachlese_zur_FrOSCon_2013/</guid>
+      <description>Am letzten Wochenende fand die 8. FrOSCon in St. Augustin statt.
+Die FrOSCon ist mittlerweile die drittgrößte Open Source Konferenz im deutschsprachigen Raum. Das Vortragsprogramm war wieder mal voll mit interessanten Themen. Es gab also genau keinen Grund, nicht hinzugehen.
+Hier eine kurze Nachlese der Vorträge, die ich besucht habe.
+Samstag
+Verkehrte Welt - Linux im High Performance Computing war ein interessanter Überblick über den Einsatz von Linux auf Supercomputern. Dies ist ein Heimspiel für Linux, der Marktanteil liegt bei gut 95%.</description>
+    </item>
+    
+    <item>
+      <title>Learn X in Y minutes</title>
+      <link>http://hweidner.de/post/2013/Learn_X_in_Y_minutes/</link>
+      <pubDate>Mon, 12 Aug 2013 15:19:45 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/Learn_X_in_Y_minutes/</guid>
+      <description>Learn X in Y minutes ist eine sehr kompakte Darstellung der Syntax zahlreicher Programmiersprachen. Zu jeder Sprache werden die wichtigsten Kontrollstrukturen, Datentypen, I/O Operationen und Idiome anhand eines kommentierten Source Code Listings dargestellt.
+Momentan fehlen noch viele wichtige Sprachen, z.B. Perl, Tcl oder Go. Man kann aber selber aktiv werden und einen Pull Request über Github einstellen.
+Nachtrag (2013-09-11): Mittlerweile gibt es auch Einträge für Perl und Go.</description>
+    </item>
+    
+    <item>
+      <title>Datenschutzfreundliche Alternativen</title>
+      <link>http://hweidner.de/post/2013/Datenschutzfreundliche_Alternativen/</link>
+      <pubDate>Sun, 28 Jul 2013 00:46:49 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/Datenschutzfreundliche_Alternativen/</guid>
+      <description>PRISM Break hat eine umfangreiche Liste zu alternativen Programmen und Webdiensten, die man anstelle von proprietärer Software und kommerziellen Anbietern einsetzen sollte, um seine Daten besser zu schützen.
+Auch wenn ich nicht mit jeder Empfehlung einverstanden bin und insbesondere den Titel für reißerisch halte, finde ich die Liste insgesamt sehr gelungen.</description>
+    </item>
+    
+    <item>
+      <title>Code Academy</title>
+      <link>http://hweidner.de/post/2013/Code_Academy/</link>
+      <pubDate>Mon, 08 Jul 2013 16:44:05 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/Code_Academy/</guid>
+      <description>Die Code Academy bietet interaktive Programmierkurse in HTML/CSS, Javascript, Ruby und anderen Sprachen.</description>
+    </item>
+    
+    <item>
+      <title>Alternativen zum Google Reader</title>
+      <link>http://hweidner.de/post/2013/Alternativen_zum_Google_Reader/</link>
+      <pubDate>Fri, 14 Jun 2013 21:34:11 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/Alternativen_zum_Google_Reader/</guid>
+      <description>Ende Juni wird der Google Reader seinen Dienst einstellen. Wer seine RSS Feeds trotzdem weiterhin über einen Public Cloud Service lesen möchte, für den hat t3n Fünf Alternativen zum Google Reader parat.
+Mit Tiny Tiny RSS kann man seinen RSS Reader aber auch selber hosten. Das ist die Variante, für die ich mich entschieden habe.</description>
+    </item>
+    
+    <item>
+      <title>AsciiDoc</title>
+      <link>http://hweidner.de/post/2013/AsciiDoc/</link>
+      <pubDate>Thu, 16 May 2013 14:02:37 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/AsciiDoc/</guid>
+      <description>Der Verlag OpenSourcePress hat bekannt gegeben, das Inputformat für seinen Publikationsprozess von LaTeX auf AsciiDoc (Homepage) umgestellt zu haben.
+AsciiDoc ist eine ASCII-Text basierte Auszeichnungssprache, mit der sich strukturierter Text einfach erfassen lässt. Sie eignet sich zur Produktion von Artikeln, Büchern, Manpages, Webseiten und mehr. Der AsciiDoc Parser ist in Python geschrieben und unterstützt zahlreiche Ausgabeformate wie z.B. HTML, DocBook oder LinuxDoc.
+AsciiDoc ist komplexer und mächtiger als einfache Wiki-Auszeichnungssprachen wie Markdown, Textile oder Creole, aber wesentlich besser lesbar als DocBook oder LaTeX.</description>
+    </item>
+    
+    <item>
+      <title>Generatoren für statische Webseiten</title>
+      <link>http://hweidner.de/post/2013/Generatoren_f%C3%BCr_statische_Webseiten/</link>
+      <pubDate>Mon, 13 May 2013 16:58:51 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/Generatoren_f%C3%BCr_statische_Webseiten/</guid>
+      <description>Modern Static listet verschiedene Ansätze, Tools und Frameworks zur Generierung von statischen Webseiten auf.</description>
+    </item>
+    
+    <item>
+      <title>Elektronische Schaltpläne mit freier Software erstellen</title>
+      <link>http://hweidner.de/post/2013/Elektronische_Schaltpl%C3%A4ne_mit_freier_Software_erstellen/</link>
+      <pubDate>Wed, 10 Apr 2013 16:48:40 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/Elektronische_Schaltpl%C3%A4ne_mit_freier_Software_erstellen/</guid>
+      <description>Unter gplEDA gibt es eine Übersicht über Software zum Designen oder Zeichnen von elektronischen Schaltungen, die unter der GPL stehen.
+Eine weitere interessante Software für den Schaltplanentwurf ist Oregano (Artikel im Linux Journal). Einen einfachen Schaltungssimulator gibt es bei falstad.com als Java-Applet.</description>
+    </item>
+    
+    <item>
+      <title>PHP - a fractal of bad design</title>
+      <link>http://hweidner.de/post/2012/PHP_-_a_fractal_of_bad_design/</link>
+      <pubDate>Thu, 04 Apr 2013 13:55:18 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2012/PHP_-_a_fractal_of_bad_design/</guid>
+      <description>PHP ist nicht meine Lieblingssprache. Aber das es so schlimm ist, wusste ich noch nicht.</description>
+    </item>
+    
+    <item>
+      <title>SUN Java Pakete für Debian paketieren</title>
+      <link>http://hweidner.de/post/2013/SUN_Java_Pakete_f%C3%BCr_Debian_paketieren/</link>
+      <pubDate>Wed, 27 Feb 2013 13:22:46 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/SUN_Java_Pakete_f%C3%BCr_Debian_paketieren/</guid>
+      <description>Eine Anleitung zum Paketieren der SUN Java Pakete für Debian. Funktioniert mit JDK und JRE sowie Version 1.6 und 1.7.</description>
+    </item>
+    
+    <item>
+      <title>Open Source CSS Resources</title>
+      <link>http://hweidner.de/post/2013/Open_Source_CSS_Resources/</link>
+      <pubDate>Wed, 13 Feb 2013 10:21:39 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/Open_Source_CSS_Resources/</guid>
+      <description>Eine Sammlung nützlicher Open Source CSS Ressourcen.</description>
+    </item>
+    
+    <item>
+      <title>alias.sh</title>
+      <link>http://hweidner.de/post/2013/alias.sh/</link>
+      <pubDate>Wed, 13 Feb 2013 10:19:51 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/alias.sh/</guid>
+      <description>Die häufigsten Shell-Aliase
+Eine Liste der am häufigsten genutzten Shell-Aliase findet sich auf alias.sh. Ein paar sehr praktische sind dabei.</description>
+    </item>
+    
+    <item>
+      <title>MySQL 5.6 GA</title>
+      <link>http://hweidner.de/post/2013/MySQL_5.6_GA/</link>
+      <pubDate>Tue, 05 Feb 2013 17:27:18 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/MySQL_5.6_GA/</guid>
+      <description>Heute wurde von Oracle die neue MySQL Version 5.6 veröffentlicht.
+Laut diverser Pressemeldungen (z.B. Golem, Heise oder Computerworld) bietet die neue Version beachtliche Performanceverbesserungen und neue Features. Zu den interessantesten gehören die Volltextsuche für die Storage Engine InnoDB, die Möglichkeit, InnoDB Tabellendefinitionen im laufenden Betrieb zu verändern und Verbesserungen bei der Replikation.
+Die neue Version ist allerdings auch mühsamer zu administrieren. Beim Update einer ersten Datenbank-Instanz fiel folgendes auf:
+ Beim Einrichten der Replikation muss man darauf achten, nach der Übertragung des Data Directories vom Master zum Slave dort die Datei auto.</description>
+    </item>
+    
+    <item>
+      <title>Der Linux Kernel als interaktive Landkarte</title>
+      <link>http://hweidner.de/post/2013/Der_Linux_Kernel_als_interaktive_Landkarte/</link>
+      <pubDate>Sat, 02 Feb 2013 22:43:47 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/Der_Linux_Kernel_als_interaktive_Landkarte/</guid>
+      <description>Hier gibt es eine Visualisierung des Linux-Kernels als interaktive Landkarte. Die Einträge in der Karte verlinken auf Codereferenzen zu den wichtigsten Structs und Interfaces des Kernels.</description>
+    </item>
+    
+    <item>
+      <title>Neue Linux-Distributionen</title>
+      <link>http://hweidner.de/post/2013/Neue_Linux-Distributionen/</link>
+      <pubDate>Sat, 02 Feb 2013 21:41:31 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/Neue_Linux-Distributionen/</guid>
+      <description>Bei Extreme Tech gibt es einen Artikel 5 Ubuntu Alternatives worth checking out. Vorgestellt werden fünf Ubuntu-Derivate mit unterschiedlichen Schwerpunkten. Vier davon stammen von Ubuntu 12.04 LTS ab.
+ BackBox Linux setz den Schwerpunkt auf Security und Vulnerability Scanning Tools. BioLinux wendet sich an Wissenschaftler und Statistiker, insbesondere dem Thema Datenanalyse in der Biologie. PinguyOS legt den Fokus auf Einfachheit und Ähnlichkeit zu Mac OSX und Windows, was Umsteiger von diesen Betriebssystemen ansprechen soll.</description>
+    </item>
+    
+    <item>
+      <title>CSS lernen</title>
+      <link>http://hweidner.de/post/2013/CSS_lernen/</link>
+      <pubDate>Sun, 27 Jan 2013 22:17:03 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/CSS_lernen/</guid>
+      <description>Ein interaktiver Lehrgang zum Thema Cascading Style Sheets: http://learnlayout.com/</description>
+    </item>
+    
+    <item>
+      <title>Spickzettel für Entwickler</title>
+      <link>http://hweidner.de/post/2013/Spickzettel_f%C3%BCr_Entwickler/</link>
+      <pubDate>Sun, 27 Jan 2013 21:49:33 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2013/Spickzettel_f%C3%BCr_Entwickler/</guid>
+      <description>Gerade auf Google+ gefunden:
+OverAPI ist eine Sammlung von Cheat Sheets zu zahlreichen Programmiersprachen, Datenbanken und Entwickler-Tools. Die meisten davon sind PDF Dokumente und nur wenige Seiten lang. Ausdrucken und die Pinnwand damit tapezieren!</description>
+    </item>
+    
+    <item>
+      <title>Wikipedia Spendenaufruf blockieren (2)</title>
+      <link>http://hweidner.de/post/2012/Wikipedia_Spendenaufruf_blockieren_2/</link>
+      <pubDate>Mon, 24 Dec 2012 00:58:30 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2012/Wikipedia_Spendenaufruf_blockieren_2/</guid>
+      <description>Wieder mal gibt es einen aufdringlich platzierten Spendenaufruf von Wikipedia, und wieder mal bezieht sich die Hälfte der Suchanfragen, die die User auf meine Seiten führen, auf die Frage, wie man den Aufruf blockt.
+Diesmal lautet der Eintrag für die Filterliste von Adblock Plus:
+de.wikipedia.org###centralNotice  </description>
+    </item>
+    
+    <item>
+      <title>Font-Handling unter Debian verbessern</title>
+      <link>http://hweidner.de/post/2012/Font-Handling_unter_Debian_verbessern/</link>
+      <pubDate>Sun, 25 Nov 2012 00:46:26 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2012/Font-Handling_unter_Debian_verbessern/</guid>
+      <description>Ein Schwachpunkt beim Einsatz von Debian GNU/Linux auf der Workstation ist das Font-Handling. Die Schriften wirken schwammig und unscharf. Das gilt insbesondere für TFT/LCD Bildschirme und kleine Auflösungen, z.B. die verbreiteten 19&amp;rdquo; Monitore mit 1280x1024 Pixeln, was einer Auflösung von 86 DPI entspricht. Andere Distributionen machen das besser (haben aber dafür andere Nachteile).
+Auf dieser Webseite gibt es Tipps zur Optimierung der Schrifteneinstellung bei Debian, genauer bei Crunchbang Linux, einem Debian-Derivat.</description>
+    </item>
+    
+    <item>
+      <title>Ein Zoo voller Datenbanken</title>
+      <link>http://hweidner.de/post/2012/Ein_Zoo_voller_Datenbanken/</link>
+      <pubDate>Sun, 11 Nov 2012 18:20:17 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2012/Ein_Zoo_voller_Datenbanken/</guid>
+      <description>Einen übersichtlichen Vergleich von Funktionen und ihrer Syntax in verschiedenen Datenbanksystemen gibt es beim SQLzoo. Betrachtet werden MySQL, PostgreSQL, Ingres, Oracle, DB2 und MS SQL Server.</description>
+    </item>
+    
+    <item>
+      <title>RAID Monitoring von SUN x86 Servern</title>
+      <link>http://hweidner.de/post/2012/RAID_Monitoring_von_SUN_x86_Servern/</link>
+      <pubDate>Wed, 29 Aug 2012 09:09:21 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2012/RAID_Monitoring_von_SUN_x86_Servern/</guid>
+      <description>Die x86-basierten Server von SUN verwenden LSI Logic RAID Controller. Beim SUN Fire X4150 ist das zum Beispiel:
+# lspci -k -s 07:00.0 07:00.0 SCSI storage controller: LSI Logic / Symbios Logic SAS1068E PCI-Express Fusion-MPT SAS (rev 04) Subsystem: LSI Logic / Symbios Logic Device 3150 Kernel driver in use: mptsas  Der RAID Status lässt sich mit dem Tool mpt-status aus dem gleichnamigen Debian-Paket abfragen. Dazu muss das Kernel-Modul mptctl geladen sein.</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 12.04 LTS Precise Pangolin</title>
+      <link>http://hweidner.de/post/2012/Ubuntu_12.04_LTS_Precise_Pangolin/</link>
+      <pubDate>Wed, 11 Apr 2012 16:41:43 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2012/Ubuntu_12.04_LTS_Precise_Pangolin/</guid>
+      <description>Als ich noch Ubuntu auf dem Desktop genutzt habe, habe ich nur ein einziges Mal eine neue Version auf dem produktiven Arbeitsplatzrechner installiert, bevor sie offiziell freigegeben wurde. Das war Ubuntu 12.04 LTS Precise Pangolin. Hier einige Anmerkungen in Bezug auf den Installationsbericht zur Version 11.10.
+  Unity ist weiterhin der Standard-Desktop, es stehen aber die Gnome 3 Shell und der Gnome 3 Classic Mode zur Auswahl. Beides funktioniert mit und ohne 3D-Unterstützung seitens der Grafikkarte.</description>
+    </item>
+    
+    <item>
+      <title>Google Go 1.0</title>
+      <link>http://hweidner.de/post/2012/Google_Go_1.0/</link>
+      <pubDate>Thu, 29 Mar 2012 09:34:46 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2012/Google_Go_1.0/</guid>
+      <description>Die Version 1.0 von Googles Programmiersprache Go ist fertig.
+Google hat die Version 1.0 seiner Programmiersprache Go veröffentlicht. Go ist für Linux, Windows, MacOS und andere Systeme verfügbar. Informationen, Tutorials etc. gibt es unter http://golang.org/.
+Go ist eine imperative und modulare Compilersprache mit Garbage Collection, Sprachmittel für Parallelprogrammierung und konsequenter Unicode-Unterstützung, auch im Quelltext. Sie bietet auch Mechanismen aus dem Bereich der funktionalen und objektorientierten Sprachen (z.B. Methoden und Interfaces); Klassen und Vererbungshierarchien gibt es aber nicht.</description>
+    </item>
+    
+    <item>
+      <title>Einführung in Arduino</title>
+      <link>http://hweidner.de/post/2012/Einf%C3%BChrung_in_Arduino/</link>
+      <pubDate>Wed, 28 Mar 2012 12:58:51 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2012/Einf%C3%BChrung_in_Arduino/</guid>
+      <description>Tutorial über den Bau und die Programmierung von Arduino für Einsteiger (englisch).
+Im Linux Journal gibt es eine Einführung in den Bau elektronischer Schaltungen und die Programmierung von Arduino-basierten Microcontroller-Boards.</description>
+    </item>
+    
+    <item>
+      <title>Monitoring von HP Proliant Servern mit Debian GNU/Linux 6.0</title>
+      <link>http://hweidner.de/post/2012/Monitoring_von_HP_Proliant_Servern_mit_Debian_GNU_Linux_6.0/</link>
+      <pubDate>Wed, 28 Mar 2012 10:57:31 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2012/Monitoring_von_HP_Proliant_Servern_mit_Debian_GNU_Linux_6.0/</guid>
+      <description>Debian Software Repository von HP mit Monitoring und System Management Tools
+Die Monitoring- und System Management Tools von Hewlett Packard für die Proliant Server Serie sind nun als Debian Repository verfügbar. Dazu muss folgendes in die Datei /etc/apt/sources.list.d/proliant.list eingetragen werden:
+# HP Management Software deb http://downloads.linux.hp.com/SDR/downloads/ProLiantSupportPack/Debian squeeze/current non-free  Der passende Signing Key kann hier herunter geladen und mit apt-key add &amp;lt;Filename&amp;gt; importiert werden. Anschließend können die Tools installiert werden, z.</description>
+    </item>
+    
+    <item>
+      <title>Einführung in Python</title>
+      <link>http://hweidner.de/post/2012/Einf%C3%BChrung_in_Python/</link>
+      <pubDate>Tue, 20 Mar 2012 22:19:07 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2012/Einf%C3%BChrung_in_Python/</guid>
+      <description>Kostenloses deutschsprachiges Buch über Python (PDF, ca. 200 Seiten) unter GNU FDL.
+Bei Wikibooks gibt es ein kostenloses deutschsprachiges Buch über Python. Es ist ein ca. 200-seitiges PDF Dokument und steht unter der GNU Free Documentation License.</description>
+    </item>
+    
+    <item>
+      <title>25 Jahre screen</title>
+      <link>http://hweidner.de/post/2012/25_Jahre_screen/</link>
+      <pubDate>Tue, 20 Mar 2012 19:29:15 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2012/25_Jahre_screen/</guid>
+      <description>Vor 25 Jahren wurde die erste Version von screen veröffentlicht.
+Am 20. März 1987, also heute vor 25 Jahren, wurde in der Newsgruppe net.sources ein SHAR (Shell Archive) mit dem Titel “BSD screen manager” veröffentlicht. Dieses Programm lebt bis heute unter dem Namen GNU screen (Debian-Paket) und erfreut sich unter Administratoren ungebrochener Beliebtheit.</description>
+    </item>
+    
+    <item>
+      <title>Grafik-Benchmarks unter Ubuntu 12.04 LTS</title>
+      <link>http://hweidner.de/post/2012/Grafik-Benchmarks_unter_Ubuntu_12.04_LTS/</link>
+      <pubDate>Wed, 08 Feb 2012 15:27:50 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2012/Grafik-Benchmarks_unter_Ubuntu_12.04_LTS/</guid>
+      <description>Auf Phoronix ist ein Artikel erschienen, in dem die Performance von graphischen Anwendungen (v.a. Spielen) mit verschiedenen Grafikkarten, Treibern und Desktop-Umgebungen verglichen werden. Als Basis dient die aktuelle Beta von Ubuntu 12.04 LTS (Long Term Support) (Precise Pangolin). Es werden folgende Komponenten getestet:
+ Grafik-Chipsätze: Nvidia Geforce 9800 GTX 512MB und AMD Radeon 5700 1024MB Hersteller-Grafiktreiber nvidia und fglrx sowie freie Treiber noveau und radeon Desktop Umgebungen Unity, Unity2D, Gnome 3 Shell, Gnome 3 Classic, KDE 4.</description>
+    </item>
+    
+    <item>
+      <title>Vergleich von Skriptsprachen</title>
+      <link>http://hweidner.de/post/2012/Vergleich_von_Skriptsprachen/</link>
+      <pubDate>Wed, 18 Jan 2012 15:05:01 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2012/Vergleich_von_Skriptsprachen/</guid>
+      <description>Vergleich von Konzepten und Syntax der Skriptsprachen PHP, Perl, Python und Ruby
+Unter http://hyperpolyglot.org/scripting gibt es einen übersichtlichen Vergleich der vier Skriptsprachen PHP, Perl, Python und Ruby. Verglichen werden die Syntax, Kontrollstrukturen, Funktionen für Arithmetik und Stringverarbeitung, Systemprogrammierung und I/O Operationen.</description>
+    </item>
+    
+    <item>
+      <title>Host-based Mirror und Cluster-Filesystem</title>
+      <link>http://hweidner.de/post/2011/Host-based_Mirror_und_Cluster-Filesystem/</link>
+      <pubDate>Tue, 27 Dec 2011 11:54:41 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2011/Host-based_Mirror_und_Cluster-Filesystem/</guid>
+      <description>Warum ein Cluster-Filesystem nicht über einem Host-based Mirror betrieben werden kann (und wie man es doch machen kann).
+Im Wiki gibt es einen neuen Artikel, dazu, warum ein Cluster Filesystem nicht über einem Host-based Mirror betrieben werden kann. Und wie man den gewünschten Effekt trotzdem erzielt.</description>
+    </item>
+    
+    <item>
+      <title>Mathe-Kenntnisse auffrischen</title>
+      <link>http://hweidner.de/post/2011/Mathe-Kenntnisse_auffrischen/</link>
+      <pubDate>Tue, 27 Dec 2011 00:45:56 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2011/Mathe-Kenntnisse_auffrischen/</guid>
+      <description>Gerade bei Hadmut gefunden:
+Bei der Khan Academy gibt es eine riesige Linkliste von Videos zur Mathematik, Naturwissenschaften und BWL. Das Niveau reicht von der Mittelstufe bis hin zum Vordiplom. Prima für alle, die ihr Wissen auffrischen wollen (und dabei nicht vor der englischen Sprache zurückschrecken).</description>
+    </item>
+    
+    <item>
+      <title>Drei Monate hweidner.de</title>
+      <link>http://hweidner.de/post/2011/Drei_Monate_hweidner.de/</link>
+      <pubDate>Mon, 26 Dec 2011 21:36:56 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2011/Drei_Monate_hweidner.de/</guid>
+      <description>Vor etwas mehr als drei Monaten habe ich diese Site angelegt; der erste Willkommensartikel datiert auf den 21. September. Die Anzahl der Postings ist hier nicht wirklich hoch, aber das war auch gar nicht beabsichtigt. Diese Seite soll dazu dienen, Ideen und kurze Infos schnell und einfach zu publizieren, weiter nichts.
+Die Site hat deswegen auch nicht sonderlich viel Traffic. Interessant sind trotzdem die Statistiken. Die Site wird von Google indiziert und spült so manche Suchanfrage an.</description>
+    </item>
+    
+    <item>
+      <title>Linux Performance Monitoring Tools</title>
+      <link>http://hweidner.de/post/2011/Linux_Performance_Monitoring_Tools/</link>
+      <pubDate>Fri, 16 Dec 2011 09:20:06 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2011/Linux_Performance_Monitoring_Tools/</guid>
+      <description>Der Artikel Top 25 Best Linux Performance Monitoring and Debugging Tools gibt eine Übersicht über Performance Monitoring Tools unter Linux und Beispiele für deren Anwendung.</description>
+    </item>
+    
+    <item>
+      <title>Writing Device Drivers</title>
+      <link>http://hweidner.de/post/2011/Writing_Device_Drivers/</link>
+      <pubDate>Fri, 09 Dec 2011 23:49:31 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2011/Writing_Device_Drivers/</guid>
+      <description>Tutorial über die Programmierung von Gerätetreibern unter Linux.
+Writing Device Drivers under Linux: A brief tutorial ist ein interessanter Artikel über Linux-Treiberprogrammierung. Er beschreibt zunächst den Aufbau eines Kernelmoduls und wie man es compiliert. Danach wird ein einfacher Treiber für die parallele Schnittstelle vorgestellt, mit dem man angeschlossene LEDs steuern kann.</description>
+    </item>
+    
+    <item>
+      <title>20 Things to learn about APT</title>
+      <link>http://hweidner.de/post/2011/20_Things_to_learn_about_APT/</link>
+      <pubDate>Fri, 02 Dec 2011 20:57:33 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2011/20_Things_to_learn_about_APT/</guid>
+      <description>Eine interessante Beschreibung von Features des Debian-Packetverwaltungssystems APT gibt es hier:
+20 Things to learn about APT</description>
+    </item>
+    
+    <item>
+      <title>CSS3 Click Chart</title>
+      <link>http://hweidner.de/post/2011/CSS3_Click_Chart/</link>
+      <pubDate>Thu, 24 Nov 2011 16:27:52 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2011/CSS3_Click_Chart/</guid>
+      <description>CSS3 Click Chart ist eine Webseite, mit der man Parameter von Cascading Style Sheets interaktiv erforschen kann. Die Site gibt zu jedem Element die Syntax sowie Hinweise zur Browserkompatibilität aus.</description>
+    </item>
+    
+    <item>
+      <title>Wikipedia Spendenaufruf blocken</title>
+      <link>http://hweidner.de/post/2011/Wikipedia_Spendenaufruf_blocken/</link>
+      <pubDate>Wed, 23 Nov 2011 16:27:44 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2011/Wikipedia_Spendenaufruf_blocken/</guid>
+      <description>Mit Firefox und Adblock Plus den penetranten Spendenaufruf von Wikipedia-Gründer Jimmy Wales blockieren.
+Für alle, die sich von dem “persönlichen Aufruf von Wikipedia Gründer Jimmy Wales”, der derzeit über jedem Wikipedia-Artikel thront, genervt fühlen: Mozilla Firefox benutzen, die Erweiterung Adblock Plus installieren und folgendes in die Filterliste eintragen:
+wikipedia.org###siteNotice  </description>
+    </item>
+    
+    <item>
+      <title>OpenRheinRuhr 2011</title>
+      <link>http://hweidner.de/post/2011/OpenRheinRuhr_2011/</link>
+      <pubDate>Tue, 08 Nov 2011 02:38:21 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2011/OpenRheinRuhr_2011/</guid>
+      <description>Meine Planung der zu besuchenden Vorträge auf der ORR 2011.
+Voraussichtlich bin ich auch in diesem Jahr wieder auf der OpenRheinRuhr dabei. Hier eine ungefähre Planung, welche Vorträge ich besuchen möchte.
+Samstag:
+ 12:20-13:20 BIND 10 14:40-15:40 Puppet oder Bacula 15:50-16:20 Arduino 16:20-16:50 Railunio 17:00-18:00 Kajona oder Git  Sonntag:
+ 10:00-11:00 Perl 6 13:30-14:30 MySQL nach PostgreSQL 15:20-16:40 Starbasic  </description>
+    </item>
+    
+    <item>
+      <title>Android 4 testen</title>
+      <link>http://hweidner.de/post/2011/Android_4_testen/</link>
+      <pubDate>Tue, 25 Oct 2011 20:38:05 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2011/Android_4_testen/</guid>
+      <description>Auch wenn es noch keine Geräte zu kaufen gibt, kann man Android 4 jetzt schon testen. Die hier verlinkte Anleitung funktioniert prima unter Ubuntu 11.10 amd64 mit OpenJDK 6.
+Trick: Jetzt schon Android 4.0 testen!</description>
+    </item>
+    
+    <item>
+      <title>Interessante Linux-Distributionen</title>
+      <link>http://hweidner.de/post/2011/Interessante_Linux-Distributionen/</link>
+      <pubDate>Thu, 20 Oct 2011 16:16:04 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2011/Interessante_Linux-Distributionen/</guid>
+      <description>Überblick über interessante Entwicklungen aus dem Bereich Linux-Distributionen
+Lange Zeit war der Distributionsmarkt zwischen wenigen großen Playern aufgeteilt. Auf Servern, aber auch vielen Desktop-Systemen findet man beiden großen Platzhirsche Debian und RedHat bzw. deren Community-Varianten Fedora und CentOS. Auf Desktops sind OpenSuse und Ubuntu mitsamt seiner Ableger {K,X,L}ubuntu weit verbreitet. Daneben sind Slackware sowie Gentoo bekannt und etabliert.
+In der letzten Zeit nimmt (gefühlt) die Vielfalt wieder zu. Hier eine kleine Übersicht über interessante, jüngere Entwicklungen:</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 11.10 Oneiric Ocelot veröffentlicht</title>
+      <link>http://hweidner.de/post/2011/Ubuntu_11.10_Oneiric_Ocelot_ver%C3%B6ffentlicht/</link>
+      <pubDate>Thu, 13 Oct 2011 15:04:24 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2011/Ubuntu_11.10_Oneiric_Ocelot_ver%C3%B6ffentlicht/</guid>
+      <description>Getreu ihrem Zeitplan hat die Firma Canonical heute das neue Release ihres freien Betriebssystems Ubuntu Linux 11.10 Oneiric Ocelot veröffentlicht.
+Ein erster Test des Systems findet sich bei Heise Open.
+Die nächste Version Ubuntu 12.04 wird wieder eine mit Long Term Support.
+Im Wiki gibt es ab sofort einen Installationsbericht.</description>
+    </item>
+    
+    <item>
+      <title>RemoteBox - eine GUI für den VirtualBox Headless Mode</title>
+      <link>http://hweidner.de/post/2011/RemoteBox_-_eine_GUI_f%C3%BCr_den_VirtualBox_Headless_Mode/</link>
+      <pubDate>Sun, 25 Sep 2011 15:22:43 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2011/RemoteBox_-_eine_GUI_f%C3%BCr_den_VirtualBox_Headless_Mode/</guid>
+      <description>VirtualBox von Innotec (später SUN und mittlerweile Oracle) ist eine der beliebtesten Virtualisierer für Desktops. Es eignet sich auch gut für Server VMs, die im Headless Mode betrieben werden. Allerdings muss man dann auf die mitgelieferte GUI verzichten und CLI Tools verwenden.
+Mit RemoteBox gibt es nun auch eine GUI für den Headless Mode. Die in Perl/Gtk geschriebene Software kommuniziert über die SOAP API mit dem VirtualBox Webservice, wahlweise auf der selben Maschine oder übers Netz.</description>
+    </item>
+    
+    <item>
+      <title>Software Freedom Day 2011 in Köln</title>
+      <link>http://hweidner.de/post/2011/Software_Freedom_Day_2011_in_K%C3%B6ln/</link>
+      <pubDate>Fri, 23 Sep 2011 13:33:01 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2011/Software_Freedom_Day_2011_in_K%C3%B6ln/</guid>
+      <description>Bericht von Michael Stehmann im Blog der FSFE über den Software Freedom Day 2011.
+Rechtsanwalt Michael Stehmann schreibt üblicherweise in seinem Blog auf den Seiten des FSFE einen Bericht über Veranstaltungen, die er besucht. So auch zum Software Freedom Day 2011 in Köln.
+stehmann’s blog - Software Freedom Day in Köln – 2011</description>
+    </item>
+    
+    <item>
+      <title>Cluster Computing</title>
+      <link>http://hweidner.de/post/2011/Cluster_Computing/</link>
+      <pubDate>Wed, 21 Sep 2011 16:49:28 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2011/Cluster_Computing/</guid>
+      <description>Am Software Freedom Day 2011 in Köln habe ich einen Vortrag über das Thema Cluster Computing mit Linux und freier Software gehalten. Thema war die verschiedenen Typen von Clustern, welche Zielsetzungen dahinter stehen, und interessante Softwareprodukte.
+Im Wiki gibt es dazu ab sofort das Manuskript und die Linksammlung.</description>
+    </item>
+    
+    <item>
+      <title>Lessfs, ein Dateisystem mit Deduplication</title>
+      <link>http://hweidner.de/post/2011/Lessfs_ein_Dateisystem_mit_Deduplication/</link>
+      <pubDate>Wed, 21 Sep 2011 08:50:51 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2011/Lessfs_ein_Dateisystem_mit_Deduplication/</guid>
+      <description>Ein Dateisystem für Linux auf Basis von FUSE. Es bietet Deduplication, Verschlüsselung und Replikation.
+Lessfs ist ein Dateisystem für Linux, das auf dem FUSE (File System in Userspace) Mechanismus beruht. Das Hauptaugenmerk liegt auf effizienten Umgang mit dem Speicherplatz. Die Feature-Liste ist beeindruckend.
+ Online Deduplication Kompression mit LZH und Google snappy On-the-fly Verschlüsselung von Metadaten und/oder Daten Synchrone und Asynchrone Replikation über das Netzwerk  In der Computerwoche gibt es einen Workshop zu Lessfs.</description>
+    </item>
+    
+    <item>
+      <title>Willkommen auf www.hweidner.de</title>
+      <link>http://hweidner.de/post/2011/Willkommen_auf_www.hweidner.de/</link>
+      <pubDate>Wed, 21 Sep 2011 08:50:16 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2011/Willkommen_auf_www.hweidner.de/</guid>
+      <description>Auf diesen Seiten entsteht nach und nach eine Infosammlung mit News, Tipps und Dokumenten rund um Linux, Open Source Software, Netzwerke, Security u.a. Im Moment ist noch ziemliche Leere, aber schaut trotzdem gelegentlich vorbei.
+Zum Wiki.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Docker -hweidner.de</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="hweidner.de">
+<meta name="author" content="Harald Weidner">
+<meta name="keywords" content="keywords">
+<link rel="stylesheet" href="/css/styles.css" type="text/css">
+</head>
+<body>
+<p class="logo">hweidner.de<br>
+<span class="subtitle">Harald Weidner explaining the world.</span>
+</p>
+<div class="content">
+
+
+
+
+  <p class="date">2014-08-07 18:57</p>
+<h1>Docker</h1>
+
+
+<p>Über die Popularität von Docker und einen Performancevergleich zwischen
+Docker und KVM.</p>
+<p><a href="https://www.docker.com/">Docker</a> ist ein Tool, mit dem man mittels
+einer einfachen, textbasierten Konfiguration einen
+Linux-Applikationscontainer bauen kann. Docker basiert dabei auf der
+Container-Technik <a href="https://linuxcontainers.org/">LXC</a>, die seit einigen
+Jahren Bestandteil des offiziellen Linux-Kernels und mittlerweile in
+allen wichtigen Linux-Distributionen aktiviert ist. Über den <a href="https://registry.hub.docker.com/">Docker
+Hub</a> lassen sich Basis-Container
+beziehen und schichtweise mit individuellen Anpassungen versehen, die
+effizient über ein Overlay-Filesystem gespeichert werden.</p>
+<p>Die Technik hinter Docker ist eigentlich nicht neu. Container gibt es
+schon lange, das Projekt <a href="http://linux-vserver.org/">Linux-VServer</a> ist
+bereits 15 Jahre alt. Eine Container-taugliche Installation der
+wichtigsten Linux-Distributionen kann man mittels
+<a href="https://wiki.debian.org/Debootstrap">debootstrap</a> in wenigen Minuten
+herstellen, und zur Anwendungsintegration genügen ein paar
+Shell-Befehle, wget-Downloads oder Git-Checkouts.</p>
+<p><a href="http://www.silicon.de/41602277/docker-container-zukunft-moderner-applikationen-und-multi-cloud-deployments/">Dieser
+Artikel</a>
+macht deutlich, warum Docker dennoch zu Recht sehr erfolgreich ist. Es
+ermöglicht eine <strong>einfache</strong> und <strong>einheitliche</strong> Definition eines
+Applikationscontainers und unterstützt nicht nur den produktiven
+Betrieb, sondern den gesamten Lebenszyklus einer Anwendung und ihrer
+Entwicklung.</p>
+<p>Wer jetzt denkt, dass es das alles in Form fertiger VM-Images von
+<a href="http://www.turnkeylinux.org/">TurnKey Linux</a> oder
+<a href="http://virtualboximages.com/">VirtualBoxImages</a> bereits gibt, dem sei
+<a href="http://www.linux-magazin.de/NEWS/IBM-Performance-Studie-sieht-Docker-Container-vor-KVM-Virtualisierung">diese
+Studie</a>
+von IBM empfohlen. Sie vergleicht KVM und Docker-Container in
+verschiedenen Performancemessungen miteinander.</p>
+<p>Die Studie stellt fest, dass Docker und KVM bei Rechenleistung und
+Memory Durchsatz nahezu äquivalent zur Bare Metal Performance sind. Bei
+Messungen der Latenzzeit ist aber KVM deutlich weniger performant als
+Docker oder Bare Metal. Insbesondere bei Praxistests mit einer MySQL
+Datenbank fällt KVM deshalb zurück. Docker liegt in fast allen Tests
+sehr nahe bei der Bare Metal Performance. Lediglich eine
+Netzwerkanbindung mittels NAT und die Verwendung des Overlay-Filesystems
+AUFS haben hier negative Effekte; beides kann aber abgeschaltet werden,
+wenn extreme Performance wichtig ist.</p>
+<p>Es wurden explizit Docker und KVM getestet, weil diese in der Praxis
+eine große Rolle spielen. Die Studie stellt zutreffend fest, dass Docker
+häufig bei PaaS Cloud Diensten genutzt wird, während KVM in IaaS Clouds
+führend ist. Docker basiert auf LXC, während KVM technologisch
+Ähnlichkeiten zu Xen (HVM) und VirtualBox aufweist. In Grenzen können
+die Ergebnisse durchaus dahingehend verallgemeinert werden. Wer es ganz
+genau wissen will, kann die für die Tests genutzten Skripte
+<a href="https://github.com/thewmf/kvm-docker-comparison">herunterladen</a> und in
+seiner Umgebung testen.</p>
+
+
+<p class="footer"><a href="/impressum/">Impressum</a></p>
+</div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,13 @@
++++
+title = "IBM portiert Go für Linux/s390"
+description = ''
+date = "2016-01-12T11:41:49+01:00"
++++
+
+
+[IBM hat bekannt gegeben](http://www.heise.de/developer/meldung/IBM-bringt-Go-auf-den-Mainframe-3068764.html), eine Portierung des Go-Compilers Gc auf den Mainframe, genauer auf Linux/s390, erstellt zu haben.
+<!--more-->
+
+Der Compiler GccGo unterstützt s/390 [schon seit September 2014](https://gcc.gnu.org/ml/gcc-patches/2014-09/msg00709.html).
+
+Das Linux-on-System-z Team von IBM ist schon seit längerer Zeit sehr aktiv und hat eine Reihe von Open Source Paketen aus den Bereichen Cluster, Cloud Computing und Big Data auf Linux/s390 portiert.

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Grafik-Benchmarks unter Ubuntu 12.04 LTS -hweidner.de</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="hweidner.de">
+<meta name="author" content="Harald Weidner">
+<meta name="keywords" content="keywords">
+<link rel="stylesheet" href="/css/styles.css" type="text/css">
+</head>
+<body>
+<p class="logo">hweidner.de<br>
+<span class="subtitle">Harald Weidner explaining the world.</span>
+</p>
+<div class="content">
+
+
+
+
+  <p class="date">2012-02-08 15:27</p>
+<h1>Grafik-Benchmarks unter Ubuntu 12.04 LTS</h1>
+
+
+<p>Auf <a href="http://www.phoronix.com/">Phoronix</a> ist ein <a href="http://www.phoronix.com/scan.php?page=article&amp;item=ubuntu_1204_desktops&amp;num=1">Artikel
+erschienen</a>,
+in dem die Performance von graphischen Anwendungen (v.a. Spielen) mit
+verschiedenen Grafikkarten, Treibern und Desktop-Umgebungen verglichen
+werden. Als Basis dient die aktuelle Beta von Ubuntu 12.04
+LTS (Long Term Support) (Precise Pangolin). Es werden folgende
+Komponenten getestet:</p>
+<ul>
+<li>Grafik-Chipsätze: Nvidia Geforce 9800 GTX 512MB und AMD Radeon 5700
+1024MB</li>
+<li>Hersteller-Grafiktreiber nvidia und fglrx sowie freie Treiber noveau
+und radeon</li>
+<li>Desktop Umgebungen Unity, Unity2D, Gnome 3 Shell, Gnome 3 Classic,
+KDE 4.8, und Xfce 4.8</li>
+</ul>
+<p>Grafikkarten mit diesen Chipsätzen gibt es im Handel zwischen ca. 100
+und 140 Euro. Die Nvidia Karte dürfte etwas schneller sein, dafür hat
+die AMD Karte mehr Speicher. In der Summe schenken sich die beiden
+hardwaremäßig nicht viel.</p>
+<p>Aus den Messwerten ergeben sich einige Schlussfolgerungen:</p>
+<ul>
+<li>Unter Linux ist die Performance der Nvidia Karte meistens besser als
+bei der AMD, sowohl mit den proprietären als auch mit den
+freien Treibern.</li>
+<li>Die proprietären Treiber haben meistens eine deutlich bessere
+Performance als die freien; es gibt aber auch Tests, wo es
+umgekehrt ist.</li>
+<li>Die Desktop-Umgebungen, die am wenigsten Performance rauben, sind
+Xfce gefolgt von Gnome 3 Shell. Die übrigen vier sind
+perfomancefressender, wobei es keine eindeutige Reihenfolge gibt.</li>
+<li>Bei der Nvidia Grafikkarte hat die verwendete Desktop-Umgebung
+wesentlich mehr Einfluss auf die Performance; bei der Radeon ist,
+von Ausreißern abgesehen, der Desktop fast egal.</li>
+</ul>
+<p>Ein kleines Detail am Rande: unter den Tests befindet sich auch die
+Kombination aus fglrx Treiber und Gnome 3 Shell; der für diese
+Kombination <a href="/docs/Ubuntu_11_10/">bekannte Bug</a> aus Ubuntu
+11.10 scheint also bei der 12.04 LTS nicht mehr zu existieren.</p>
+
+
+<p class="footer"><a href="/impressum/">Impressum</a></p>
+</div>
+</body>
+</html>
+
+
+

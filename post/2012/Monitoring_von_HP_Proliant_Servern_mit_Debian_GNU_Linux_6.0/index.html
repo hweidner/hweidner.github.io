@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Monitoring von HP Proliant Servern mit Debian GNU/Linux 6.0 -hweidner.de</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="hweidner.de">
+<meta name="author" content="Harald Weidner">
+<meta name="keywords" content="keywords">
+<link rel="stylesheet" href="/css/styles.css" type="text/css">
+</head>
+<body>
+<p class="logo">hweidner.de<br>
+<span class="subtitle">Harald Weidner explaining the world.</span>
+</p>
+<div class="content">
+
+
+
+
+  <p class="date">2012-03-28 10:57</p>
+<h1>Monitoring von HP Proliant Servern mit Debian GNU/Linux 6.0</h1>
+
+
+<p>Debian Software Repository von HP mit Monitoring und System Management
+Tools</p>
+<p>Die Monitoring- und System Management Tools von Hewlett Packard für die
+Proliant Server Serie sind nun als Debian Repository verfügbar. Dazu
+muss folgendes in die Datei <code>/etc/apt/sources.list.d/proliant.list</code>
+eingetragen werden:</p>
+<pre><code># HP Management Software
+deb http://downloads.linux.hp.com/SDR/downloads/ProLiantSupportPack/Debian squeeze/current non-free
+</code></pre>
+<p>Der passende Signing Key kann
+<a href="https://h20392.www2.hp.com/portal/swdepot/displayProductInfo.do?productNumber=HPLinuxCodeSigning">hier</a>
+herunter geladen und mit <code>apt-key add &lt;Filename&gt;</code> importiert werden.
+Anschließend können die Tools installiert werden, z.B.</p>
+<pre><code># aptitude update
+# aptitude install hp-health hpacucli
+</code></pre>
+<p>Im <a href="/docs/">Wiki</a> gibt es ab sofort einen längeren Artikel zum
+<a href="/docs/ProliantMonitoring">Hardware-Monitoring von HP Proliant Servern</a>.</p>
+
+
+<p class="footer"><a href="/impressum/">Impressum</a></p>
+</div>
+</body>
+</html>
+
+
+

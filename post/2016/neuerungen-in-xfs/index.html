@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Neuerungen in XFS -hweidner.de</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="hweidner.de">
+<meta name="author" content="Harald Weidner">
+<meta name="keywords" content="keywords">
+<link rel="stylesheet" href="/css/styles.css" type="text/css">
+</head>
+<body>
+<p class="logo">hweidner.de<br>
+<span class="subtitle">Harald Weidner explaining the world.</span>
+</p>
+<div class="content">
+
+
+
+
+  <p class="date">2016-10-17 12:37</p>
+<h1>Neuerungen in XFS</h1>
+
+
+<p>Unter Linux gelten die Dateisysteme BtrFS und ZFS als modern, haben sich aber nie
+wirklich durchgesetzt. XFS könnte in die Lücke springen.</p>
+<p><a href="https://de.wikipedia.org/wiki/Btrfs">BtrFS</a> ist eine relativ junge Entwicklung
+und erreicht bisher nicht annähernd die Performance der verbreiteten Filesysteme
+wie <a href="https://de.wikipedia.org/wiki/Ext4">ext4</a> oder
+<a href="https://de.wikipedia.org/wiki/XFS_(Dateisystem)">XFS</a>.
+Zudem fehlen ihm wichtige Tools, beispielsweise zur Datenrettung.
+Auch <a href="https://de.wikipedia.org/wiki/ZFS_(Dateisystem)">ZFS</a> erreicht keine
+vergleichbare Performance, zudem verhindern Lizenzprobleme eine enge Integration
+in den Linux-Kernel.</p>
+<p>In naher Zukunft könnte XFS diese Lücke füllen. Denn ab
+<a href="https://heise.de/-3351310">Kernel 4.9</a> soll der Abstand zu BtrFS und ZFS in puncto
+Funktionalität schrumpfen: XFS erhält mit
+<a href="https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=35a891be96f1f8e1227e6ad3ca827b8a08ce47ea">Copy-on-Write</a>
+und bald auch Data Scrubbing zwei wichtige Features moderner Filesysteme.
+Mit <a href="https://de.wikipedia.org/wiki/Copy-On-Write">Copy-on-Write</a> lassen sich Kopien von
+Dateien schnell und platzsparend erstellen, denn die Kopie teilt sich zunächst
+die Datenblöcke mit dem Original; erst wenn eine der Dateien verändert wird, erzeugt
+das Filesystem tatsächlich eine Kopie.
+<a href="https://en.wikipedia.org/wiki/Data_scrubbing">Data Scrubbing</a> versieht alle Nutz- und Metadaten
+im Filesystem mit einer Prüfsumme, so dass Verfälschungen, wie sie etwa durch
+Hardwaredefekte entstehen können, erkannt und teilweise sogar automatisch korrigiert
+werden können.</p>
+<p>Andere Funktionen wie eingebaute RAID-Modi, Volume Management oder Snapshots wird XFS
+nicht erhalten. Das ist aber kein Problem, da solche Funktionen weiterhin über das
+<a href="https://en.wikipedia.org/wiki/Device_mapper">Device Mapper Framework</a> des Linux-Kernels
+genutzt werden können.</p>
+<p>Siehe auch:<br>
+<a href="https://blogs.oracle.com/linuxkernel/entry/upcoming_xfs_work_in_linux">Upcoming XFS Work in Linux v4.8 v4.9 and v4.10+</a>
+(Artikel im Oracle Blog).</p>
+
+<p class="footer"><a href="/impressum/">Impressum</a></p>
+</div>
+</body>
+</html>
+
+
+

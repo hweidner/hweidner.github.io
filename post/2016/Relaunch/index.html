@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Relaunch von hweidner.de -hweidner.de</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="hweidner.de">
+<meta name="author" content="Harald Weidner">
+<meta name="keywords" content="keywords">
+<link rel="stylesheet" href="/css/styles.css" type="text/css">
+</head>
+<body>
+<p class="logo">hweidner.de<br>
+<span class="subtitle">Harald Weidner explaining the world.</span>
+</p>
+<div class="content">
+
+
+
+
+  <p class="date">2016-02-28 18:32</p>
+<h1>Relaunch von hweidner.de</h1>
+
+
+<p>Fast 4 1/2 Jahre nach der Eröffnung dieser Site gibt es heute den ersten Relaunch.</p>
+<p>Am 21. September 2011 wurde der <a href="/post/2011/Willkommen_auf_www.hweidner.de/">erste Artikel</a>
+auf dieser Site veröffentlicht. Da ich damals viel mit <a href="http://www.redmine.org/">Redmine</a>
+gearbeitet und seine Wiki-Funktionalität genutzt habe, lag es nahe, die Site als
+Projekt in Redmine anzulegen.</p>
+<p>Über die Jahre haben sich einige Nachteile von Redmine gezeigt. Das Standard-Layout ist
+nicht besonders hübsch und schlecht für Mobilgeräte geeignet. Redmine ist eine aufgeblasene
+Ruby-on-Rails Anwendung und auf schwachen Servern relativ langsam. Nach dem Neustart des
+Apache dauert es 30-45 Sekunden, bevor die erste Seite angezeigt wird. Auch der RAM-Bedarf
+ist für so eine kleine Site viel zu hoch. In der Redmine-Version in
+<a href="https://www.debian.org/releases/stable/amd64/release-notes/index.en.html">Debian GNU/Linux 8 (jessie)</a>
+ist aufgrund eines <a href="http://www.redmine.org/boards/2/topics/30676?r=40348">Bugs</a> kein Betrieb
+mit FastCGI mehr möglich. Ein Abhilfe wäre der Wechsel auf Passenger gewesen, was aber den
+RAM-Bedarf noch weiter gesteigert hätte.</p>
+<p>Für die neue Seite habe ich mich für einen statischen Website-Generator entschieden, und
+zwar die Software <a href="http://gohugo.io/">Hugo</a>. Dieser generiert statisches HTML aus den
+Eingabedateien, die in <a href="https://daringfireball.net/projects/markdown/">Markdown</a> verfasst
+sind. Die Seiten werden somit sehr schnell ausgeliefert, obwohl mein Webserver auf dem
+eher schwachen <a href="http://ark.intel.com/de/products/78866/Intel-Celeron-Processor-J1800-1M-Cache-up-to-2_58-GHz">Intel Celeron J1800
+Prozessor</a>
+basiert.</p>
+<p>Da Redmine <a href="https://de.wikipedia.org/wiki/Textile">Textile2</a> als Auszeichnungssprache
+verwendet, mussten alle Beiträge nach Markdown konvertiert werden. Dies wurde im
+Wesentlichen automatisch durch den Parser <a href="https://de.wikipedia.org/wiki/Pandoc">Pandoc</a>
+erledigt. An vielen Stellen musste aber von Hand nachgearbeitet werden, weil Pandoc
+beispielsweise keine internen Wiki-Links von Redmine versteht und Schwierigkeiten
+mit manchen Zeichenkombinationen (z.B. C++) hat.</p>
+<p>Bei der Gelegenheit wurden dann auch Fehler und veraltete Informationen in älteren
+Beiträgen korrigiert und auch einige vollkommen veraltete Informationen entfernt. Sicherlich
+sind durch den Relaunch einige neue Fehler oder tote Links eingebaut worden; diese behebe
+ich, sobald ich davon erfahre.</p>
+<p>Das Foto im Kopf dieser Site zeigt übrigens den See
+<a href="https://de.wikipedia.org/wiki/Lagoa_do_Fogo">Lagoa do Fogo</a> auf der Azoreninsel
+<a href="https://de.wikipedia.org/wiki/S%C3%A3o_Miguel">São Miguel</a>.</p>
+
+<p class="footer"><a href="/impressum/">Impressum</a></p>
+</div>
+</body>
+</html>
+
+
+

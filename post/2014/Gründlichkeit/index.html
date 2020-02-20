@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Gründlichkeit -hweidner.de</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="hweidner.de">
+<meta name="author" content="Harald Weidner">
+<meta name="keywords" content="keywords">
+<link rel="stylesheet" href="/css/styles.css" type="text/css">
+</head>
+<body>
+<p class="logo">hweidner.de<br>
+<span class="subtitle">Harald Weidner explaining the world.</span>
+</p>
+<div class="content">
+
+
+
+
+  <p class="date">2014-06-30 13:44</p>
+<h1>Gründlichkeit</h1>
+
+
+<p>Wenn man einen eigenen Webserver betreibt, gehören Scans nach
+vertraulichen Inhalten oder angreifbarer Software zum Alltag. Meistens
+beschränken sich die Scanner aber auf einige wenige URLs und suchen nach
+Anzeichen für das Vorhandensein bekannter Software, z.B. Wordpress oder
+phpMyAdmin.</p>
+<p>Heute wollte es aber mal jemand ganz genau wissen. (Die IP-Adresse wurde
+von mir anonymisiert.)</p>
+<p>Während sich die meisten URLs auf SSH Konfigurationen, Shell-Dateien
+oder Cryptowährungen beziehen, ist der Dateiname <code>checknfurl123</code>
+rätselhaft. Mein erster Gedanke war, dass ein vom Hersteller dieses Tool
+kompromittierter Webserver diese Datei anlegt und sich damit als bereits
+erledigt kennzeichnet. Eine andere Erklärung wird in <a href="https://isc.sans.edu/diary.html?date=2014-06-11">dieser
+Diskussion</a> gegeben:
+die Abfrage dient zur Prüfung, wie der Webserver auf file-not-found
+Fehler reagiert; damit könnten False Positives erkannt werden.</p>
+<p>Vielleicht sollte ich einfach mal ein paar der gewünschten Dateien auf
+dem Webserver anlegen und kucken, was der Scanner dann macht…</p>
+<pre><code>127.127.127.127 - - [30/Jun/2014:05:37:52 +0200] &quot;HEAD /checknfurl123 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:52 +0200] &quot;HEAD /.ssh/id_rsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:52 +0200] &quot;HEAD /.ssh/id_dsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:52 +0200] &quot;HEAD /.ssh/rsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:52 +0200] &quot;HEAD /.ssh/dsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:52 +0200] &quot;HEAD /.ssh/key HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:53 +0200] &quot;HEAD /.ssh/priv HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:53 +0200] &quot;HEAD /.ssh/id_rsa.old HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:53 +0200] &quot;HEAD /.ssh/id_dsa.old HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:53 +0200] &quot;HEAD /.ssh/identity HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:53 +0200] &quot;HEAD /.ssh/authorized_keys HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:53 +0200] &quot;HEAD /.ssh/authorized_keys2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:53 +0200] &quot;HEAD /.ssh/known_hosts HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:54 +0200] &quot;HEAD /.ssh/config HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:54 +0200] &quot;HEAD /.ssh/config.old HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:54 +0200] &quot;HEAD /.ssh/config~ HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:54 +0200] &quot;HEAD /.ssh/id_rsa.pub HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:54 +0200] &quot;HEAD /.ssh/id_dsa.pub HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:54 +0200] &quot;HEAD /.ssh/id_rsa_2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:54 +0200] &quot;HEAD /.ssh/id_rsa.2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:54 +0200] &quot;HEAD /.ssh/id_dsa_2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:55 +0200] &quot;HEAD /.ssh/id_dsa.2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:55 +0200] &quot;HEAD /.ssh/id_ecdsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:55 +0200] &quot;HEAD /.ssh/id_ecdsa.2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:55 +0200] &quot;HEAD /.ssh/id_ecdsa_2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:55 +0200] &quot;HEAD /.ssh/id_rsa2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:55 +0200] &quot;HEAD /.ssh/id_dsa2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:55 +0200] &quot;HEAD /.ssh/id_ecdsa2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:56 +0200] &quot;HEAD /.ssh/id_ecdsa_old HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:56 +0200] &quot;HEAD /.ssh/id_ecdsa.old HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:56 +0200] &quot;HEAD /.ssh/id_rsa.bak HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:56 +0200] &quot;HEAD /.ssh/id_dsa.bak HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:56 +0200] &quot;HEAD /.bash_history HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:56 +0200] &quot;HEAD /.history HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:56 +0200] &quot;HEAD /.sh_history HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:57 +0200] &quot;HEAD /.bitcoin/wallet.dat HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:57 +0200] &quot;HEAD /.litecoin/wallet.dat HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:57 +0200] &quot;HEAD /.psi/profiles/default/config.xml HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:57 +0200] &quot;HEAD /.purple/accounts.xml HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:57 +0200] &quot;HEAD /.mozilla/firefox/profiles.ini HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:57 +0200] &quot;HEAD /id_ecdsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:57 +0200] &quot;HEAD /id_ecdsa.2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:57 +0200] &quot;HEAD /id_ecdsa_2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:58 +0200] &quot;HEAD /id_ecdsa_old HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:58 +0200] &quot;HEAD /id_ecdsa.old HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:58 +0200] &quot;HEAD /config HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:58 +0200] &quot;HEAD /id_rsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:58 +0200] &quot;HEAD /id_dsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:58 +0200] &quot;HEAD /rsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:58 +0200] &quot;HEAD /dsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:59 +0200] &quot;HEAD /key HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:59 +0200] &quot;HEAD /key.priv HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:59 +0200] &quot;HEAD /id_rsa.old HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:59 +0200] &quot;HEAD /id_dsa.old HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:59 +0200] &quot;HEAD /identity HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:59 +0200] &quot;HEAD /authorized_keys HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:59 +0200] &quot;HEAD /authorized_keys2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:00 +0200] &quot;HEAD /known_hosts HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:00 +0200] &quot;HEAD /id_rsa.pub HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:00 +0200] &quot;HEAD /id_dsa.pub HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:00 +0200] &quot;HEAD /.htpasswd HTTP/1.1&quot; 403 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:00 +0200] &quot;HEAD /htpasswd HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:00 +0200] &quot;HEAD /.htpasswd~ HTTP/1.1&quot; 403 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:00 +0200] &quot;HEAD /passwd HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:00 +0200] &quot;HEAD /.passwd HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:53 +0200] &quot;HEAD /.ssh/known_hosts HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:54 +0200] &quot;HEAD /.ssh/config HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:54 +0200] &quot;HEAD /.ssh/config.old HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:54 +0200] &quot;HEAD /.ssh/config~ HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:54 +0200] &quot;HEAD /.ssh/id_rsa.pub HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:54 +0200] &quot;HEAD /.ssh/id_dsa.pub HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:54 +0200] &quot;HEAD /.ssh/id_rsa_2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:54 +0200] &quot;HEAD /.ssh/id_rsa.2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:54 +0200] &quot;HEAD /.ssh/id_dsa_2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:55 +0200] &quot;HEAD /.ssh/id_dsa.2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:55 +0200] &quot;HEAD /.ssh/id_ecdsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:55 +0200] &quot;HEAD /.ssh/id_ecdsa.2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:55 +0200] &quot;HEAD /.ssh/id_ecdsa_2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:55 +0200] &quot;HEAD /.ssh/id_rsa2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:55 +0200] &quot;HEAD /.ssh/id_dsa2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:55 +0200] &quot;HEAD /.ssh/id_ecdsa2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:56 +0200] &quot;HEAD /.ssh/id_ecdsa_old HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:56 +0200] &quot;HEAD /.ssh/id_ecdsa.old HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:56 +0200] &quot;HEAD /.ssh/id_rsa.bak HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:56 +0200] &quot;HEAD /.ssh/id_dsa.bak HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:56 +0200] &quot;HEAD /.bash_history HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:56 +0200] &quot;HEAD /.history HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:56 +0200] &quot;HEAD /.sh_history HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:57 +0200] &quot;HEAD /.bitcoin/wallet.dat HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:57 +0200] &quot;HEAD /.litecoin/wallet.dat HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:57 +0200] &quot;HEAD /.psi/profiles/default/config.xml HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:57 +0200] &quot;HEAD /.purple/accounts.xml HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:57 +0200] &quot;HEAD /.mozilla/firefox/profiles.ini HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:57 +0200] &quot;HEAD /id_ecdsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:57 +0200] &quot;HEAD /id_ecdsa.2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:57 +0200] &quot;HEAD /id_ecdsa_2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:58 +0200] &quot;HEAD /id_ecdsa_old HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:58 +0200] &quot;HEAD /id_ecdsa.old HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:58 +0200] &quot;HEAD /config HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:58 +0200] &quot;HEAD /id_rsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:58 +0200] &quot;HEAD /id_dsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:58 +0200] &quot;HEAD /rsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:58 +0200] &quot;HEAD /dsa HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:59 +0200] &quot;HEAD /key HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:59 +0200] &quot;HEAD /key.priv HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:59 +0200] &quot;HEAD /id_rsa.old HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:59 +0200] &quot;HEAD /id_dsa.old HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:59 +0200] &quot;HEAD /identity HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:59 +0200] &quot;HEAD /authorized_keys HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:37:59 +0200] &quot;HEAD /authorized_keys2 HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:00 +0200] &quot;HEAD /known_hosts HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:00 +0200] &quot;HEAD /id_rsa.pub HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:00 +0200] &quot;HEAD /id_dsa.pub HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:00 +0200] &quot;HEAD /.htpasswd HTTP/1.1&quot; 403 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:00 +0200] &quot;HEAD /htpasswd HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:00 +0200] &quot;HEAD /.htpasswd~ HTTP/1.1&quot; 403 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:00 +0200] &quot;HEAD /passwd HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:00 +0200] &quot;HEAD /.passwd HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:01 +0200] &quot;HEAD /passwords HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:01 +0200] &quot;HEAD /password HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:01 +0200] &quot;HEAD /passwords.txt HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+127.127.127.127 - - [30/Jun/2014:05:38:01 +0200] &quot;HEAD /pass HTTP/1.1&quot; 404 147 &quot;-&quot; &quot;-&quot;
+</code></pre>
+
+
+<p class="footer"><a href="/impressum/">Impressum</a></p>
+</div>
+</body>
+</html>
+
+
+

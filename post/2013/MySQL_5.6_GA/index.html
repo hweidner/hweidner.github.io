@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>MySQL 5.6 GA -hweidner.de</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="hweidner.de">
+<meta name="author" content="Harald Weidner">
+<meta name="keywords" content="keywords">
+<link rel="stylesheet" href="/css/styles.css" type="text/css">
+</head>
+<body>
+<p class="logo">hweidner.de<br>
+<span class="subtitle">Harald Weidner explaining the world.</span>
+</p>
+<div class="content">
+
+
+
+
+  <p class="date">2013-02-05 17:27</p>
+<h1>MySQL 5.6 GA</h1>
+
+
+<p>Heute wurde von Oracle die neue MySQL Version 5.6 veröffentlicht.</p>
+<p>Laut diverser Pressemeldungen (z.B.
+<a href="http://www.golem.de/news/oracle-mysql-5-6-ist-deutlich-schneller-1302-97388.html">Golem</a>,
+<a href="http://www.heise.de/newsticker/meldung/Oracle-veroeffentlicht-MySQL-5-6-1796834.html">Heise</a>
+oder
+<a href="http://www.computerworld.ch/news/software/artikel/oracle-mysql-180x-schneller-62488/">Computerworld</a>)
+bietet die neue Version beachtliche Performanceverbesserungen und neue
+Features. Zu den interessantesten gehören die Volltextsuche für die
+Storage Engine InnoDB, die Möglichkeit, InnoDB Tabellendefinitionen im
+laufenden Betrieb zu verändern und Verbesserungen bei der Replikation.</p>
+<p>Die neue Version ist allerdings auch mühsamer zu administrieren. Beim
+Update einer ersten Datenbank-Instanz fiel folgendes auf:</p>
+<ul>
+<li>Beim Einrichten der Replikation muss man darauf achten, nach der
+Übertragung des Data Directories vom Master zum Slave dort die Datei
+<code>auto.cnf</code> zu löschen. Sie enthält eine automatisch generierte
+Seriennummer, die auf dem Slave unterschiedlich zum Master
+sein muss. Löscht man die Datei, dann erzeugt MySQL beim Start eine
+zufällige neue Seriennummer.</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Ein Update von MySQL konnte bisher einfach durch Austausch der
+Binaries und anschließendem Start des Tools <code>mysql_upgrade</code>
+gemacht werden. Das scheint nun nicht mehr möglich zu sein. MySQL
+5.6 startet gar nicht auf dem alten Datenbestand; auch wenn man es
+schafft, durch Abschalten der Replikationsfeatures MySQL 5.6 zu
+starten, konvertiert <code>mysql_upgrade</code> den Datenbestand
+nicht vollständig. Es ist nötig, die MySQL Verwaltungstabellen mit
+dem Skript <code>mysql_install_db</code> neu anzulegen und anschließend die
+Schemata per Dump und Import zu übertragen.</li>
+</ul>
+<p>Es lohnt sich, die <a href="http://dev.mysql.com/doc/relnotes/mysql/5.6/en/">Release
+Notes</a> und <a href="http://dev.mysql.com/doc/refman/5.6/en/mysql-nutshell.html">What Is New
+in MySQL
+5.6</a> zu
+lesen.</p>
+
+
+<p class="footer"><a href="/impressum/">Impressum</a></p>
+</div>
+</body>
+</html>
+
+
+
