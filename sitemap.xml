@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://hweidner.de/</loc>
-    <lastmod>2019-12-31T01:54:00+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://hweidner.de/post/2019/mein-jahr-2019/</loc>
     <lastmod>2019-12-31T01:54:00+01:00</lastmod>
   </url>
@@ -340,6 +335,11 @@
   <url>
     <loc>http://hweidner.de/post/2014/Linkspam/</loc>
     <lastmod>2014-04-23T00:15:56+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://hweidner.de/</loc>
+    <lastmod>2014-04-23T00:00:07+02:00</lastmod>
   </url>
   
   <url>
