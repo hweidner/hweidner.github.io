@@ -116,7 +116,8 @@ jemand gemacht.&lt;/p&gt;</description>
       <pubDate>Sun, 08 Jan 2017 17:30:32 +0100</pubDate>
       
       <guid>http://hweidner.de/post/2017/go-programmiersprache-des-jahres-2016/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.tiobe.com/&#34;&gt;Tiobe&lt;/a&gt; hat &lt;a href=&#34;http://hweidner.de/golang/&#34;&gt;Go&lt;/a&gt; zur Programmiersprache des Jahres 2016 gekürt.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.tiobe.com/&#34;&gt;Tiobe&lt;/a&gt; hat &lt;a href=&#34;https://github.com/hweidner/golang-de/wiki&#34;&gt;Go&lt;/a&gt;
+zur Programmiersprache des Jahres 2016 gekürt.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -148,7 +149,7 @@ wirklich durchgesetzt. XFS könnte in die Lücke springen.&lt;/p&gt;</descriptio
       <description>&lt;p&gt;Heute vor fünf Jahren habe ich unter der Domain hweidner.de, die ich schon länger
 besaß und bis dahin nur für E-Mail verwendet habe, diese Webseiten eingerichtet.
 Geplant war eine einfache Hompage mit zwei Rubriken: einem Blog-ähnlichen
-&lt;a href=&#34;http://hweidner.de/post/&#34;&gt;Nachrichtenbereich&lt;/a&gt; und einer Informationssammlung in Form eines &lt;a href=&#34;http://hweidner.de/docs/&#34;&gt;Wiki&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;a href=&#34;http://hweidner.de/&#34;&gt;Nachrichtenbereich&lt;/a&gt; und einer Informationssammlung in Form eines Wiki.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -539,7 +540,7 @@ Leider fielen mehrere Vorträge aus, auf die ich mich gefreut hatte - teilweise 
       
       <guid>http://hweidner.de/post/2014/Seven_Concurrency_Models_in_Seven_Weeks/</guid>
       <description>Jeder Programmierer, der die Möglichkeiten eines aktuellen Computers ausschöpfen möchte, kommt um eine Beschäftigung mit Parallelprogrammierung nicht herum. Während Betriebssysteme die Ausnutzung mehrere CPU-Kerne seit vielen Jahren ermöglichen, gibt es in den letzten Jahren immer mehr Programmiersprachen mit direkter Unterstützung für nebenläufige/parallele Programmierung.
-Welche Modelle und Paradigmen dabei verwendet werden, beschreibt das Buch Seven Concurrency Models in Seven Weeks aus dem O’Reilly Verlag. Der Verlag hat mir freundlicherweise ein Rezensionsexemplar zur Verfügung gestellt.</description>
+Welche Modelle und Paradigmen dabei verwendet werden, beschreibt das spannende Buch Seven Concurrency Models in Seven Weeks aus dem O’Reilly Verlag.</description>
     </item>
     
     <item>
@@ -692,12 +693,12 @@ Warum aber andererseits eine thematisch vollkommen unpassende Wiki-Seite ausgesu
       
       <guid>http://hweidner.de/impressum/</guid>
       <description>Impressum und Datenschutzerklärung Freiwillige Anbieterkennzeichnung Dies ist ein privates Weblog und dient ausschließlich persönlichen oder familiären Zwecken. Gemäß §55 RStV besteht keine Impressumspflicht.
-Die freiwillige Anbieterkennzeichnung lautet:
+Dieses Weblog wird betrieben von;
 Harald Weidner
 D-42551 Velbert (Rheinland)
 E-Mail: hweidner (at) gmx (dot) net
 Weitere Kanäle zur direkten Kontaktaufnahme (zur Nutzung dieser Anbieter ist ggf. das Anlegen eines kostenlosen Accounts erforderlich) umfassen:
- MeWe Facebook Telegram  Die hier angegebenen Adressinformationen dienen ausschließlich der Anbieterkennzeichnung. Kommerzielle Werbung ist unerwünscht.</description>
+ MeWe Facebook Telegram  Die hier angegebenen Adressinformationen dienen ausschließlich der Anbieterkennzeichnung.</description>
     </item>
     
     <item>
@@ -1142,16 +1143,6 @@ Unter http://hyperpolyglot.org/scripting gibt es einen übersichtlichen Vergleic
     </item>
     
     <item>
-      <title>Host-based Mirror und Cluster-Filesystem</title>
-      <link>http://hweidner.de/post/2011/Host-based_Mirror_und_Cluster-Filesystem/</link>
-      <pubDate>Tue, 27 Dec 2011 11:54:41 +0100</pubDate>
-      
-      <guid>http://hweidner.de/post/2011/Host-based_Mirror_und_Cluster-Filesystem/</guid>
-      <description>Warum ein Cluster-Filesystem nicht über einem Host-based Mirror betrieben werden kann (und wie man es doch machen kann).
-Im Wiki gibt es einen neuen Artikel, dazu, warum ein Cluster Filesystem nicht über einem Host-based Mirror betrieben werden kann. Und wie man den gewünschten Effekt trotzdem erzielt.</description>
-    </item>
-    
-    <item>
       <title>Mathe-Kenntnisse auffrischen</title>
       <link>http://hweidner.de/post/2011/Mathe-Kenntnisse_auffrischen/</link>
       <pubDate>Tue, 27 Dec 2011 00:45:56 +0100</pubDate>
@@ -1262,8 +1253,7 @@ In der letzten Zeit nimmt (gefühlt) die Vielfalt wieder zu. Hier eine kleine Ü
       <guid>http://hweidner.de/post/2011/Ubuntu_11.10_Oneiric_Ocelot_ver%C3%B6ffentlicht/</guid>
       <description>Getreu ihrem Zeitplan hat die Firma Canonical heute das neue Release ihres freien Betriebssystems Ubuntu Linux 11.10 Oneiric Ocelot veröffentlicht.
 Ein erster Test des Systems findet sich bei Heise Open.
-Die nächste Version Ubuntu 12.04 wird wieder eine mit Long Term Support.
-Im Wiki gibt es ab sofort einen Installationsbericht.</description>
+Die nächste Version Ubuntu 12.04 wird wieder eine mit Long Term Support.</description>
     </item>
     
     <item>
@@ -1294,7 +1284,7 @@ stehmann’s blog - Software Freedom Day in Köln – 2011</description>
       
       <guid>http://hweidner.de/post/2011/Cluster_Computing/</guid>
       <description>Am Software Freedom Day 2011 in Köln habe ich einen Vortrag über das Thema Cluster Computing mit Linux und freier Software gehalten. Thema war die verschiedenen Typen von Clustern, welche Zielsetzungen dahinter stehen, und interessante Softwareprodukte.
-Im Wiki gibt es dazu ab sofort das Manuskript und die Linksammlung.</description>
+Im meinem Vortragsarchiv gibt es dazu ab sofort das Manuskript und die Linksammlung.</description>
     </item>
     
     <item>
@@ -1314,8 +1304,7 @@ Lessfs ist ein Dateisystem für Linux, das auf dem FUSE (File System in Userspac
       <pubDate>Wed, 21 Sep 2011 08:50:16 +0200</pubDate>
       
       <guid>http://hweidner.de/post/2011/Willkommen_auf_www.hweidner.de/</guid>
-      <description>Auf diesen Seiten entsteht nach und nach eine Infosammlung mit News, Tipps und Dokumenten rund um Linux, Open Source Software, Netzwerke, Security u.a. Im Moment ist noch ziemliche Leere, aber schaut trotzdem gelegentlich vorbei.
-Zum Wiki.</description>
+      <description>Auf diesen Seiten entsteht nach und nach eine Infosammlung mit News, Tipps und Dokumenten rund um Linux, Open Source Software, Netzwerke, Security u.a. Im Moment ist noch ziemliche Leere, aber schaut trotzdem gelegentlich vorbei.</description>
     </item>
     
   </channel>

@@ -31,18 +31,17 @@ Projekte bei Github, das persönliche Blog liegt auf Github Pages.</p>
 
 <p>Meine Site lief bisher auf einem Mietserver vom Typ
 <a href="https://www.euserv.com/de/dedizierte-server/misurfi-rootserver/v7/misurfi-lc10.php">Misurfi LC10</a>
-beim Provider <a href="https://www.euserv.com/">EUserv</a>.
-Darin steckt ein Intel Celeron J1800 Prozessor mit zwei Cores ohne
-Hyperthreading, 4 GB RAM und eine 1 TB Festplatte. Die Leistung ist nicht
-mehr ganz zeitgemäß, war aber für den Webserver sowie den ebenfalls darauf
-laufenden E-Mail-Server völlig ausreichend.</p>
+beim Provider <a href="https://www.euserv.com/">EUserv</a>. Darin steckt ein
+<a href="https://ark.intel.com/content/www/de/de/ark/products/78866/intel-celeron-processor-j1800-1m-cache-up-to-2-58-ghz.html">Intel Celeron J1800</a>
+Prozessor mit zwei Cores ohne Hyperthreading, 4 GB RAM und eine 1 TB Festplatte.
+Die Leistung ist nicht mehr ganz zeitgemäß, war aber für den Webserver sowie
+den ebenfalls darauf laufenden E-Mail-Server völlig ausreichend.</p>
 
 <p>Der Server lief jahrelang stabil, bis auf einen Festplattendefekt gab es
 keine nennenswerten Störungen am Server selbst. Allerdings war die
 Netzwerkanbindung des Providers häufig recht langsam oder gar nicht
 verfügbar. Ein Ping von meinem DSL-Anschluss zum Server war mit ca. 40-45 ms
-eher langsam, dementsprechend fühlten sich interaktive Sessions recht träge
-an.
+eher langsam, dementsprechend fühlten sich interaktive Sessions recht träge an.
 Außerdem bereitete mir Auslegung mit nur einer Festplatte Sorgen; wenn diese
 Defekt ist, fällt der Server aus. Der Provider stellt mir zwar zeitnah eine
 neue Festplatte oder gleich einen neuen Server zur Verfügung. Ich habe aber
@@ -66,16 +65,18 @@ als Unterseite des privaten Blogs zu versteckt.</p>
 <h2 id="was-wird">Was wird</h2>
 
 <p>Mein neuer E-Mail Server ist eine
-<a href="https://active-servers.com/vserver_nvme.php">virtuelle Maschine mit KVM</a>.
-Er hat ebenfalls 4 GB RAM, aber nur einen CPU-Kern und deutlich weniger
-Festplattenplatz. Für meine E-Mails ist das vollkommen ausreichend. Dank
-NVM-SSDs, Ceph und einer sehr schnellen Netzwerkanbindung ist er ordentlich
-flott und von der Verfügbarkeit und Datensicherheit her wahrscheinlich
-deutlich besser als der alte; die Zeit wird zeigen, ob das stimmt.</p>
+<a href="https://active-servers.com/vserver_nvme.php">virtuelle Maschine mit KVM</a>
+beim Provider <a href="https://active-servers.com/">active-servers</a>.
+Er hat ebenfalls 4 GB RAM, aber nur einen CPU-Kern und mit 40 GB
+deutlich weniger Festplattenplatz. Für meine E-Mails ist das vollkommen
+ausreichend. Dank NVM-SSDs, Ceph und einer sehr schnellen Netzwerkanbindung
+ist er ordentlich flott und von der Verfügbarkeit und Datensicherheit her
+wahrscheinlich deutlich besser als der alte; die Zeit wird zeigen, ob das stimmt.</p>
 
 <p>Ein Ping von zu Hause zum Server benötigt nur ca. 15 ms. Daher fühlt sich
 der Server beim Arbeiten mit SSH sehr flott an. Die Virtualisierung ist bei
-dem Provider mit Proxmox VE gelöst, so dass ich mich über den Browser in die
+dem Provider mit <a href="https://www.proxmox.com/de/proxmox-ve">Proxmox VE</a>
+gelöst, so dass ich mich über den Browser in die
 virtuelle  Konsole aufschalten kann, wenn der Server über SSH mal nicht
 erreichbar ist. Updates und Konfigurationsänderungen sind so deutlich weniger
 abenteuerlich. Last not least ist ein virtueller Server auch ökologisch und
@@ -107,8 +108,8 @@ gelöscht und können bei Bedarf wieder hervorgeholt werden.</p>
 
 <p>Übrig blieb der schlanke Kern meines persönlichen Blogs. Dieser befindet sich
 nun auf <a href="https://pages.github.com/">Github Pages</a>. Dank meines eigenen
-Layouts und meines Domainnamens bleibt er individuell. Aber den Serverbetrieb,
-DoS Angriffe und dergleichen kümmert sich nun Github.</p>
+Layouts und meines Domainnamens bleibt er individuell. Aber um den Serverbetrieb,
+DDoS Angriffe und dergleichen kümmert sich nun Github.</p>
 
 <p class="footer"><a href="/impressum/">Impressum</a></p>
 </div>
