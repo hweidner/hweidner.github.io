@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://hweidner.de/post/2020/lscpu-mitigations/</loc>
+    <lastmod>2020-04-07T17:54:37+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://hweidner.de/post/2020/relaunch-und-servermigration/</loc>
     <lastmod>2020-02-20T21:18:30+01:00</lastmod>
   </url>
@@ -654,7 +659,7 @@
   
   <url>
     <loc>http://hweidner.de/post/</loc>
-    <lastmod>2020-02-20T21:18:30+01:00</lastmod>
+    <lastmod>2020-04-07T17:54:37+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -665,7 +670,7 @@
   
   <url>
     <loc>http://hweidner.de/</loc>
-    <lastmod>2020-02-20T21:18:30+01:00</lastmod>
+    <lastmod>2020-04-07T17:54:37+02:00</lastmod>
     <priority>0</priority>
   </url>
   
