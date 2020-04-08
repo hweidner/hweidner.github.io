@@ -18,7 +18,7 @@
       
       <guid>http://hweidner.de/post/2020/lscpu-mitigations/</guid>
       <description>&lt;p&gt;Das Kommando &lt;code&gt;lscpu&lt;/code&gt; in der neuen Ubuntu 20.04 LTS Beta zeigt jetzt
-auch die CPU Vulnerabilities und Mitigations an.&lt;/p&gt;</description>
+auch die CPU Sicherheitslücken und Gegenmaßnahmen an.&lt;/p&gt;</description>
     </item>
     
     <item>

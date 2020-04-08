@@ -22,46 +22,57 @@
 
 
 <p>Das Kommando <code>lscpu</code> in der neuen Ubuntu 20.04 LTS Beta zeigt jetzt
-auch die CPU Vulnerabilities und Mitigations an.</p>
+auch die CPU Sicherheitslücken und Gegenmaßnahmen an.</p>
 
-<p>root@ubu2004:~# lscpu
-    Architektur:                     x86_64
-    CPU Operationsmodus:             32-bit, 64-bit
-    Byte-Reihenfolge:                Little Endian
-    Adressgrößen:                    48 bits physical, 48 bits virtual
-    CPU(s):                          2
-    Liste der Online-CPU(s):         0,1
-    Thread(s) pro Kern:              1
-    Kern(e) pro Socket:              2
-    Sockel:                          1
-    NUMA-Knoten:                     1
-    Anbieterkennung:                 AuthenticAMD
-    Prozessorfamilie:                23
-    Modell:                          1
-    Modellname:                      AMD Ryzen 7 1700 Eight-Core Processor
-    Stepping:                        1
-    CPU MHz:                         2946.110
-    BogoMIPS:                        5892.22
-    Hypervisor-Anbieter:             KVM
-    Virtualisierungstyp:             voll
-    L1d Cache:                       64 KiB
-    L1i Cache:                       128 KiB
-    L2 Cache:                        1 MiB
-    L3 Cache:                        16 MiB
-    NUMA-Knoten0 CPU(s):             0,1
-    Vulnerability Itlb multihit:     Not affected
-    Vulnerability L1tf:              Not affected
-    Vulnerability Mds:               Not affected
-    Vulnerability Meltdown:          Not affected
-    Vulnerability Spec store bypass: Mitigation; Speculative Store Bypass disabled via prctl and seccomp
-    Vulnerability Spectre v1:        Mitigation; usercopy/swapgs barriers and __user pointer sanitization
-    Vulnerability Spectre v2:        Mitigation; Full AMD retpoline, STIBP disabled, RSB filling
-    Vulnerability Tsx async abort:   Not affected
-    Markierungen:                    fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht sy
-                                     scall nx mmxext fxsr_opt rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid tsc_known_f
-                                     req pni pclmulqdq ssse3 cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx rdrand hypervisor lahf_lm
-                                     cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch ssbd vmmcall fsgsbase avx2 rdseed clflushopt
-                                     arat</p>
+<p>Ich teste gerade die aktuelle Beta-Version des neuen Ubuntu 20.04 LTS. Diese
+wurde am Wochenende veröffentlicht, das fertige Release soll am 23. April
+erscheinen.</p>
+
+<p>Ein schönes Feature von <code>lscpu</code> aus dem Paket
+<a href="https://packages.ubuntu.com/focal/util-linux">util-linux</a>
+ist, dass es die Sicherheitsprobleme der verwendeten CPU wie z.B.
+<a href="https://meltdownattack.com/">Meltdown und Spectre</a> und die
+Gegenmaßnahmen im Linux-Kernel (Mitigations) anzeigt.</p>
+
+<pre><code>root@ubu2004:~# lscpu
+Architektur:                     x86_64
+CPU Operationsmodus:             32-bit, 64-bit
+Byte-Reihenfolge:                Little Endian
+Adressgrößen:                    48 bits physical, 48 bits virtual
+CPU(s):                          2
+Liste der Online-CPU(s):         0,1
+Thread(s) pro Kern:              1
+Kern(e) pro Socket:              2
+Sockel:                          1
+NUMA-Knoten:                     1
+Anbieterkennung:                 AuthenticAMD
+Prozessorfamilie:                23
+Modell:                          1
+Modellname:                      AMD Ryzen 7 1700 Eight-Core Processor
+Stepping:                        1
+CPU MHz:                         2946.110
+BogoMIPS:                        5892.22
+Hypervisor-Anbieter:             KVM
+Virtualisierungstyp:             voll
+L1d Cache:                       64 KiB
+L1i Cache:                       128 KiB
+L2 Cache:                        1 MiB
+L3 Cache:                        16 MiB
+NUMA-Knoten0 CPU(s):             0,1
+Vulnerability Itlb multihit:     Not affected
+Vulnerability L1tf:              Not affected
+Vulnerability Mds:               Not affected
+Vulnerability Meltdown:          Not affected
+Vulnerability Spec store bypass: Mitigation; Speculative Store Bypass disabled via prctl and seccomp
+Vulnerability Spectre v1:        Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:        Mitigation; Full AMD retpoline, STIBP disabled, RSB filling
+Vulnerability Tsx async abort:   Not affected
+Markierungen:                    fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht sy
+                                 scall nx mmxext fxsr_opt rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid tsc_known_f
+                                 req pni pclmulqdq ssse3 cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx rdrand hypervisor lahf_lm 
+                                 cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch ssbd vmmcall fsgsbase avx2 rdseed clflushopt 
+                                 arat
+</code></pre>
 
 <p class="footer"><a href="/impressum/">Impressum</a></p>
 </div>
