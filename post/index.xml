@@ -6,20 +6,10 @@
     <description>Recent content in Posts on hweidner.de</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 21 May 2020 14:10:18 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2020 17:54:37 +0200</lastBuildDate>
     
 	<atom:link href="http://hweidner.de/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Home Office</title>
-      <link>http://hweidner.de/post/2020/home-office/</link>
-      <pubDate>Thu, 21 May 2020 14:10:18 +0200</pubDate>
-      
-      <guid>http://hweidner.de/post/2020/home-office/</guid>
-      <description>&lt;p&gt;Seit Corona findet das Arbeiten im Home Office eine große Verbreitung und
-wird teilweise kontrovers diskutiert.&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>Mitigation Infos in lscpu</title>
