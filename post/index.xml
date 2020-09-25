@@ -6,10 +6,20 @@
     <description>Recent content in Posts on hweidner.de</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Fri, 24 Jul 2020 23:20:17 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2020 16:16:40 +0200</lastBuildDate>
     
 	<atom:link href="http://hweidner.de/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Virtuelle Server</title>
+      <link>http://hweidner.de/post/2020/virtuelle-server/</link>
+      <pubDate>Fri, 25 Sep 2020 16:16:40 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2020/virtuelle-server/</guid>
+      <description>&lt;p&gt;In meinem &lt;a href=&#34;../homeserver/&#34;&gt;Artikels über Homeserver&lt;/a&gt; hatte ich bereits angekündigt, noch
+etwas über (virtuelle) Server bei Hosting-Providern zu schreiben.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Mein Home-Server Setup</title>
