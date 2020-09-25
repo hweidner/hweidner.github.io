@@ -25,7 +25,7 @@
 etwas über (virtuelle) Server bei Hosting-Providern zu schreiben.</p>
 
 <p>Bis 2003 diente ein alter, lauter und stromfressender PC im Flur meiner
-Wohnung als 24x7 laufender E-Mail Server. Um ihn abzulösen und meiner
+Wohnung als 24x7 laufender E-Mail Server. Um ihn abzulösen und die
 Wohnung auf einen höheren WAF (woman acceptance factor) anzuheben, schaute
 ich mich nach Mietangeboten für virtuelle Server um.</p>
 
@@ -38,9 +38,10 @@ voller hilfsbereiter Einträge, die Produkte des Anbieters wurden dort in
 hohen Tönen gelobt. An die genaue Ausstattung des Servers kann ich mich
 nicht mehr erinnern, aber das Angebot wirkte mit 5€ pro Monat bei Abschluss
 eines Jahresvertrags preiswert. Man konnte unter verschiedenen Distributionen
-wählen, ich entschied mich natürlich für <a href="https://www.debian.org/">Debian</a>.</p>
+wählen; ich entschied mich natürlich, wie auch bei allen späteren
+Mietservern, für <a href="https://www.debian.org/">Debian</a>.</p>
 
-<p>Über die Virtualierungstechnologie machte der Provider auf seiner Homepage
+<p>Über die Virtualisierungstechnologie machte der Provider auf seiner Homepage
 keine Angaben. Schnell stellte sich aber heraus, dass mein Server unter
 <a href="https://de.wikipedia.org/wiki/Xen">Xen</a>
 betrieben wurde. Andere Kunden klagten im Forum teilweise über eine
@@ -59,7 +60,7 @@ wurde er so unerträglich langsam, dass man sich nicht mehr einloggen konnte,
 weil die SSH Verbindungen alle in ein Timeout liefen. Gleichzeitig nahm er
 aber, wenn auch langsam, noch eingehende E-Mails entgegen, so dass diese für
 die Absender als zugestellt erschienen, ich jedoch nicht darauf zugreifen
-konnte. Nach einer WOche erholte sich die Performance aber wieder.</p>
+konnte. Nach einer Woche erholte sich die Performance aber wieder.</p>
 
 <p>Ein weiteres Manko war das Fehlen von
 <a href="https://de.wikipedia.org/wiki/Netfilter">Netfilter/IPtables</a>,
@@ -109,7 +110,7 @@ namens <a href="https://de.wikipedia.org/wiki/OpenVZ">OpenVZ</a> gab, die sogar 
 kurze Zeit lang in Debian Linux verfügbar war. Virtuozzo war speziell für
 den Einsatz bei Providern auslegt und ermöglichte feingranulare
 Ressourcenlimits für zahlreiche Systemfunktionen. Der Server erfüllte im
-Wesentlichen unspektakulär eine Aufgaben als Mailserver. Auch eine Apache
+Wesentlichen unspektakulär seine Aufgaben als Mailserver. Auch ein Apache
 Webserver mit statischen Seiten und CGI-Skripten funktionierte klaglos.
 An seine Grenzen stieß das Angebot jedoch, als ich versuchte, für
 Web-Experimente eine MySQL Datenbank zu installieren. Trotz sorgfältigem
@@ -121,9 +122,10 @@ Schwierigkeiten oder Ereignisse. Das Ansinnen, dort auch dynamische
 Web-Applikationen zu betrieben, hatte ich schnell aufgegeben, aber als
 Mailserver behielt ich den Server mehrere Jahre lang.</p>
 
-<p>In der Zwischenzeit hatte ich jedoch auch beruflich mit Linux-VServer,
-der wahrscheinlich ältesten Container-Technologie nach dem Chroot System
-Call zu tun und war davon sehr angetan. Daher wuchs der Wunsch,
+<p>In der Zwischenzeit hatte ich jedoch auch beruflich mit
+<a href="http://linux-vserver.org/">Linux-VServer</a>, der wahrscheinlich
+ältesten Container-Technologie nach dem Chroot System
+Call, zu tun und war davon sehr angetan. Daher wuchs der Wunsch,
 Linux-VServer auch für meine privaten Zwecke einzusetzen.</p>
 
 <h2 id="linux-vserver">Linux-VServer</h2>
@@ -139,18 +141,18 @@ IMAP (<a href="https://www.dovecot.org/">Dovecot</a>),
 Web (<a href="https://httpd.apache.org/">Apache</a>),
 Datenbank (<a href="https://dev.mysql.com/">MySQL</a>) und auch einige andere,
 zeitweise betriebenenen Anwendungen (z.b.
-<a href="https://icecast.org/">Icecast2</a>) hatte keine technischen Probleme; lediglich
+<a href="https://icecast.org/">Icecast2</a>) hatten keine technischen Probleme; lediglich
 mit dem knappen RAM und Festplattenplatz musste man aufpassen.</p>
 
 <p>Nach einigen Jahren voller Zufriedenheit kündigte sich eine Änderung an. Der
 Provider, ein Einzelunternehmer, trennte sich auf Überlastungsgründen von
 dem Providergeschäft und übergab es an ein Hosting-Unternehmen in NRW. Kurz
-nach dem Vetragswechsel folgte ein technischer Umzug, vermutlich ein Umzug
-der Datem mit <a href="https://de.wikipedia.org/wiki/Rsync">rsync</a> oder etwas ähnlichem,
+nach dem Vetragswechsel folgte ein technischer Umzug, vermutlich eine
+Datenmigration mit <a href="https://de.wikipedia.org/wiki/Rsync">rsync</a> oder etwas ähnlichem,
 teilweise online. Dadurch wurde der Server längere Zeit quälend langsam und fiel
 mehrfach ganz aus.</p>
 
-<p>Am Ende der Aktion funktionierten einige Dienste nicht mehr, z. Postfix.
+<p>Am Ende der Aktion funktionierten einige Dienste nicht mehr, z.B. Postfix.
 Eine Analyse stellte fest, dass die Dateien und Verzeichnisse von Postfix
 plötzlich eine falsche UID und GID hatten. Aus meiner beruflichen Erfahrung
 kannte ich solche Probleme, die aus einer falsche Anwendung von rsync
@@ -203,7 +205,7 @@ virtueller Server auf den Markt zu bringen. Es gab drei Modelle zu Preisen
 von ca. 6, 12 und 20 €/Monat. Ich entschied mich für den mittleren und
 bekam eine Intel Celeron J1800 CPU, 4 GB RAM und eine (allerdings relativ
 langsame) 1 TB SATA Festplatte; für die moderate Kostensteigerung also
-deutlich mehr Hardare als bei den typischen virtuellen Serverangeboten.</p>
+deutlich mehr Leistung als bei den typischen virtuellen Serverangeboten.</p>
 
 <p>Der physische Server hat mehrere Vorteile gegenüber dem virtuellen. Die
 Leistung (CPU und I/O) kann nicht von anderen Kunden überbucht werden
