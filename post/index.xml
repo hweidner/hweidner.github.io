@@ -6,10 +6,22 @@
     <description>Recent content in Posts on hweidner.de</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Fri, 25 Sep 2020 16:16:40 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2020 17:31:09 +0200</lastBuildDate>
     
 	<atom:link href="http://hweidner.de/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Welche Sprache für Checkmk Local Checks?</title>
+      <link>http://hweidner.de/post/2020/welche-sprache-fuer-checkmk-local-checks/</link>
+      <pubDate>Wed, 30 Sep 2020 17:31:09 +0200</pubDate>
+      
+      <guid>http://hweidner.de/post/2020/welche-sprache-fuer-checkmk-local-checks/</guid>
+      <description>&lt;p&gt;Das Monitoring-System &lt;a href=&#34;https://checkmk.de/&#34;&gt;Checkmk&lt;/a&gt; erlaubt es, die
+eingebauten Standard-Checks durch eigene Erweiterungen zu ergänzen. Meistens
+werden dabei &lt;a href=&#34;https://checkmk.de/cms_localchecks.html&#34;&gt;Local Checks&lt;/a&gt;
+verwendet.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Virtuelle Server</title>
