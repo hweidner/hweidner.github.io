@@ -26,6 +26,8 @@ eingebauten Standard-Checks durch eigene Erweiterungen zu ergänzen. Meistens
 werden dabei <a href="https://checkmk.de/cms_localchecks.html">Local Checks</a>
 verwendet.</p>
 
+<p>(Nachtrag 2020-10-25: Messwerte für PHP hinzugefügt.)</p>
+
 <p>Local Checks sind Skripte oder Programme, die man auf dem zu überwachenden
 System in einem speziellen Verzeichnis ablegt. Sie ermitteln einen Messwert
 für das Monitoring und geben ihn in einem definierten Format auf der
@@ -68,7 +70,7 @@ einer &ldquo;richtigen&rdquo; Programmiersprache.</p>
 OpenSUSE Leap und Ubuntu LTS &ndash; bringen drei (alle außer CentOS)
 bereits in der Minimalinstallation einen Perl5 Interpreter mit.
 Weitere beliebte Skriptsprachen, die bei allen genannten Distributionen
-enthalten sind, umfassen Python und Ruby. Diese sind nicht Bestandteil
+enthalten sind, umfassen PHP, Python und Ruby. Diese sind nicht Bestandteil
 der Minimalinstallation, lassen sich aber über die Standard-Paketquellen
 nachinstallieren; ebenso wie Perl auf CentOS.</p>
 
@@ -86,6 +88,7 @@ mehr in Betracht ziehen.</p>
 <th>System</th>
 <th>Bash</th>
 <th>Perl</th>
+<th>PHP</th>
 <th>Python 3</th>
 <th>Ruby</th>
 </tr>
@@ -96,6 +99,7 @@ mehr in Betracht ziehen.</p>
 <td>CentOS 8</td>
 <td>4.4.19</td>
 <td>5.26.3</td>
+<td>7.2.24</td>
 <td>3.6.8 und 3.8.0</td>
 <td>2.5.5</td>
 </tr>
@@ -104,6 +108,7 @@ mehr in Betracht ziehen.</p>
 <td>Debian 10</td>
 <td>5.0.3</td>
 <td>5.28.1</td>
+<td>7.3.19</td>
 <td>3.7.3</td>
 <td>2.5.1</td>
 </tr>
@@ -112,6 +117,7 @@ mehr in Betracht ziehen.</p>
 <td>OpenSUSE Leap 15</td>
 <td>4.4.23</td>
 <td>5.26.1</td>
+<td>7.4.6</td>
 <td>3.6.10</td>
 <td>2.5.8</td>
 </tr>
@@ -120,6 +126,7 @@ mehr in Betracht ziehen.</p>
 <td>Ubuntu 20.04 LTS</td>
 <td>5.0.17</td>
 <td>5.30.0</td>
+<td>7.4.3</td>
 <td>3.8.2</td>
 <td>2.7</td>
 </tr>
@@ -146,6 +153,12 @@ real	0m0,003s
 user	0m0,003s
 sys	0m0,001s
 
+$ time php -r ''
+
+real	0m0,017s
+user	0m0,008s
+sys	0m0,009s
+
 $ time python3 -c ''
 
 real	0m0,027s
@@ -160,8 +173,8 @@ sys	0m0,016s
 </code></pre>
 
 <p>Die Initialisierungszeit für den Bash und Perl liegt gleichauf im Bereich
-weniger Millisekunden. Python 3 (und 2 ebenfalls) benötigt bereits knapp 30
-Millisekunden, Ruby sogar das doppelte.</p>
+weniger Millisekunden. PHP benötigt knapp 20 und Python 3 (und 2 ebenfalls)
+bereits knapp 30 Millisekunden, Ruby sogar nochmal das doppelte.</p>
 
 <p>Natürlich sind die Messungen mit <code>time</code> nicht sehr präzise, zumal sich keine
 höhere Genauigkeit als Millisekunden ausgeben lässt. Eine Tendenz ist aber
@@ -236,6 +249,41 @@ harald@moonrise:~$ strace -c perl -e ''
   0,00    0,000000           0         1           execve
 ------ ----------- ----------- --------- --------- ----------------
 100.00    0,001634                   189        12 total
+
+
+$ strace -c php -r ''
+
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+100,00    0,000790          11        69           munmap
+  0,00    0,000000           0       109           read
+  0,00    0,000000           0       116           close
+  0,00    0,000000           0        30           stat
+  0,00    0,000000           0       150           fstat
+  0,00    0,000000           0        12         7 lstat
+  0,00    0,000000           0         1           lseek
+  0,00    0,000000           0       314           mmap
+  0,00    0,000000           0       111           mprotect
+  0,00    0,000000           0        15           brk
+  0,00    0,000000           0        80           rt_sigaction
+  0,00    0,000000           0         2           rt_sigprocmask
+  0,00    0,000000           0        30        30 ioctl
+  0,00    0,000000           0         8           pread64
+  0,00    0,000000           0         2         1 access
+  0,00    0,000000           0         1           execve
+  0,00    0,000000           0         1           getcwd
+  0,00    0,000000           0         2           readlink
+  0,00    0,000000           0         1           sysinfo
+  0,00    0,000000           0         2         1 arch_prctl
+  0,00    0,000000           0        18           futex
+  0,00    0,000000           0         2           getdents64
+  0,00    0,000000           0         1           set_tid_address
+  0,00    0,000000           0       116         3 openat
+  0,00    0,000000           0         1           set_robust_list
+  0,00    0,000000           0         2           prlimit64
+  0,00    0,000000           0         2           getrandom
+------ ----------- ----------- --------- --------- ----------------
+100.00    0,000790                  1198        42 total
 
 
 $ strace -c python3 -c ''
@@ -327,13 +375,14 @@ $ strace -c ruby -e ''
 <p>Die konkreten Zeitangaben sind hier gar nicht so interessant, da strace sich
 zwischen Programm und Syscall schiebt und damit die Laufzeiten beeinflusst.
 Entscheidend ist die Anzahl: Bash und Perl setzen bei der Initialisierung
-weniger als 200 Syscalls ab; Python etwa 750 und Ruby sogar mehr als 1.800.</p>
+weniger als 200 Syscalls ab; Python etwa 750, PHP knapp 1.200 und Ruby sogar
+mehr als 1.800.</p>
 
 <h2 id="fazit">Fazit</h2>
 
 <p>Bezüglich der Startup-Zeiten für den Interpreter liegt es durch die
 Messungen nahe, bei ansonsten gleicher Eignung Perl5 den Vorzug gegenüber
-anderen Skriptsprachen wie Python 3 oder Ruby zu geben.</p>
+anderen Skriptsprachen wie PHP, Python 3 oder Ruby zu geben.</p>
 
 <p>Sehr einfache Bash-Skripte sind sogar noch etwas performanter als Perl.
 Allerdings kehrt sich der Vorteil zugunsten von Perl um, sobald die Skripte
