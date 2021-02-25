@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Wie viele Codezeilen hat Wireguard -hweidner.de</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="hweidner.de">
+<meta name="author" content="Harald Weidner">
+<meta name="keywords" content="keywords">
+<link rel="stylesheet" href="/css/styles.css" type="text/css">
+</head>
+<body>
+<p class="logo">hweidner.de<br>
+<span class="subtitle">Harald Weidner explaining the world.</span>
+</p>
+<div class="content">
+
+
+
+
+  <p class="date">2021-02-25 01:45</p>
+<h1>Wie viele Codezeilen hat Wireguard</h1>
+
+
+<p>In meinem gestrigen Vortrag über <a href="https://wireguard.com/">Wireguard</a> im
+Rahmen des Freien Software Abends Köln/Düsseldorf hatte ich zitiert,
+dass Wireguard nur einen Codeumfang von 3.800 Zeilen hat, im Vergleich
+zu den ca. 400.000 von Strongswan und 600.000 von OpenVPN.</p>
+
+<p>Diese Zahl hatte ich bei der Vorbereitung meines ersten Wireguard-Vortrags
+als Zitat aus einer Quelle im Internet übernommen, die ich jedoch auf Rückfrage
+nicht mehr benennen konnte.</p>
+
+<p>Sucht man mit Google nach dem Suchbegriff &ldquo;wireguard lines of code&rdquo;, enthält
+die Vorschau zum <a href="https://restoreprivacy.com/vpn/wireguard/">ersten Treffer</a>
+diese Zahl; der verlinkte Artikel nennt sie jedoch nicht mehr. Die Treffer
+zwei bis vier sprechen jeweils von ca. 4000 Zeilen.</p>
+
+<p><img src="/img/wireguard-lines-of-code.png" alt="Google-Suche nach &quot;wireguard lines of code&quot;" title="wireguard lines of code" /></p>
+
+<p>Aber schauen wir doch mal in die Quellen.</p>
+
+<p>Wireguard wurde in Linux 5.6 erstmals als Bestandteil des Kernels
+veröffentlicht. Hier ist die C-Implementierung von Wireguard bereits
+4.764 Zeilen groß. Mit Headern und Makefile sind es 5453 Zeilen.</p>
+
+<pre><code>harald@moonrise:~/Downloads/linux-5.6/drivers/net/wireguard$ cloc .
+      31 text files.
+      31 unique files.                              
+       0 files ignored.
+
+github.com/AlDanial/cloc v 1.82  T=0.03 s (963.6 files/s, 216617.2 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+C                               17            790            495           4764
+C/C++ Header                    13            137             94            671
+make                             1              0              0             18
+-------------------------------------------------------------------------------
+SUM:                            31            927            589           5453
+-------------------------------------------------------------------------------
+</code></pre>
+
+<p>In der aktuellen Kernelversion 5.11.1 ist der Codeumfang nahezu gleich
+geblieben; er betägt nun 5444 Zeilen inclusive Header und Makefile.</p>
+
+<p>Um Wireguard nutzen zu können, benötigt man neben dem Kerneltreiber
+auch die Tools <code>wg</code> und <code>wg-quick</code>. Sie kommen unter Debian/Ubuntu
+im Paket
+<a href="https://packages.debian.org/buster-backports/wireguard-tools">wireguard-tools</a>.
+Der Sourcecode dazu liegt z.B auf GitHub im Repository
+<a href="https://github.com/WireGuard/wireguard-tools">wireguard-tools</a> im
+Verzeichnis <code>src</code>. Hier ist die reine Implementierung in C 3211 Zeilen lang,
+mit Headern und Buildsystem ergeben sich aber insgesamt 8659 Zeilen. Der
+große Umfang ist u.a. der Tatsache geschuldet, dass das Repository die
+Tools für die Betriebssysteme Linux, OpenBSD, FreeBSD, MacOS, Windows und
+Android beinhaltet.</p>
+
+<pre><code>harald@moonrise:~/git/wireguard-tools/src (master)$ cloc .
+      56 text files.
+      56 unique files.                              
+      13 files ignored.
+
+github.com/AlDanial/cloc v 1.82  T=0.05 s (998.3 files/s, 208911.5 lines/s)
+-----------------------------------------------------------------------------------
+Language                         files          blank        comment           code
+-----------------------------------------------------------------------------------
+C/C++ Header                        20            429            318           3661
+C                                   21            464            105           3211
+Bourne Again Shell                   4            184             54           1625
+make                                 2             22              6            112
+Windows Resource File                1              5              4             31
+XML                                  1              0              4             19
+-----------------------------------------------------------------------------------
+SUM:                                49           1104            491           8659
+-----------------------------------------------------------------------------------
+</code></pre>
+
+<p>Insgesamt ergibt sich also ein Codeumfang der C Quelltexte von Kernel und
+Tools von 7.975 Zeilen, mit Headern sind es 12.307 Zeilen. Also durchaus
+einiges mehr als die ursprünglich zitierten 3.800 Zeilen, allerdings immer
+noch deutlich weniger als OpenVPN und Strongswan mit ihrem Codeumfang im
+sechsstelligen Bereich.</p>
+
+<p class="footer"><a href="/impressum/">Impressum</a></p>
+</div>
+</body>
+</html>
+
+
+

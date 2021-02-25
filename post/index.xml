@@ -6,10 +6,22 @@
     <description>Recent content in Posts on hweidner.de</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 30 Sep 2020 19:38:34 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 25 Feb 2021 01:45:28 +0100</lastBuildDate>
     
 	<atom:link href="http://hweidner.de/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Wie viele Codezeilen hat Wireguard</title>
+      <link>http://hweidner.de/post/2021/wireguard-lines-of-code/</link>
+      <pubDate>Thu, 25 Feb 2021 01:45:28 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2021/wireguard-lines-of-code/</guid>
+      <description>&lt;p&gt;In meinem gestrigen Vortrag über &lt;a href=&#34;https://wireguard.com/&#34;&gt;Wireguard&lt;/a&gt; im
+Rahmen des Freien Software Abends Köln/Düsseldorf hatte ich zitiert,
+dass Wireguard nur einen Codeumfang von 3.800 Zeilen hat, im Vergleich
+zu den ca. 400.000 von Strongswan und 600.000 von OpenVPN.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Welche Sprache für Checkmk Local Checks?</title>
