@@ -17,7 +17,9 @@
       <pubDate>Thu, 25 Feb 2021 01:45:28 +0100</pubDate>
       
       <guid>http://hweidner.de/post/2021/wireguard-lines-of-code/</guid>
-      <description>&lt;p&gt;In meinem gestrigen Vortrag über &lt;a href=&#34;https://wireguard.com/&#34;&gt;Wireguard&lt;/a&gt; im
+      <description>&lt;p&gt;In meinem gestrigen
+&lt;a href=&#34;https://github.com/hweidner/talks/tree/master/2021-02_Wireguard_VPNs__FSA&#34;&gt;Vortrag&lt;/a&gt;
+über VPNs mit &lt;a href=&#34;https://wireguard.com/&#34;&gt;Wireguard&lt;/a&gt; im
 Rahmen des Freien Software Abends Köln/Düsseldorf hatte ich zitiert,
 dass Wireguard nur einen Codeumfang von 3.800 Zeilen hat, im Vergleich
 zu den ca. 400.000 von Strongswan und 600.000 von OpenVPN.&lt;/p&gt;</description>
