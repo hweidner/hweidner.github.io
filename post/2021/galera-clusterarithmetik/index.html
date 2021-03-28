@@ -68,7 +68,7 @@ werden könnten.</p>
 <pre><code>+---+---+---+
 | A | B | C |
 +---+---+---+
-+ 1 + 1 + 1 +
+| 1 | 1 | 1 |
 +---+---+---+
 </code></pre>
 
@@ -103,7 +103,7 @@ ist technisch gesehen auch der Aufbau eines 2-Node Clusters möglich.</p>
 <pre><code>+---+---+
 | A | B |
 +---+---+
-+ 1 + 1 +
+| 1 | 1 |
 +---+---+
 </code></pre>
 
@@ -113,19 +113,23 @@ wurde. Wegen des Quorums von 2 toleriert der Cluster weder den Ausfall eines
 Knotens oder Standortes, noch den Ausfall der Netzwerkverbindung zwischen
 ihnen.</p>
 
-<p>Das kann man (etwas) besser lösen.</p>
+<p>Das kann man besser lösen.</p>
 
 <h2 id="eine-frage-der-gewichtung">Eine Frage der Gewichtung</h2>
 
 <p>In einem Galera Cluster kann das Gewicht jedes Knotens manuell eingestellt
-werden. In der folgenden Abbildung wird ein Cluster aus zwei Knoten gezeigt,
+werden. Nur das Gewicht bzw. die Summe der Gewichte entscheiden über das
+Quorum im Cluster. Damit sind auch sinnvolle Clustertopologien mit einer
+geraden Anzahl an Knoten möglich.</p>
+
+<p>In der folgenden Abbildung wird ein Cluster aus zwei Knoten gezeigt,
 bei dem einer ein Gewicht von 2, der andere den Standardwert 1 hat. Somit
 ist das Gesamtgewicht des Clusters 3, das Quorum liegt bei 2.</p>
 
 <pre><code>+---+---+
 | A | B |
 +---+---+
-+ 2 + 1 +
+| 2 | 1 |
 +---+---+
 </code></pre>
 
@@ -156,7 +160,7 @@ Knoten ein unterschiedliches Gewicht zu geben.</p>
 <pre><code>+---+---+---+
 | A | B | C |
 +---+---+---+
-+ 4 + 3 + 2 +
+| 4 | 3 | 2 |
 +---+---+---+
 </code></pre>
 
@@ -198,8 +202,8 @@ Knoten haben. Das folgende Beispiel zeigt, warum:</p>
 <pre><code>+---+---+---+
 | A | B | C |
 +---+---+---+
-+ 1 + 1 + 1 +
-+ 1 +   +   +
+| 1 | 1 | 1 |
+| 1 |   |   |
 +---+---+---+
 </code></pre>
 
@@ -219,8 +223,8 @@ Gewicht null zu geben.</p>
 <pre><code>+---+---+---+
 | A | B | C |
 +---+---+---+
-+ 1 + 1 + 1 +
-+ 0 +   +   +
+| 1 | 1 | 1 |
+| 0 |   |   |
 +---+---+---+
 </code></pre>
 
@@ -235,8 +239,8 @@ weiteren eins-Knotens das Quorum verliert.</p>
 <pre><code>+---+---+---+
 | A | B | C |
 +---+---+---+
-+ 5 + 6 + 8 +
-+ 4 +   +   +
+| 5 | 6 | 8 |
+| 4 |   |   |
 +---+---+---+
 </code></pre>
 
@@ -261,8 +265,8 @@ fünf Knoten notwendig.</p>
 <pre><code>+---+---+---+
 | A | B | C |
 +---+---+---+
-+ 6 + 5 + 7 +
-+ 5 + 5 +   +
+| 6 | 5 | 7 |
+| 5 | 5 |   |
 +---+---+---+
 </code></pre>
 
@@ -282,8 +286,8 @@ beliebiger zweier Knoten oder eines beliebigen Standortes zu tolerieren.</p>
 <pre><code>+---+---+---+
 | A | B | C |
 +---+---+---+
-+ 6 + 5 + 4 +
-+ 4 + 4 + 4 +
+| 6 | 5 | 4 |
+| 4 | 4 | 4 |
 +---+---+---+
 </code></pre>
 
