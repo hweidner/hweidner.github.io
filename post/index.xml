@@ -6,10 +6,22 @@
     <description>Recent content in Posts on hweidner.de</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 25 Feb 2021 01:45:28 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 27 Mar 2021 23:43:29 +0100</lastBuildDate>
     
 	<atom:link href="http://hweidner.de/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Galera Clusterarithmetik</title>
+      <link>http://hweidner.de/post/2021/galera-clusterarithmetik/</link>
+      <pubDate>Sat, 27 Mar 2021 23:43:29 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2021/galera-clusterarithmetik/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://galeracluster.com/&#34;&gt;Galera Cluster&lt;/a&gt; ist ein Replikationslösung für
+&lt;a href=&#34;https://www.mysql.com/&#34;&gt;MySQL&lt;/a&gt; und &lt;a href=&#34;https://mariadb.com/&#34;&gt;MariaDB&lt;/a&gt;.
+Galera ermöglicht es, die Datenbank als verteilten Multi-Master Cluster
+auf Basis einer synchronen Datenreplikation zu betreiben.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Wie viele Codezeilen hat Wireguard?</title>
