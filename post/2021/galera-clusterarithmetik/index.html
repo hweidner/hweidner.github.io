@@ -39,7 +39,7 @@ nur noch in der Konfiguration aktiviert werden. Für MySQL muss Galera
 manuell installiert werden; in MySQL ab 5.7.17 steht mit Group Replication
 ein vergleichbarer Clustermechanismus zur Verfügung.</p>
 
-<h1 id="absolute-mehrheit">Absolute Mehrheit</h1>
+<h2 id="absolute-mehrheit">Absolute Mehrheit</h2>
 
 <p>Galera Cluster funktioniert, wie viele andere Cluster-Lösungen, Quorum-basiert.
 Knoten, die im Gegensatz zur Mehrheit eine Transaktion nicht ausführen
@@ -52,7 +52,7 @@ ausgeschlossen ist.</p>
 
 <p>Daraus ergibt sich, dass der Cluster stets mit einer ungeraden Anzahl von
 Knoten betrieben werden sollte und davon immer mehr als die Hälfte verfügbar
-sein muss. Die naheliegenden Topologien eines Galera Clusters besteht also aus
+sein muss. Die naheliegenden Topologien eines Galera Clusters bestehen also aus
 mindestens drei Knoten.</p>
 
 <p>Da bei IT-Systemen nicht nur einzelne Knoten ausfallen können, sondern ganze
@@ -95,7 +95,7 @@ beiden verbleibenden Knoten verfügt mehr über das Quorum, weshalb die
 Datenbank auf keinem der Knoten mehr genutzt werden kann. Wir kommen weiter
 unten darauf zurück.</p>
 
-<h1 id="zwei-knoten">Zwei Knoten</h1>
+<h2 id="zwei-knoten">Zwei Knoten</h2>
 
 <p>Obwohl ein Galera Cluster meistens auf drei oder mehr Knoten basiert,
 ist technisch gesehen auch der Aufbau eines 2-Node Clusters möglich.</p>
@@ -115,7 +115,7 @@ ihnen.</p>
 
 <p>Das kann man (etwas) besser lösen.</p>
 
-<h1 id="eine-frage-der-gewichtung">Eine Frage der Gewichtung</h1>
+<h2 id="eine-frage-der-gewichtung">Eine Frage der Gewichtung</h2>
 
 <p>In einem Galera Cluster kann das Gewicht jedes Knotens manuell eingestellt
 werden. In der folgenden Abbildung wird ein Cluster aus zwei Knoten gezeigt,
@@ -185,7 +185,7 @@ möglich sein.</li>
 <li>Das selbe soll für die Standorte gelten. Da wir hier nur drei Standorte
 betrachten, soll ein Standort vollständig ausfallen dürfen, ohne den
 Clusterbetrieb einzuschränken.</li>
-<li>Die selben Eigenschaften sollten sinngeäß gelten, wenn ein beliebiger
+<li>Die selben Eigenschaften sollten sinngemäß gelten, wenn ein beliebiger
 Knoten zu Wartungszwecken aus dem Clusterverbund herausgenommen wird. Auch
 hier soll kein Split-Brain Szenario entstehen können.</li>
 </ul>
@@ -253,7 +253,7 @@ darf, ohne das Quorum zu unterschreiten. Wenn dagegen ein Knoten am
 Standort B oder C in Wartung ist, verbleibt ein 2-Node Cluster mit
 den oben beschriebenen Einschränkungen.</p>
 
-<h1 id="drei-von-fünf">Drei von fünf</h1>
+<h2 id="drei-von-fünf">Drei von fünf</h2>
 
 <p>Um einen Ausfall zweier beliebiger Knoten zu tolerieren, sind mindestens
 fünf Knoten notwendig.</p>
@@ -261,7 +261,7 @@ fünf Knoten notwendig.</p>
 <pre><code>+---+---+---+
 | A | B | C |
 +---+---+---+
-+ 5 + 6 + 7 +
++ 6 + 5 + 7 +
 + 5 + 5 +   +
 +---+---+---+
 </code></pre>
@@ -274,7 +274,7 @@ eines ganzen Standortes toleriert. Nur bei Wartungsarbeiten an dem Knoten
 an Standort C verbleibt ein Cluster über zwei Standorte, bei dem Standort
 A nicht ausfallen darf.</p>
 
-<h1 id="volle-standortredundanz">Volle Standortredundanz</h1>
+<h2 id="volle-standortredundanz">Volle Standortredundanz</h2>
 
 <p>Mit sechs Knoten ist es möglich, ohne und mit Wartungsarbeiten den Ausfall
 beliebiger zweier Knoten oder eines beliebigen Standortes zu tolerieren.</p>
@@ -291,7 +291,7 @@ beliebiger zweier Knoten oder eines beliebigen Standortes zu tolerieren.</p>
 Punkte nötig. Bei Ausfall zweier beliebiger Knoten bleiben mindestens 17 Punkte
 übrig, ebenso beim Ausfall eines Standortes. Egal, welcher der Knoten in
 Wartung genommen wird, es verbleibt in jedem Fall ein 5-Node Cluster, bei
-dem zwei beliebige Knoten oder ein beliebiger Standort ausfallen kann,
+dem zwei beliebige Knoten oder ein beliebiger Standort ausfallen können,
 ohne das Quorum zu unterschreiten. In allen Fällen ist kein Split-Brain
 Szenario möglich.</p>
 
