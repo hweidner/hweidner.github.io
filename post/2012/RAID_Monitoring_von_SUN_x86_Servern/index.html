@@ -23,27 +23,22 @@
 
 <p>Die x86-basierten Server von SUN verwenden LSI Logic RAID Controller.
 Beim SUN Fire X4150 ist das zum Beispiel:</p>
-
 <pre><code># lspci -k -s 07:00.0
 07:00.0 SCSI storage controller: LSI Logic / Symbios Logic SAS1068E PCI-Express Fusion-MPT SAS (rev 04)
         Subsystem: LSI Logic / Symbios Logic Device 3150
         Kernel driver in use: mptsas
 </code></pre>
-
 <p>Der RAID Status lässt sich mit dem Tool <code>mpt-status</code> aus dem
 gleichnamigen
 <a href="http://packages.debian.org/squeeze/mpt-status">Debian-Paket</a> abfragen.
 Dazu muss das Kernel-Modul <code>mptctl</code> geladen sein.</p>
-
 <pre><code># mpt-status -i 1
 ioc0 vol_id 1 type IM, 2 phy, 135 GB, state OPTIMAL, flags ENABLED
 ioc0 phy 2 scsi_id 3 HITACHI  H103014SCSUN146G A2A8, 136 GB, state ONLINE, flags NONE
 ioc0 phy 1 scsi_id 2 HITACHI  H103014SCSUN146G A2A8, 136 GB, state ONLINE, flags NONE
 </code></pre>
-
 <p>Mit der Option <code>-s</code> wird eine kürzere Ausgabe erzeugt, die sich leicht
 für Nagios NRPE oder check_mk einbinden lässt.</p>
-
 <pre><code># mpt-status -i 1 -s
 log_id 1 OPTIMAL
 phys_id 2 ONLINE

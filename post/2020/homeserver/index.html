@@ -25,19 +25,14 @@
 <a href="https://www.deimeke.net/dirk/blog/index.php?/archives/2859-Server-Zu-Hause-Ich-Nein!.html">Dirk</a>
 und andere haben in ihren Blogs ihr Homeserver-Setup vorgestellt. Das möchte
 ich hiermit ebenfalls tun.</p>
-
 <h2 id="die-vorgeschichte">Die Vorgeschichte</h2>
-
 <p>Als ich noch Student oder Mitarbeiter der Uni war, konnte ich jederzeit
 vor Ort oder von unterwegs mit Telnet und später SSH auf die Uni-Server
 zugreifen, um meine E-Mails mit <a href="http://www.mutt.org/">mutt</a> (und vorher
 <a href="https://de.wikipedia.org/wiki/Elm_(E-Mail-Programm)">elm</a>) zu lesen.</p>
-
 <p>Nach dem Wechsel in die Industrie im Jahr 2002 ging das nicht mehr. Um die
 gewohnte Arbeitsweise nicht aufgeben zu müssen, musste ein eigener Server her.</p>
-
 <h2 id="ein-eigener-homeserver">Ein eigener Homeserver&hellip;</h2>
-
 <p>Ich hatte mittlerweile einen DSL-Anschluss und entschied mich für einen
 selbst betriebenen Server im Flur meiner Wohnung. Dafür musste ein ausgedienter
 PC herhalten; diese Rolle nahm für kurze Zeit ein PC mit einem Intel Pentium
@@ -50,7 +45,6 @@ die Mailboxen sortiert. Gelesen wurden sie mit SSH-Login und mutt,
 dank DynDNS auch von unterwegs. Im Laufe der Zeit sammelten sich mehr
 Dienste auf dem Server, u.a. Fileservice mit NFS und Samba und ein Apache
 Webserver mit selbstprogrammierten CGI-Skripten.</p>
-
 <p>Doch der Betrieb eines 24x7 laufenden Servers hatte auch Nachteile.
 Gelegentlich war der Server einfach nicht erreichbar, was abwechselnd auf
 Probleme mit der DSL-Verbindung, dem DynDNS oder dem heimischen Netzwerk
@@ -58,9 +52,7 @@ zurückzuführen war. Daneben war der Energieverbrauch für einen 24x7
 laufenden alten PC unvernünftig. Zudem deutete sich an, dass ich irgendwann
 mit meiner Freundin zusammenziehen würde und ein lärmender Homeserver im
 Flur nicht den nötigen WAF (women acceptance factor) hätte.</p>
-
 <h2 id="oder-ein-mietserver-bei-einem-provider">&hellip;oder ein Mietserver bei einem Provider&hellip;</h2>
-
 <p>2003 mietete ich meinen ersten virtuellen Server, eine Linux-VM mit einem
 GB RAM und 30 GB Plattenplatz unter der Virtualisierungstechnologie Xen.
 Darauf zog der E-Mail Betrieb und der Apache Webserver um. Anstatt die
@@ -68,13 +60,11 @@ E-Mails periodisch abzuholen, leitete ich sie verzögerungsfrei von GMX an den
 Server weiter, auf dem ein Postfix lief. Der Server im Flur blieb dort bis
 zum Auszug 2005 stehen, wurde jedoch zum reinen Fileserver und lief nicht
 mehr 24h am Tag.</p>
-
 <p>Nach dem Umzug in die gemeinsame Wohnung rüstete ich meinen Haupt-PC, ein
 AMD Athlon 3200+, soweit auf, dass er die Rolle des Fileservers mit übernehmen
 konnte. Der alte Server diente noch eine Weile als Backupserver, bis er
 schließlich ganz ausgemustert wurde. Einen dauerlaufenden Server gab es
 bei mir für längere Zeit nicht mehr.</p>
-
 <p>Dem Mietserver-Setup bin ich bis heute treu geblieben. Zwar wechselten die
 Anbieter (dazu demnächst ein eigener Artikel) und die Technik von Zeit zu
 Zeit. Zwischendrin war es dedizierter Server auf Basis des Intel Celeron
@@ -85,15 +75,12 @@ Procmail, mutt und seit dem Aufkommen von Smartphones auch
 Zeitweise lagen dort auch meine Webseiten wie dieses Blog, das jedoch
 <a href="/post/2020/relaunch-und-servermigration/">Anfang dieses Jahres eine neue Heimat bei GitHub
 Pages</a> gefunden hat.</p>
-
 <h2 id="oder-beides">&hellip;oder beides?</h2>
-
 <p>Im Laufe der Jahre wuchsen die Anforderungen an Serverdienste zum
 persönlichen Gebrauch. Ein dauerhaft laufender lärmender Alt-PC kam aber
 nicht mehr in Frage.
 Stattdessen schaute ich mich bei den damals aufkommenden Mini-PCs um, die
 eine geringe Leistungsaufnahme und einen lautlosen Betrieb versprachen.</p>
-
 <p>2011 erstand ich ein <a href="https://www.alix-board.de/">ALIX-Board</a> mit AMD
 Geode LX800 Prozessor und 256 MB RAM. Das Betriebssystem und die Daten
 lagen auf der Compact Flash Karte, die damals noch extrem wenige
@@ -105,7 +92,6 @@ nur alle paar Stunden auf die CF-Karte synchronisiert. Updates und
 Konfigurationsänderungen waren dadurch ziemlich mühsam. Der Ansatz stellte
 sich schon bald als zu heftig und das Gerät als zu leistungsschwach heraus,
 so dass nie ernsthaft Serverdienste darauf betrieben wurden.</p>
-
 <p>Einige Zeit später folgte ein neuer Versuch, wieder mit einem lüfterlosen
 System. Diesmal wurde es ein <a href="http://www.shuttle.eu/de/produkte/discontinued/barebones/ds47/uebersicht/">Shuttle
 DS47</a>
@@ -114,14 +100,11 @@ Das System ist für Dauerbetrieb zertifiziert; es kühlt sich lüfterlos nach
 dem Konvektionsprinzip, dazu muss es aufrecht stehend betrieben werden.
 Der Shuttle sollte den Mietserver nicht ablösen, sondern ergänzen.
 Er läuft normalerweise ständig, außer während ich auf größeren Reisen bin.</p>
-
 <p>Mit dem Server habe ich die Möglichkeit, verschiedene Serverdienste
 bereit zu halten; wenn sie nicht genutzt werden, können sie auch schnell
 wieder eingestampft werden. Die Liste der Dienste ist daher als
 Momentaufnahme zu betrachten.</p>
-
 <p><strong>Serverdienste aus Debian 10 (stable)</strong></p>
-
 <ul>
 <li><a href="http://www.postfix.org/">Postfix</a> zum Mailversand über den Provider-Server</li>
 <li><a href="https://httpd.apache.org/">Apache HTTPD</a> hauptsächlich als Reverse Proxy vor den u.g. Webdiensten</li>
@@ -135,24 +118,18 @@ webbasierten Dienste</li>
 <li><a href="https://icecast.org/">Icecast2</a></li>
 <li><a href="https://github.com/shellinabox/shellinabox">Shell in a Box</a></li>
 </ul>
-
 <p><strong>Aus Debian testing/unstable/backports</strong></p>
-
 <ul>
 <li><a href="https://prometheus.io/">Prometheus</a></li>
 <li>Diverse Prometheus-Exporter, u.a. Node-Exporter, MySQL und Apache HTTPD</li>
 <li><a href="https://www.wireguard.com/">Wireguard</a> VPN</li>
 </ul>
-
 <p><strong>Aus eigenen Paketquellen</strong></p>
-
 <ul>
 <li><a href="https://checkmk.de/">Checkmk Monitoring-Server</a></li>
 <li><a href="https://podman.io/">Podman</a>, <a href="https://buildah.io/">Buildah</a> und <a href="https://github.com/containers/skopeo">Skopeo</a></li>
 </ul>
-
 <p><strong>Als Docker Container</strong></p>
-
 <ul>
 <li><a href="https://grafana.com/">Grafana</a></li>
 <li><a href="https://gitea.io/">Gitea</a></li>
@@ -163,26 +140,21 @@ webbasierten Dienste</li>
 <li><a href="https://www.portainer.io/">Portainer</a></li>
 <li><a href="http://cachethq.io/">Cachet</a></li>
 </ul>
-
 <p>Alle genannten Dienste zusammen lasten den Shuttle DS47 bzgl. CPU zu etwa
 einem Drittel und RAM knapp zur Hälfte aus.</p>
-
 <p>Ich finde es erstaunlich, wie weit man mit einem so kleinen und komplett
 geräuschlosem Gerät kommt. Jedoch gibt es auch Anwendungen, die die
 Möglichkeiten des Servers sprengen und die ich deshalb nach kurzer Zeit
 wieder deinstalliert habe. Dazu gehören GitLab, OpenProject, Rancher sowie
 libvirt mit eigener Kubernetes-VM unter
 <a href="https://kubernetes.io/docs/setup/learning-environment/minikube/">minikube</a>.</p>
-
 <p>Die meisten der genannten webbasierten Dienste sind dank DynDNS und Port
 Forwarding am DSL Router prinzipiell von außen erreichbar. Jedoch betreibe ich
 hier nur Dienste für mich selber. Dienste, die auch von anderen Personen
 genutzt werden, laufen auf dem Mietserver beim Provider. Derzeit sind dies
 Mattermost und <a href="https://www.mumble.info/">Mumble</a> (murmurd) sowie eine
 MariaDB-Instanz für Mattermost.</p>
-
 <h2 id="und-in-zukunft">Und in Zukunft?</h2>
-
 <p>Es ist schwer zu sagen, was in Zukunft kommt und/oder sich ändern wird.
 Grundsätzlich bin ich mit dem System derzeit zufrieden; abgesehen vom
 chronisch knappen Platz auf der SSD und dem einen oder anderen

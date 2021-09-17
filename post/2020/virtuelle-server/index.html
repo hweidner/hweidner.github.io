@@ -23,14 +23,11 @@
 
 <p>In meinem <a href="../homeserver/">Artikels über Homeserver</a> hatte ich bereits angekündigt, noch
 etwas über (virtuelle) Server bei Hosting-Providern zu schreiben.</p>
-
 <p>Bis 2003 diente ein alter, lauter und stromfressender PC im Flur meiner
 Wohnung als 24x7 laufender E-Mail Server. Um ihn abzulösen und die
 Wohnung auf einen höheren WAF (woman acceptance factor) anzuheben, schaute
 ich mich nach Mietangeboten für virtuelle Server um.</p>
-
 <h2 id="xen">Xen</h2>
-
 <p>Schnell wurde ich fündig bei einem kleinen Provider im Südwesten
 Deutschlands, der Webhosting und virtuelle Server im Angebot hatte. Die
 Homepage wirkte freundlich und aufgeräumt, das öffentliche Kundenforum war
@@ -40,7 +37,6 @@ nicht mehr erinnern, aber das Angebot wirkte mit 5€ pro Monat bei Abschluss
 eines Jahresvertrags preiswert. Man konnte unter verschiedenen Distributionen
 wählen; ich entschied mich natürlich, wie auch bei allen späteren
 Mietservern, für <a href="https://www.debian.org/">Debian</a>.</p>
-
 <p>Über die Virtualisierungstechnologie machte der Provider auf seiner Homepage
 keine Angaben. Schnell stellte sich aber heraus, dass mein Server unter
 <a href="https://de.wikipedia.org/wiki/Xen">Xen</a>
@@ -52,7 +48,6 @@ einsetzen musste, und ich eröffnete eine Diskussion im Forum darüber. Diese
 wurde jedoch schnell abgewürgt mit der Behauptung, dieses Thema gehöre nicht
 ins Forum, und nach kurzer Zeit ganz gelöscht, ebenso wie die Klagen über die
 Performance und Fehler.</p>
-
 <p>Mit der Zeit eskalierte die Situation, immer mehr Kundenbeschwerden tauchten
 im Forum auf und wurden in immer kürzeren Zeitabständen gelöscht. Irgendwann
 traf es auch meinen Server. Während einer angekündigten &ldquo;online&rdquo; Storagemigration
@@ -61,7 +56,6 @@ weil die SSH Verbindungen alle in ein Timeout liefen. Gleichzeitig nahm er
 aber, wenn auch langsam, noch eingehende E-Mails entgegen, so dass diese für
 die Absender als zugestellt erschienen, ich jedoch nicht darauf zugreifen
 konnte. Nach einer Woche erholte sich die Performance aber wieder.</p>
-
 <p>Ein weiteres Manko war das Fehlen von
 <a href="https://de.wikipedia.org/wiki/Netfilter">Netfilter/IPtables</a>,
 obwohl das mit Xen damals schon möglich war.
@@ -75,7 +69,6 @@ Man hatte das Geschäft mit den Mietservern an einen Einzelunternehmer in
 NRW verkauft und konzentriere sich zukünftig auf das Webhosting. Der Vertrag
 ginge mit sofortiger Wirkung an den neuen Anbieter über. Auf die Frage zu
 IPtables kam keine Antwort.</p>
-
 <p>Bei Ablauf des Jahresvertrags erwartete ich eigentlich ein Angebot des neuen
 Anbieters, aber es kam nichts. Stattdessen funktionierte der Server weiter,
 ohne dass Geld abgebucht oder eine Rechnung gestellt wurde. Nach mehreren
@@ -87,22 +80,18 @@ den Vertrag zu velängern. Das wollte der Anbieter nicht. Wir einigten uns
 auf ein Vertragsende in wenigen Monaten und eine Nachzahlung der bis dahin
 angefallenen Monatsbeträge. Ich hatte Zeit, meine Daten zu sichern und einen
 neuen Anbieter zu suchen.</p>
-
 <p>Wenige Monate nach meinem Weggang las ich in einem Diskussionsforum, dass
 der Anbieter Insolvenz angemeldet hatte und alle Hosts mit den virtuellen
 Servern abgeschaltet worden waren. Für eine einmalige Wieder-Inbetriebnahme
 zwecks Datensicherung müsste jeder Kunde 300€ bezahlen, da die Aktion mit
 einer Fahrt in das 200km entfernte Hosting-Rechenzentrum verbunden sei. Es
 kam wohl auch zu Rechtsstreitigkeiten deswegen.</p>
-
 <h2 id="virtuozzo">Virtuozzo</h2>
-
 <p>Da die Suche nach einem neuen Anbieter einigermaßen eilig war, konnte ich
 nicht lange recherchieren und vergleichen. Nach den Erfahrungen mit
 Kleinfirmen und Einzelanbietern entschied mich für ein Angebot eines
 vergleichsweise großen Anbieters. Der virtuelle Server lag wieder in der
 Klasse um 5€/Monat bei 12 Monaten Vertragsbindung.</p>
-
 <p>Dieses Mal basierte der Server auf
 <a href="https://de.wikipedia.org/wiki/Virtuozzo">Virtouzzo</a>, einer kommerziellen
 Containertechnologie, von der es später auch eine Open Source Variante
@@ -116,25 +105,20 @@ An seine Grenzen stieß das Angebot jedoch, als ich versuchte, für
 Web-Experimente eine MySQL Datenbank zu installieren. Trotz sorgfältigem
 Tuning stieß diese immer wieder gegen ein unerwartetes Ressourcenlimit und
 stürzte nach einigen Stunden bis Tagen ab.</p>
-
 <p>Ansonsten gab es mit dem Server und dem Provider keine nennenswerten
 Schwierigkeiten oder Ereignisse. Das Ansinnen, dort auch dynamische
 Web-Applikationen zu betrieben, hatte ich schnell aufgegeben, aber als
 Mailserver behielt ich den Server mehrere Jahre lang.</p>
-
 <p>In der Zwischenzeit hatte ich jedoch auch beruflich mit
 <a href="http://linux-vserver.org/">Linux-VServer</a>, der wahrscheinlich
 ältesten Container-Technologie nach dem Chroot System
 Call, zu tun und war davon sehr angetan. Daher wuchs der Wunsch,
 Linux-VServer auch für meine privaten Zwecke einzusetzen.</p>
-
 <h2 id="linux-vserver">Linux-VServer</h2>
-
 <p>Im Gegensatz zu Virtuozzo gab es nur wenige Provider, die virtuelle Server
 mit Linux-VServer anboten. Einer davon hatte einen sehr guten Ruf in der
 Community und wurde in Foren und im Usenet oft lobend erwähnt. Irgendwann
 wechselte auch ich zu diesem Anbieter.</p>
-
 <p>Der Server, wieder in der Klasse um 5€/Monat, machte viele Jahre eine sehr
 gute Figur. Mailserver (<a href="https://de.postfix.org/">Postfix</a>),
 IMAP (<a href="https://www.dovecot.org/">Dovecot</a>),
@@ -143,7 +127,6 @@ Datenbank (<a href="https://dev.mysql.com/">MySQL</a>) und auch einige andere,
 zeitweise betriebenenen Anwendungen (z.b.
 <a href="https://icecast.org/">Icecast2</a>) hatten keine technischen Probleme; lediglich
 mit dem knappen RAM und Festplattenplatz musste man aufpassen.</p>
-
 <p>Nach einigen Jahren voller Zufriedenheit kündigte sich eine Änderung an. Der
 Provider, ein Einzelunternehmer, trennte sich auf Überlastungsgründen von
 dem Providergeschäft und übergab es an ein Hosting-Unternehmen in NRW. Kurz
@@ -151,7 +134,6 @@ nach dem Vertragswechsel folgte ein technischer Umzug, vermutlich eine
 Datenmigration mit <a href="https://de.wikipedia.org/wiki/Rsync">rsync</a> oder etwas ähnlichem,
 teilweise online. Dadurch wurde der Server längere Zeit quälend langsam und fiel
 mehrfach ganz aus.</p>
-
 <p>Am Ende der Aktion funktionierten einige Dienste nicht mehr, z.B. Postfix.
 Eine Analyse stellte fest, dass die Dateien und Verzeichnisse von Postfix
 plötzlich eine falsche UID und GID hatten. Aus meiner beruflichen Erfahrung
@@ -164,7 +146,6 @@ nur der Provider beheben konnte, z.B. Ausfälle des Servers oder
 Netzwerkprobleme. Ich eröffnete jedes Mal einen Auftrag im Ticketsystem,
 der auch nach einigen Tagen bearbeitet wurde. Im Einzelnen waren es jeweils
 Kleinigkeiten, aber einfach zu viele.</p>
-
 <p>Zudem gab es ein größeres Problem, dass der Provider nicht lösen konnte oder
 wollte. Zu Beginn lief der virtuelle Server, der Kernelversion nach zu
 urteilen, mit der gleichen Debian-Version wie der Host. Ich bin nicht mehr
@@ -175,9 +156,7 @@ libc-Version mit, die zu dem alten Kernel nicht mehr kompatibel war. Die
 Aussage des Providers war nur, dass die Linux-VServer basierenden Produkte
 abgekündigt seinen und ich auf sein neues Angebot wechseln sollte, das
 wieder auf Xen basierte.</p>
-
 <h2 id="openvz">OpenVZ</h2>
-
 <p>In der Zwischenzeit war ein anderer, in Thüringen beheimateter Provider
 einen damals ungewöhnlichen Schritt gegangen: er lud zu einem öffentlichen
 Betatest eines virtuellen Servers basierend auf OpenVZ ein. Der
@@ -186,7 +165,6 @@ neues virtuelles Serverprodukt vor der offiziellen Markeinführung ausgiebig
 testen. Der Server war kostenlos und blieb es über ein Jahr, anschließend
 konnten die Betatester zu vergünstigen Konditionen den Server in der 5€
 Klasse übernehmen, während er für Neukunden teurer angeboten wurde.</p>
-
 <p>Nachdem ich einige Monate an dem Test teilgenommen hatte und meine
 Verbesserungsvorschläge, die ich im Forum niedergeschrieben hatte,
 tatsächlich umgesetzt wurden, wechselte ich direkt nach dem Ende des
@@ -197,22 +175,18 @@ verblieb der Kernel auf einer immer älter werdenden Version, der Host
 war augenscheinlich auf einem in die Jahre gekommenen Fedora Linux stehen
 geblieben. Dies und der Wunsch nach mehr Leistung führen zu dem nächsten
 Wechsel, diesmal beim selben Provider.</p>
-
 <h2 id="dedizierte-hardware">Dedizierte Hardware</h2>
-
 <p>Dieser hatte nämlich angekündigt, einfache dedizierte Server zum Preis
 virtueller Server auf den Markt zu bringen. Es gab drei Modelle zu Preisen
 von ca. 6, 12 und 20 €/Monat. Ich entschied mich für den mittleren und
 bekam eine Intel Celeron J1800 CPU, 4 GB RAM und eine (allerdings relativ
 langsame) 1 TB SATA Festplatte; für die moderate Kostensteigerung also
 deutlich mehr Leistung als bei den typischen virtuellen Serverangeboten.</p>
-
 <p>Der physische Server hat mehrere Vorteile gegenüber dem virtuellen. Die
 Leistung (CPU und I/O) kann nicht von anderen Kunden überbucht werden
 und ist damit sehr gut vorhersagbar. Auch muss ich mich nicht mit einem
 veralteten Host-Kernel herumschlagen und eingeschränken System Calls
 oder Ressourcenlimits herumschlagen.</p>
-
 <p>Es gibt aber auch Nachteile; wenn der Server mal kaputt geht, muss ich mich
 zu einem unplanbaren Zeitpunkt mit dem Umzug der Daten auf ein Ersatzsystem
 herumschlagen; und mangels RAID droht ein Verlust der Daten bzw. Änderungen
@@ -223,9 +197,7 @@ an einzelnen Dateien langsam ankündigte. Zudem habe ich die Leistung des
 Servers mit meinem Mailbetrieb nicht ansatzweise ausgelastet, vor allem
 die Kapazität der Festplatte. Letzlich ist ein virtueller Server für meinen
 Use Case ökonomisch und ökologisch sinnvoller.</p>
-
 <h2 id="kvm">KVM</h2>
-
 <p>So kam es zum bislang letzten Wechsel des Anbieters. Der aktuelle Server
 liegt wieder in der 5€ Klasse und läuft unter
 <a href="https://www.linux-kvm.org/page/Main_Page">KVM</a>. Die Leistungsdaten sind mit
@@ -235,13 +207,11 @@ Inaktivität nicht von anderen Kunden überbucht werden. Der Speicherplatz
 ist mit 40 GB zwar knapp, liegt aber auf einem Ceph Cluster aus NVME SSDs,
 so dass die Performance sehr gut ist und man sich um Datenverlust
 (hoffentlich) keine Gedanken machen muss.</p>
-
 <p>Der Server läuft in einer <a href="https://www.proxmox.com/de/proxmox-ve">Proxmox VE</a>
 Virtualisierungsumgebung. Als Kunde erhält man Zugriff auf die KVM Konsole,
 so dass man sich selber helfen kann, wenn der Server nach einem Kernelupdate
 nicht mehr hochkommt oder man sich durch fehlerhafte IPtables Regeln vom SSH
 Login ausgesperrt hat.</p>
-
 <p>Auf absehbare Zeit gibt es also keinen Grund, den Anbieter zu wechseln.
 Hoffentlich bleibt das noch eine Weile so.</p>
 

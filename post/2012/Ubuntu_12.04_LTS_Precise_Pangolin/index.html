@@ -25,30 +25,31 @@
 eine neue Version auf dem produktiven Arbeitsplatzrechner installiert,
 bevor sie offiziell freigegeben wurde. Das war <a href="https://wiki.ubuntu.com/PrecisePangolin/TechnicalOverview/Beta2">Ubuntu 12.04 LTS Precise
 Pangolin</a>.
-Hier einige Anmerkungen in Bezug auf den <a href="/post/2011/Ubuntu_11.10_Oneiric_Ocelot_veröffentlicht">Installationsbericht zur Version
+Hier einige Anmerkungen in Bezug auf den <a href="/post/2011/Ubuntu_11.10_Oneiric_Ocelot_ver%C3%B6ffentlicht">Installationsbericht zur Version
 11.10</a>.</p>
-
 <ul>
-<li><p>Unity ist weiterhin der Standard-Desktop, es stehen aber die Gnome 3
+<li>
+<p>Unity ist weiterhin der Standard-Desktop, es stehen aber die Gnome 3
 Shell und der Gnome 3 Classic Mode zur Auswahl. Beides funktioniert
 mit und ohne 3D-Unterstützung seitens der Grafikkarte. Auch Unity
-funktioniert mittlerweile in einem VirtualBox Gastsystem.</p></li>
-
-<li><p>Der Kernel-Bug im Zusammenhang mit einem Twinhan DVB-T Receiver ist
+funktioniert mittlerweile in einem VirtualBox Gastsystem.</p>
+</li>
+<li>
+<p>Der Kernel-Bug im Zusammenhang mit einem Twinhan DVB-T Receiver ist
 behoben. Allerdings zickt der Infrarot-Fernbedienungs-Empfänger: wenn
 man eine Fernsehsendung mit DVB-T laufen hat und parallel in einem
 anderen Fenster arbeitet, wird dort permanent das Drücken der TAB-Taste
 emuliert. Um den DVB-T Stick vernünftig zu nutzen, muss die
 Fernbedienung abgeschaltet werden. Dazu erstellt man eine Datei
 <code>/etc/modprobe.d/dvbt.conf</code> mit folgenden Inhalt:</p>
-
 <pre><code>options dvb-usb disable_rc_polling=1
-</code></pre></li>
-
-<li><p>Rhythmbox ist wieder das Standard-Musikwiedergabeprogramm. Die
-Abstürze von 11.10 treten bei Ubuntu 12.04 LTS nicht mehr auf.</p></li>
+</code></pre>
+</li>
+<li>
+<p>Rhythmbox ist wieder das Standard-Musikwiedergabeprogramm. Die
+Abstürze von 11.10 treten bei Ubuntu 12.04 LTS nicht mehr auf.</p>
+</li>
 </ul>
-
 <p>Nachtrag: Heute, am 26.4.2012, wurde <a href="http://releases.ubuntu.com/precise/">Ubunu 12.04
 LTS</a> offiziell freigegeben (siehe
 auch

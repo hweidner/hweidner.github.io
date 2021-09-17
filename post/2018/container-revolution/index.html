@@ -24,7 +24,6 @@
 <p>Container unter Unix/Linux gibt es schon sehr lange. Schon 1979 zog mit dem
 chroot System Call die Grundlage für den Bau isolierter Umgebungen in Unix
 System V ein.</p>
-
 <p>Mit <a href="http://linux-vserver.org">Linux-VServer</a> begann schon in den 90er
 Jahren das erste vollwertige Containerprojekt für Linux, es wird heute noch
 gepflegt. Kurze Zeit später kamen
@@ -35,7 +34,6 @@ auf Basis von Container-Technologie mieten.
 offizieller Bestandteil des Linux-Kernels.
 Dennoch führten Container lange Zeit außerhalb des Providerumfelds ein
 Nischendasein.</p>
-
 <p><a href="https://github.com/hweidner/golang-de/wiki">Die Programmiersprache Go</a>
 wurde 2009 erstmals der Öffentlichkeit
 vorgestellt und erschien 2012 in der stabilen Version Go 1.0. Schon
@@ -44,14 +42,12 @@ früh entschied sich die damals unbekannte amerikanische Firma
 entwickelte damit mit <a href="/post/2014/docker/">Docker</a> die Software, die die
 Container-Revolution einleitete. Die erste Version von Docker erschien
 2013.</p>
-
 <p>Go und Docker bildeten eine solide Basis für eine rasante Entwicklung.
 Schon 2014 kam das zunächst Google-eigene Projekt
 <a href="https://kubernetes.io/">Kubernetes</a>, ein leistungsfähiger Orchestrator
 für Anwendungen auf Basis von Docker unter Linux. Heute ist Kubernetes
 das größte öffentlich bekannte Projekt. das in Go geschrieben wird, und
 gehört neben Docker selbst zu den bekanntesten Entwicklungen in Go.</p>
-
 <p>Daneben entstand im Projekt <a href="https://coreos.com/">CoreOS</a>, das heute zu
 Red Hat gehört, eine Reihe von Tools in Go. Das wohl bekannteste davon
 ist der verteilte Key-Value-Store <a href="https://coreos.com/etcd/">etcd</a>, der
@@ -62,7 +58,6 @@ Ein anderer bedeutender Player im Container-Umfeld ist
 <a href="https://www.consul.io/">Consul</a>,
 <a href="https://www.vaultproject.io/">Vault</a> und
 <a href="https://www.nomadproject.io/">Nomad</a> gehören.</p>
-
 <p>Einst ein eigener Docker-Orchestrator, ist <a href="https://rancher.com/">Rancher</a>
 heute ein beliebtes Tool zum Management von Anwendungen in mehreren
 Kubernetes-Clustern.
@@ -73,7 +68,6 @@ haben sich die Zeitreihendatenbanken
 <a href="https://prometheus.io/">Prometheus</a> und
 <a href="https://www.influxdata.com/">InfluxDB</a> etabliert, deren Daten mit
 <a href="https://grafana.com/">Grafana</a> visualisiert werden können.</p>
-
 <p>Doch obwohl Docker (neben Go) die Basis all dieser Entwicklungen war, blieb es
 nicht alternativlos. Mit <a href="https://coreos.com/rkt/">rkt</a> erschien im CoreOS
 Projekt eine alternative Container-Engine, die stärker an den Bedürfnissen
@@ -83,7 +77,6 @@ erlaubt. Eine weitere Entwicklung in diese Richtung bildet
 Ablösung für Docker ausgewählt wurde. Dass das nahtlos geht, liegt an der
 Standardisierung der Container-Definition durch die
 <a href="https://www.opencontainers.org/">Open Container Initiative (OCI)</a>.</p>
-
 <p>Mit <a href="https://buildah.io/">Buildah</a>,
 <a href="https://podman.io/">Podman</a> und
 <a href="https://github.com/containers/skopeo#skopeo-">Skopeo</a>
@@ -98,7 +91,6 @@ Google in Go entwickelt werden, ist, dass sie ohne System Daemon auskommen.
 Somit können auch nichtprivilegierte Benutzer alle Containerfunktionen nutzen,
 auch auf Multiuser-Systemen, ohne sich gegenseitig zu stören. Eine
 Unterstützung seitens Kubernetes ist bereits angekündigt.</p>
-
 <p>Es sieht ganz danach aus, als ob Docker, noch das Synonym für Container
 unter Linux in großem Stil, in der nächsten Zeit nicht mehr zwingend
 benötigt wird. Seinen festen Platz in der IT-Geschichte hat Docker aber

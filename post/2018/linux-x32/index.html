@@ -23,7 +23,6 @@
 
 <p><a href="https://www.pro-linux.de">Pro-Linux</a> berichtet heute von Bestrebungen, die Unterstützung für das
 <a href="https://www.pro-linux.de/news/1/26603/entfernung-der-x32-subarchitektur-aus-linux-vorgeschlagen.html">x32 ABI aus Linux zu entfernen</a>.</p>
-
 <p>Das <a href="https://de.wikipedia.org/wiki/X32_(ABI)">x32 ABI</a> ist ein Binärformat
 für Linux auf Intel-kompatiblen Prozessoren. Es ist als ein Versuch
 gestartet worden, die Vorteile von i386 und amd64 zu verbinden.
@@ -36,42 +35,31 @@ Anwendungen ausreichend ist. Durch die kürzeren Pointer werden die Programme
 kleiner, bei der Ausführung passt mehr Programmcode in die CPU-Caches. Einen
 Vergleich von x32, i386 und amd64 gibt es auf
 <a href="https://de.wikipedia.org/wiki/X32_(ABI)">Wikipedia</a>.</p>
-
 <p>Laut des Artikels ist jedoch fraglich, ob x32 in ausreichenden Umfang
 genutzt wird, um den Aufwand bei der Pflege im Mainline-Kernel zu
 rechtfertigen.
 Nur die Distributionen Debian, Gentoo und Yocto bieten einen eigenen Port
 mit ausschließlich x32 Paketen an. <a href="https://debian-x32.org/">Debian/x32</a>
 ist zudem dem frühen Entwicklungsstadium nie entwachsen.</p>
-
 <h2 id="x32-programme-auf-amd64-distributionen">x32 Programme auf amd64 Distributionen</h2>
-
 <p>Jedoch können x32 Programme auch unter dem &ldquo;normalen&rdquo; Debian bzw Ubuntu
 benutzt werden. Um x32-Software ausführen zu können, muss mindestens die
 GNU-libc für x32 installiert sein.</p>
-
 <pre><code># apt install libc6-x32
 </code></pre>
-
 <p>Zudem ist im Debian-Standardkernel der Support für x32 zwar vorhanden, muss
 aber mit dem Parameter <code>syscall.x32=y</code> eingeschaltet werden. Unter
 Ubuntu ist das nicht nötig, x32 ist standardmäßig aktiv.</p>
-
 <p>Um auch eigene Programme für x32 (cross-)compilieren zu können, werden zudem
 die Header benötigt:</p>
-
 <pre><code># apt install libc6-dev-x32
 </code></pre>
-
 <p>Damit kann ein C-Programm compiliert werden, z.B.:</p>
-
 <pre><code>$ gcc -mx32 -Wall -o hello hello.c
 </code></pre>
-
 <p>Das entstehende Programm ist ein 32-Bit Programm für amd64 (x86_64) Systeme
 und ist dynamisch gegen die x32-libc gelinkt. Wie man sieht, sind alle
 Pointer 32 Bit lang:</p>
-
 <pre><code>$ file hello
 hello: ELF 32-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /libx32/ld-linux-x32.so.2, for GNU/Linux 3.4.0, [...] not stripped
 
@@ -80,26 +68,19 @@ linux-vdso.so.1 (0xff99a000)
 libc.so.6 =&gt; /libx32/libc.so.6 (0xf77ad000)
 /libx32/ld-linux-x32.so.2 (0xf7d5f000)
 </code></pre>
-
-<h2 id="go-x32">Go/x32</h2>
-
+<h2 id="gox32">Go/x32</h2>
 <p>Unter Ubuntu 18.04 LTS lassen sich auch Go-Programme für x32 compilieren und
 ausführen. Dazu wird der GCC-Go Compiler benötigt:</p>
-
 <pre><code># apt install gccgo-x86-64-linux-gnux32 gccgo-multilib-x86-64-linux-gnux32
 </code></pre>
-
 <p>Zum Compilieren des Programmes muss der passende Compiler direkt aufgerufen
 werden, ein <code>-mx32</code> wie bei C genügt nicht.</p>
-
 <pre><code>$ x86_64-linux-gnux32-gccgo -Wall -o hello hello.go
 </code></pre>
-
 <p>Das Programm wird dynamisch gegen die üblichen Shared Libraries und die
 Go-Library von GccGo gelinkt. Letztere wird jedoch vom dynamischen Linker
 nicht automatisch gefunden, weil der Pfad für die Go x32 Libraries nicht
 in der <code>ldconfig</code> Konfiguration steht.</p>
-
 <pre><code>$ file hello
 hello: ELF 32-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /libx32/ld-linux-x32.so.2, for GNU/Linux 3.4.0, [...] with debug_info, not stripped
 
@@ -110,10 +91,8 @@ libgcc_s.so.1 =&gt; /usr/libx32/libgcc_s.so.1 (0xf7af9000)
 libc.so.6 =&gt; /libx32/libc.so.6 (0xf7749000)
 /libx32/ld-linux-x32.so.2 (0xf7d10000)
 </code></pre>
-
 <p>Um das Programm auszuführen, kann die benötigte Library mit <code>LD_PRELOAD</code>
 vorgeladen werden:</p>
-
 <pre><code>LD_PRELOAD=/usr/x86_64-linux-gnux32/lib/libgo.so.13.0.0 ./hello
 </code></pre>
 

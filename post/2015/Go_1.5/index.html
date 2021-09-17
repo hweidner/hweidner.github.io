@@ -23,7 +23,6 @@
 
 <p>Heute wurde wie geplant die neue Version <a href="https://blog.golang.org/go1.5">Go 1.5
 veröffentlicht</a>.</p>
-
 <p>Die größte Neuerung ist der Compiler selber. Er ist nun vollständig in
 Go geschrieben; um ihn zu übersetzen, kann z.B. auf Go 1.4
 zurückgegriffen werden, welcher noch in C geschrieben ist. Da mit Go 1.4
@@ -33,26 +32,22 @@ erfolgte mit einem automatischen C-to-Go Translator. Das Resultat ist
 noch nicht optimiert, so dass der Compiler nur noch halb so schnell ist.
 Für die nächste Version 1.6 ist geplant, den Compiler zu optimieren, so
 dass wieder annähernd die alte Geschwindigkeit erreicht wird.</p>
-
 <p>Mit Go 1.5 können erstmals Shared Libraries erstellt werden, die von
 anderen Programmen (z.B. in C oder C++) verlinkt werden können.
 Umgekehrt können auch bestehende Shared Libraries in Go-Programme
 gelinkt werden. Die Unterstützung für Apple iOS auf ARM wurde verbessert
 und gilt nun als stabil; als experimentell ist Unterstützung für PowerPC
 Prozessoren hinzugekommen.</p>
-
 <p>Die wichtigste Verbesserung aus Entwicklersicht sind Änderungen am
 Garbage Collector. Er wurde deutlich beschleunigt und der
 nicht-parallelisierbare Anteil gesenkt, wodurch Go nun erstmals auch für
 Anwendungsgebiete mit weichen Echtzeitanforderungen (z.B. Actionspiele)
 eingesetzt werden kann.</p>
-
 <p>An der Sprache selbst gibt es mit der neuen Version nur eine minimale
 Änderung. Die Definition von Map-Literalen wurde vereinfacht und ist nun
 konsistenter mit Array/Slice-Literalen. Die Standardbibliothek wurde an
 verschiedenen Stellen verbessert, insbesondere gibt es neue Funktionen
 in der Reflection Library.</p>
-
 <p>Die Änderungen sie wie immer ausführlich in den <a href="https://golang.org/doc/go1.5">Release
 Notes</a> beschrieben.</p>
 

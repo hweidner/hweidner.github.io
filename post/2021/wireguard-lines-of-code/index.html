@@ -27,25 +27,19 @@
 Rahmen des Freien Software Abends Köln/Düsseldorf hatte ich zitiert,
 dass Wireguard nur einen Codeumfang von 3.800 Zeilen hat, im Vergleich
 zu den ca. 400.000 von Strongswan und 600.000 von OpenVPN.</p>
-
 <p>Diese Zahl hatte ich bei der Vorbereitung meines ersten Wireguard-Vortrags
 als Zitat aus einer Quelle im Internet übernommen, die ich jedoch auf Rückfrage
 nicht mehr benennen konnte.</p>
-
 <p>Sucht man mit Google nach dem Suchbegriff &ldquo;wireguard lines of code&rdquo;, enthält
 die Vorschau zum <a href="https://restoreprivacy.com/vpn/wireguard/">ersten Treffer</a>
 diese Zahl; der verlinkte Artikel nennt sie jedoch nicht mehr. Die Treffer
 zwei bis vier sprechen jeweils von ca. 4.000 Zeilen. Der Wikipedia-Artikel
 in Treffer drei gibt an, dass damit explizit der Code im Kernel gemeint ist.</p>
-
-<p><img src="/img/wireguard-lines-of-code.png" alt="Google-Suche nach &quot;wireguard lines of code&quot;" title="wireguard lines of code" /></p>
-
+<p><img src="/img/wireguard-lines-of-code.png" alt="Google-Suche nach &ldquo;wireguard lines of code&rdquo;" title="wireguard lines of code"></p>
 <p>Aber schauen wir doch mal in die Quellen.</p>
-
 <p>Wireguard wurde in Linux 5.6 erstmals als Bestandteil des Kernels
 veröffentlicht. Hier ist die C-Implementierung von Wireguard bereits
 4.764 Zeilen groß. Mit Headern und Makefile sind es 5.453 Zeilen.</p>
-
 <pre><code>harald@moonrise:~/Downloads/linux-5.6/drivers/net/wireguard$ cloc .
       31 text files.
       31 unique files.                              
@@ -61,11 +55,8 @@ make                             1              0              0             18
 -------------------------------------------------------------------------------
 SUM:                            31            927            589           5453
 -------------------------------------------------------------------------------
-</code></pre>
-
-<p>In der aktuellen Kernelversion 5.11.1 ist der Codeumfang nahezu gleich
+</code></pre><p>In der aktuellen Kernelversion 5.11.1 ist der Codeumfang nahezu gleich
 geblieben; er beträgt nun 5.444 Zeilen inclusive Header und Makefile.</p>
-
 <p>Um Wireguard nutzen zu können, benötigt man neben dem Kerneltreiber
 auch die Tools <code>wg</code> und <code>wg-quick</code>. Sie kommen unter Debian/Ubuntu
 im Paket
@@ -77,7 +68,6 @@ mit Headern und Buildsystem ergeben sich aber insgesamt 8.659 Zeilen. Der
 große Umfang ist u.a. der Tatsache geschuldet, dass das Repository die
 Tools für die Betriebssysteme Linux, OpenBSD, FreeBSD, MacOS, Windows und
 Android beinhaltet.</p>
-
 <pre><code>harald@moonrise:~/git/wireguard-tools/src (master)$ cloc .
       56 text files.
       56 unique files.                              
@@ -96,9 +86,7 @@ XML                                  1              0              4            
 -----------------------------------------------------------------------------------
 SUM:                                49           1104            491           8659
 -----------------------------------------------------------------------------------
-</code></pre>
-
-<p>Insgesamt ergibt sich also ein Codeumfang der C Quelltexte von Kernel und
+</code></pre><p>Insgesamt ergibt sich also ein Codeumfang der C Quelltexte von Kernel und
 Tools von 7.975 Zeilen, mit Headern sind es 12.307 Zeilen. Also durchaus
 einiges mehr als die ursprünglich zitierten 3.800 Zeilen, allerdings immer
 noch deutlich weniger als OpenVPN und Strongswan mit ihrem Codeumfang im

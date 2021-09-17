@@ -25,47 +25,38 @@
 eingebauten Standard-Checks durch eigene Erweiterungen zu ergänzen. Meistens
 werden dabei <a href="https://checkmk.de/cms_localchecks.html">Local Checks</a>
 verwendet.</p>
-
 <p>(Nachtrag 2020-10-25: Messwerte für PHP hinzugefügt.)</p>
-
 <p>Local Checks sind Skripte oder Programme, die man auf dem zu überwachenden
 System in einem speziellen Verzeichnis ablegt. Sie ermitteln einen Messwert
 für das Monitoring und geben ihn in einem definierten Format auf der
 Standardausgabe aus. Das Format ist sehr einfach: pro Check wird eine Zeile
 ausgegeben. Diese enthält vier Werte, durch Leerzeichen getrennt. Ein
 einfaches Beispiel sieht so aus:</p>
-
 <pre><code>0 Mein_Check - Beschreibung des Checks
 </code></pre>
-
 <p>Das erste Feld enthält den Status in numerischer Form; 0 steht für OK
-(grün), 1 für WARN (gelb), 2 für CRIT (rot) und 3 für UNKNOWN (orange).<br />
+(grün), 1 für WARN (gelb), 2 für CRIT (rot) und 3 für UNKNOWN (orange).<br>
 Das zweite Feld gibt den Namen des Checks an. Dieser sollte immer gleich
 sein, da er vom Checkmk Server bei der Inventarisierung gelernt und dann
-bei jedem Check-Durchlauf ein Eintrag dieses Namens erwartet wird.<br />
+bei jedem Check-Durchlauf ein Eintrag dieses Namens erwartet wird.<br>
 Das dritte Feld kann optional quantitative Messwerte enthalten; wenn es
-keine gibt, wird ein &ldquo;-&rdquo; angegeben.<br />
+keine gibt, wird ein &ldquo;-&rdquo; angegeben.<br>
 Im vierten Feld steht eine Beschreibung des Checks und des Ergebnisses;
 es wird so in der Monitoring-Konsole angezeigt und bei Benachrichtungen
 verschickt, z.B. als E-Mail.</p>
-
 <h2 id="welche-skriptsprache">Welche Skriptsprache?</h2>
-
 <p>Einzelne Local Check Skripte sind normalerweise recht kurz. In realen
 Umgebungen werden aber oft sehr viele davon ausgerollt. Diese werden bei
 jedem Check-Durchlauf einzeln aufgerufen, so dass die Performance durchaus
 eine Rolle spielt.</p>
-
 <p>Daher kommt bei jeder Checkmk Einführung früher oder später die Frage auf,
 welche Programmiersprache man am besten für Local Checks verwendet.</p>
-
 <p>Viele Local Checks werden als Shellskript in Bash geschrieben. Das liegt
 nahe, denn Bash dürfte der einzige Skriptinterpreter sein, der auf wirklich
 jedem Linux-System vorhanden ist. Wenn aber die Komplexität etwas höher
 wird und zum Beispiel Arrays, Hashes oder Regular Expressions benötigt
 werden, stößt man schnell an die Grenzen von Bash und greift lieber zu
 einer &ldquo;richtigen&rdquo; Programmiersprache.</p>
-
 <p>Von den vier großen stabilen Linux-Distributionen &ndash; CentOS, Debian stable,
 OpenSUSE Leap und Ubuntu LTS &ndash; bringen drei (alle außer CentOS)
 bereits in der Minimalinstallation einen Perl5 Interpreter mit.
@@ -73,7 +64,6 @@ Weitere beliebte Skriptsprachen, die bei allen genannten Distributionen
 enthalten sind, umfassen PHP, Python und Ruby. Diese sind nicht Bestandteil
 der Minimalinstallation, lassen sich aber über die Standard-Paketquellen
 nachinstallieren; ebenso wie Perl auf CentOS.</p>
-
 <p>Bei Python muss beachtet werden, dass derzeit zwei verschiedene
 Sprachversionen, Python 2 und 3, im Umlauf sind. Diese sind nicht
 kompatibel; abgesehen von Trivialfällen muss ein Skript für die
@@ -81,7 +71,6 @@ jeweilige Sprachversion geschrieben werden. Python 2 wurde bereits
 abgekündigt. Die stabilen Distributionen unterstützen es noch im
 Rahmen ihrer Lebenszyklen, ich würde es jedoch für Neuentwicklungen nicht
 mehr in Betracht ziehen.</p>
-
 <table>
 <thead>
 <tr>
@@ -93,7 +82,6 @@ mehr in Betracht ziehen.</p>
 <th>Ruby</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>CentOS 8</td>
@@ -103,7 +91,6 @@ mehr in Betracht ziehen.</p>
 <td>3.6.8 und 3.8.0</td>
 <td>2.5.5</td>
 </tr>
-
 <tr>
 <td>Debian 10</td>
 <td>5.0.3</td>
@@ -112,7 +99,6 @@ mehr in Betracht ziehen.</p>
 <td>3.7.3</td>
 <td>2.5.1</td>
 </tr>
-
 <tr>
 <td>OpenSUSE Leap 15</td>
 <td>4.4.23</td>
@@ -121,7 +107,6 @@ mehr in Betracht ziehen.</p>
 <td>3.6.10</td>
 <td>2.5.8</td>
 </tr>
-
 <tr>
 <td>Ubuntu 20.04 LTS</td>
 <td>5.0.17</td>
@@ -132,15 +117,12 @@ mehr in Betracht ziehen.</p>
 </tr>
 </tbody>
 </table>
-
 <h2 id="startup-zeiten">Startup-Zeiten</h2>
-
 <p>Wenn viele kleine Skripte nacheinander ausgeführt werden, ist die
 Startup-Zeit des Interpreters ein entscheidender Faktor für die
 Gesamtperformance. Auf einem System mit dem Ryzen 7-1700 Prozessor
 unter Ubuntu 20.04 LTS dauert die Ausführung eines leeren Programmes
 wie folgt:</p>
-
 <pre><code>$ time bash -c ''
 
 real	0m0,003s
@@ -170,17 +152,13 @@ $ time ruby -e ''
 real	0m0,057s
 user	0m0,040s
 sys	0m0,016s
-</code></pre>
-
-<p>Die Initialisierungszeit für den Bash und Perl liegt gleichauf im Bereich
+</code></pre><p>Die Initialisierungszeit für den Bash und Perl liegt gleichauf im Bereich
 weniger Millisekunden. PHP benötigt knapp 20 und Python 3 (und 2 ebenfalls)
 bereits knapp 30 Millisekunden, Ruby sogar nochmal das doppelte.</p>
-
 <p>Natürlich sind die Messungen mit <code>time</code> nicht sehr präzise, zumal sich keine
 höhere Genauigkeit als Millisekunden ausgeben lässt. Eine Tendenz ist aber
 durchaus erkennbar. Ein Lauf mit <code>strace -c</code> zeigt die Häufigkeit und Dauer
 von Syscalls und liefert eine Begründung für die Unterschiede:</p>
-
 <pre><code>$ strace -c bash -c ''
 
 % time     seconds  usecs/call     calls    errors syscall
@@ -370,33 +348,26 @@ $ strace -c ruby -e ''
   0,00    0,000000           0         3           prlimit64
 ------ ----------- ----------- --------- --------- ----------------
 100.00    0,004348                  1873       303 total
-</code></pre>
-
-<p>Die konkreten Zeitangaben sind hier gar nicht so interessant, da strace sich
+</code></pre><p>Die konkreten Zeitangaben sind hier gar nicht so interessant, da strace sich
 zwischen Programm und Syscall schiebt und damit die Laufzeiten beeinflusst.
 Entscheidend ist die Anzahl: Bash und Perl setzen bei der Initialisierung
 weniger als 200 Syscalls ab; Python etwa 750, PHP knapp 1.200 und Ruby sogar
 mehr als 1.800.</p>
-
 <h2 id="fazit">Fazit</h2>
-
 <p>Bezüglich der Startup-Zeiten für den Interpreter liegt es durch die
 Messungen nahe, bei ansonsten gleicher Eignung Perl5 den Vorzug gegenüber
 anderen Skriptsprachen wie PHP, Python 3 oder Ruby zu geben.</p>
-
 <p>Sehr einfache Bash-Skripte sind sogar noch etwas performanter als Perl.
 Allerdings kehrt sich der Vorteil zugunsten von Perl um, sobald die Skripte
 größer werden. Denn Bash-Skripte rufen meistens viele andere externe
 Kommandos wie <code>sed</code>, <code>awk</code>, <code>grep</code> oder <code>tr</code> auf, was zu weiteren Syscalls
 führt. Perl hat entsprechende Funktionen oft bereits eingebaut, ggf. über
 Bibliotheken.</p>
-
 <p>Natürlich ist die Performance nicht das alleinige Kriterium für die Auswahl
 der Programmiersprache. Viele Faktoren können hier entscheidend sein, etwa
 die Standardisierung im gesamten Kontext des Systems, die Lesbarkeit, die
 eigenen Skills und die Verfügbarkeit von Libraries, die zur Erhebung der
 Monitoring-Ergebnisse ggf. benötigt werden.</p>
-
 <p>Die hier getätigten Aussagen gelten nur für Umgebungen mit vielen kleinen
 Local Check Skripten; wenn man deren Funktionen zu wenigen größeren Skripten
 zusammenfassen kann, spielen die Startup-Zeiten eine geringere Rolle. Die

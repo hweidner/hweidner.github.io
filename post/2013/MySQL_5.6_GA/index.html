@@ -22,7 +22,6 @@
 
 
 <p>Heute wurde von Oracle die neue MySQL Version 5.6 veröffentlicht.</p>
-
 <p>Laut diverser Pressemeldungen (z.B.
 <a href="http://www.golem.de/news/oracle-mysql-5-6-ist-deutlich-schneller-1302-97388.html">Golem</a>,
 <a href="http://www.heise.de/newsticker/meldung/Oracle-veroeffentlicht-MySQL-5-6-1796834.html">Heise</a>
@@ -32,10 +31,8 @@ bietet die neue Version beachtliche Performanceverbesserungen und neue
 Features. Zu den interessantesten gehören die Volltextsuche für die
 Storage Engine InnoDB, die Möglichkeit, InnoDB Tabellendefinitionen im
 laufenden Betrieb zu verändern und Verbesserungen bei der Replikation.</p>
-
 <p>Die neue Version ist allerdings auch mühsamer zu administrieren. Beim
 Update einer ersten Datenbank-Instanz fiel folgendes auf:</p>
-
 <ul>
 <li>Beim Einrichten der Replikation muss man darauf achten, nach der
 Übertragung des Data Directories vom Master zum Slave dort die Datei
@@ -44,9 +41,7 @@ Seriennummer, die auf dem Slave unterschiedlich zum Master
 sein muss. Löscht man die Datei, dann erzeugt MySQL beim Start eine
 zufällige neue Seriennummer.</li>
 </ul>
-
-<!-- -->
-
+<!-- raw HTML omitted -->
 <ul>
 <li>Ein Update von MySQL konnte bisher einfach durch Austausch der
 Binaries und anschließendem Start des Tools <code>mysql_upgrade</code>
@@ -58,7 +53,6 @@ nicht vollständig. Es ist nötig, die MySQL Verwaltungstabellen mit
 dem Skript <code>mysql_install_db</code> neu anzulegen und anschließend die
 Schemata per Dump und Import zu übertragen.</li>
 </ul>
-
 <p>Es lohnt sich, die <a href="http://dev.mysql.com/doc/relnotes/mysql/5.6/en/">Release
 Notes</a> und <a href="http://dev.mysql.com/doc/refman/5.6/en/mysql-nutshell.html">What Is New
 in MySQL

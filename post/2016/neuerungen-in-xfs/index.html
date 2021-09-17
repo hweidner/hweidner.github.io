@@ -23,7 +23,6 @@
 
 <p>Unter Linux gelten die Dateisysteme BtrFS und ZFS als modern, haben sich aber nie
 wirklich durchgesetzt. XFS könnte in die Lücke springen.</p>
-
 <p><a href="https://de.wikipedia.org/wiki/Btrfs">BtrFS</a> ist eine relativ junge Entwicklung
 und erreicht bisher nicht annähernd die Performance der verbreiteten Filesysteme
 wie <a href="https://de.wikipedia.org/wiki/Ext4">ext4</a> oder
@@ -32,7 +31,6 @@ Zudem fehlen ihm wichtige Tools, beispielsweise zur Datenrettung.
 Auch <a href="https://de.wikipedia.org/wiki/ZFS_(Dateisystem)">ZFS</a> erreicht keine
 vergleichbare Performance, zudem verhindern Lizenzprobleme eine enge Integration
 in den Linux-Kernel.</p>
-
 <p>In naher Zukunft könnte XFS diese Lücke füllen. Denn ab
 <a href="https://heise.de/-3351310">Kernel 4.9</a> soll der Abstand zu BtrFS und ZFS in puncto
 Funktionalität schrumpfen: XFS erhält mit
@@ -46,13 +44,11 @@ das Filesystem tatsächlich eine Kopie.
 im Filesystem mit einer Prüfsumme, so dass Verfälschungen, wie sie etwa durch
 Hardwaredefekte entstehen können, erkannt und teilweise sogar automatisch korrigiert
 werden können.</p>
-
 <p>Andere Funktionen wie eingebaute RAID-Modi, Volume Management oder Snapshots wird XFS
 nicht erhalten. Das ist aber kein Problem, da solche Funktionen weiterhin über das
 <a href="https://en.wikipedia.org/wiki/Device_mapper">Device Mapper Framework</a> des Linux-Kernels
 genutzt werden können.</p>
-
-<p>Siehe auch:<br />
+<p>Siehe auch:<br>
 <a href="https://blogs.oracle.com/linuxkernel/entry/upcoming_xfs_work_in_linux">Upcoming XFS Work in Linux v4.8 v4.9 and v4.10+</a>
 (Artikel im Oracle Blog).</p>
 
