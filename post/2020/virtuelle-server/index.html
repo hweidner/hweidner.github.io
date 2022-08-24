@@ -135,7 +135,7 @@ Datenmigration mit <a href="https://de.wikipedia.org/wiki/Rsync">rsync</a> oder 
 teilweise online. Dadurch wurde der Server längere Zeit quälend langsam und fiel
 mehrfach ganz aus.</p>
 <p>Am Ende der Aktion funktionierten einige Dienste nicht mehr, z.B. Postfix.
-Eine Analyse stellte fest, dass die Dateien und Verzeichnisse von Postfix
+Bei näherer Analyse stellte ich fest, dass die Dateien und Verzeichnisse von Postfix
 plötzlich eine falsche UID und GID hatten. Aus meiner beruflichen Erfahrung
 kannte ich solche Probleme, die aus einer falsche Anwendung von rsync
 (fehlende Option <code>--numeric-ids</code>) oder
@@ -185,8 +185,8 @@ deutlich mehr Leistung als bei den typischen virtuellen Serverangeboten.</p>
 <p>Der physische Server hat mehrere Vorteile gegenüber dem virtuellen. Die
 Leistung (CPU und I/O) kann nicht von anderen Kunden überbucht werden
 und ist damit sehr gut vorhersagbar. Auch muss ich mich nicht mit einem
-veralteten Host-Kernel herumschlagen und eingeschränken System Calls
-oder Ressourcenlimits herumschlagen.</p>
+veralteten Host-Kernel und eingeschränken System Calls oder Ressourcenlimits
+herumschlagen.</p>
 <p>Es gibt aber auch Nachteile; wenn der Server mal kaputt geht, muss ich mich
 zu einem unplanbaren Zeitpunkt mit dem Umzug der Daten auf ein Ersatzsystem
 herumschlagen; und mangels RAID droht ein Verlust der Daten bzw. Änderungen
