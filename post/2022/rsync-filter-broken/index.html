@@ -52,7 +52,7 @@ etwa so aus:</p>
 Verzeichnis synchronisieren.  Dabei sollten Dateien, die auf dem Quellsystem
 nicht existieren, aber auf dem Zielsystem schon, an der Quelle gelöscht
 werden; dies aber nur im Unterverzeichnis für die dynamischen
-Konfigurationen; außerhalb dieses Verzeichnisses sollen solche Dateien
+Konfigurationen. Außerhalb dieses Verzeichnisses sollen solche Dateien
 unverändert bleiben, denn darin befindet sich der überwiegende Teil der
 Default-Konfigurationseinstellungen dieser Software, die nicht
 kundenspezifisch verändert wurde. Dies leisten die rsync-Filter P (protect),
@@ -97,9 +97,9 @@ Zielverzeichnis geschützter Dateiname im Quellverzeichnis vorkommt.
 Das ist gleich doppelt unsinnig. Zum einen schützt der P-Filter laut
 Manual Page lediglich vor einer Löschung; dieser Fall tritt aber gerade nicht
 ein, wenn die Datei im Quellverzeichnis vorhanden ist. Zum anderen soll, wenn
-der Protect-Fall eintritt, einfach nur die Datei nicht entfernt werden;
-nicht jedoch die gesamte Synchronisation unverrichteter Dinge abgebrochen
-werden. Also eindeutig ein Fehler, der sich offenbar bei der Beseitigung
+der Protect-Fall eintritt, einfach nur die Datei vor dem Löschen bewahrt,
+nicht aber die gesamte Synchronisation unverrichteter Dinge abgebrochen
+werden. Also eindeutig ein Fehler, der sich offenbar bei der Behandlung
 der genannten Sicherheitslücke eingeschlichen hat.</p>
 <p>Im Internet finden sich verschiedene Fehlerbeschreibungen zu diesem Thema.
 Offenbar wurde der Fehler in der Upstream rsync Version 3.2.5 eingeführt,
@@ -113,7 +113,8 @@ auch 3.2.6 enthalten, im aktuellen HEAD des master-Branches aber behoben
 ist.  Dazwischen liegen nur ca.  30 Commits, so dass der passende mittels
 Git Bisection schnell gefunden ist.  Es handelt sich um den Commit mit der
 Kurzbeschreibung <a href="https://github.com/WayneD/rsync/commit/950730313de994d191ba2d5be575e97690b355e8">Fix bug with validing remote filter
-rules</a>.</p>
+rules</a>
+vom 13. September 2022.</p>
 <p>Es ist also davon auszugehen, dass die nächste rsync-Version 3.2.7 den
 Fehler beseitigt.  Ob Red Hat den Fix dann zurück portiert, und ob dieser
 Fix als erneutes Security Update getaggt wird, so dass er im Rahmen des
