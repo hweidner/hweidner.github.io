@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Red Hat, rsync und der Protect-Filter -hweidner.de</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="hweidner.de">
+<meta name="author" content="Harald Weidner">
+<meta name="keywords" content="keywords">
+<link rel="stylesheet" href="/css/styles.css" type="text/css">
+</head>
+<body>
+<p class="logo">hweidner.de<br>
+<span class="subtitle">Harald Weidner explaining the world.</span>
+</p>
+<div class="content">
+
+
+
+
+  <p class="date">2022-10-09 00:49</p>
+<h1>Red Hat, rsync und der Protect-Filter</h1>
+
+
+<p>Manche Linux-Tools gehören zwar nicht zu den GNU Utilities, aber sind im
+Linux-Universum so grundlegend und nicht mehr wegzudenken.  Man erwartet,
+dass sie immer da sind und funktionieren, und genau das tun sie.  Außer,
+wenn sie es mal nicht tun.</p>
+<p>Ein solches Tool ist rsync, ein Werkzeug für den Datenabgleich zwischen
+lokalen Verzeichnissen oder über das Netzwerk mit anderen Rechnern.  In
+Ubuntu ist rsync ein Standard-Paket und damit in jeder normalen Installation
+vorhanden.  Auf anderen Distributionen wie Debian oder Red Hat ist rsync
+optional, wird aber von vielen Softwarepaketen als Abhängigkeit referenziert
+und ist daher ebenfalls meistens installiert.</p>
+<p>Bei einem Kunden bin ich für den Betrieb und die Weiterentwicklung einer
+komplexeren Software verantwortlich.  Eine Instanz dieser Software hat ein
+umfangreiches Konfigurationsverzeichnis mit vielen Dateien in mehreren
+Unterverzeichnissen.  Bei der Installation dieser Software werden für die
+vielen Einstellmöglichkeiten herstellerseitige Defaults gesetzt.  Diese sind
+in gefühlt 90% der Fälle absolut sinnvoll.  Einige Einstellungen müssen
+kundenspezifisch, aber statisch überschrieben werden.  Ein kleiner Teil der
+Konfiguration ist hochdynamisch und ändert sich ungefähr jede Stunde.</p>
+<p>Da der Kunde viele Instanzen dieser Software betreibt, ist die
+kundenspezifische Anpassung der Konfiguration automatisiert.  Dazu werden
+die Konfigurationsdateien an einer zentralen Stelle teilweise statisch
+abgelegt, teilweise aus Templates und Datenbankabfragen dynamisch
+zusammengesetzt.  Die resultierenden Verzeichnisbäume werden mit rsync an
+die einzelnen Instanzen übertragen.  Ein solcher Aufruf sieht (vereinfacht)
+etwa so aus:</p>
+<pre><code>rsync --recursive --delete --filter R_/dynamic_config_items/ --filter P_/ $LOCAL_BASE/$instance/ $instance:$REMOTE_BASE/
+</code></pre><p>Der Aufruf soll ein lokales Verzeichnis rekursiv mit einem entfernten
+Verzeichnis synchronisieren.  Dabei sollten Dateien, die auf dem Quellsystem
+nicht existieren, aber auf dem Zielsystem schon, an der Quelle gelöscht
+werden; dies aber nur im Unterverzeichnis für die dynamischen
+Konfigurationen; außerhalb dieses Verzeichnisses sollen solche Dateien
+unverändert bleiben, denn darin befindet sich der überwiegende Teil der
+Default-Konfigurationseinstellungen dieser Software, die nicht
+kundenspezifisch verändert wurde. Dies leisten die rsync-Filter P (protect),
+der Dateien und Verzeichnisse vor dem Löschen beschützt, und R (risk), der
+den Schutz für das angegebene Verzeichnis aufhebt.</p>
+<p>Diese Automatisierung lief anstandslos seit mehreren Jahre.  Ende August
+2022 gingen plötzlich von mehreren Anwendern Störungsmeldungen ein, die sich
+beklagten, dass die Software einen veralteten Konfigurationsstand aufwies.
+Ein Blick in das Logfile zeigte, dass der obige rsync-Aufruf mit einer
+Fehlermeldung abbrach:</p>
+<pre><code>ERROR: rejecting excluded file-list name: foobar
+rsync error: protocol incompatibility (code 2) at flist.c(912) [Receiver=3.1.3]
+</code></pre><p>Was war geschehen?  Der bemängelte Dateiname, hier <code>foobar</code>, war
+unverdächtig.  Es handelte sich um eine der Dateien, in der eine
+Default-Konfiguration der Software kundenspezifisch verändert wurde, aber
+statisch.  Die Datei hätte mit rsync nicht erneut übertragen werden sollen,
+da sie seit Jahr und Tag auf dem Zielsystem liegt und nicht verändert wurde.
+Dass sie jetzt einen Fehler auslöst, musste an rsync selber liegen.</p>
+<p>Aus dem <code>/var/log/dnf.log</code> ging hervor, dass in der Nacht zuvor ein Security
+Update für rsync eingespielt worden war.  Der Hintergrund war <a href="https://heise.de/-7202888">diese
+Sicherheitslücke</a>.  Es war bekannt geworden, dass
+beim rsync-Protokoll der Server dem Client eine Datei zum Überschreiben
+angeben konnte, die der Client gar nicht verlangt hatte bzw.  die sich
+außerhalb der Destination-Spezifikation befand.  Das Problem betrifft nur
+den Datentransfer vom Server zum Client.  Bei meinem Anwendungsfall werden
+ausschließlich Dateien vom rsync-Client zu den Servern transportiert,
+weshalb die Sicherheitslücke gar nicht ausnutzbar gewesen wäre.</p>
+<p>Aber warum funktionierten legitime Synchronisationsoperationen nicht mehr?</p>
+<p>Durch einige Experimente mit gepatchten und ungepatchten Systemen konnte der
+Unterschied auf ein einfaches Beispiel heruntergebrochen werden, das sich
+wie folgt reproduzieren lässt:</p>
+<pre><code>mkdir /tmp/{a,b}
+touch /tmp/a/x
+rsync -r -f P_/x /tmp/a/ /tmp/b/
+</code></pre><p>Auf einem ungepatchten RHEL System, sowie auf anderen Linux-Derivaten läuft
+dieses Beispiel einwandfrei und kopiert die Datei x aus dem Quellverzeichnis
+/tmp/a in das Zielverzeichnis /tmp/b.  Nach dem Einspielen des Security
+Updates bricht der Transfer dagegen mit der oben genannten Fehlermeldung ab
+und es wird keine Datei synchronisiert. Der Filter P (protect) sorgt also
+neuerdings für einen Abbruch mit Fehlermeldung, wenn ein damit im
+Zielverzeichnis geschützter Dateiname im Quellverzeichnis vorkommt.
+Das ist gleich zweimal unlogisch. Zum einen schützt der P-Filter laut
+Manual Page lediglich vor einer Löschung; dieser Fall tritt aber nicht ein,
+wenn die Datei im Quellverzeichnis vorhanden ist. Zum anderen soll, wenn
+der Protect-Fall eintritt, einfach nur die Datei nicht entfernt werden;
+nicht jedoch die gesamte Synchronisation unverrichteter Dinge abgebrochen
+werden. Also eindeutig ein Fehler, der sich offenbar bei der Beseitigung
+der genannten Sicherheitslücke eingeschlichen hat.</p>
+<p>Im Internet finden sich verschiedene Fehlerbeschreibungen zu diesem Thema.
+Offenbar wurde der Fehler in der Upstream rsync Version 3.2.5 eingeführt,
+und Red Hat hatte ihn ungeprüft in ihren Security Patch übernommen.
+Im Issue Tracker von rsync gibt es etwa den
+Eintrag <a href="https://github.com/WayneD/rsync/issues/376">#376</a>,
+in dem ein ähnliches Problem beschrieben ist.</p>
+<p>Ein Clonen des <a href="https://github.com/WayneD/rsync">rsync Git-Repositories</a> und
+Testen verschiedener Versionen zeigt, dass der Fehler in Version 3.2.5 und
+auch 3.2.6 enthalten, im aktuellen HEAD des master-Branches aber behoben
+ist.  Dazwischen liegen nur ca.  30 Commits, so dass der passende mittels
+Git Bisection schnell gefunden ist.  Es handelt sich um den Commit mit der
+Kurzbeschreibung <a href="https://github.com/WayneD/rsync/commit/950730313de994d191ba2d5be575e97690b355e8">Fix bug with validing remote filter
+rules</a>.</p>
+<p>Es ist also davon auszugehen, dass die nächste rsync-Version 3.2.7 den
+Fehler beseitigt.  Ob Red Hat den Fix dann zurück portiert, und ob dieser
+Fix als erneutes Security Update getaggt wird, so dass er im Rahmen des
+täglichen Patchens auf die Systeme gelangt, ist aber fraglich.  Auf jeden
+Fall wäre es nicht sinnvoll gewesen, darauf zu warten, denn die Anwender
+wollten nicht mehrere Wochen oder Monate auf einem veralteten
+Konfigurationsstand arbeiten.  In meinem Anwendungsfall konnte mit diesem
+Workaround, bei dem der Rsync-Aufruf in zwei getrennte Aufrufe für die
+statischen und die dynamischen Konfigurationsdateien aufgeteilt wurde, das
+Problem umgehen:</p>
+<pre><code>rsync --recursive --exclude /dynamic_config_items/ $LOCAL_BASE/$instance/ $instance:$REMOTE_BASE/
+rsync --recursive --delete $LOCAL_BASE/$instance/dynamic_config_items/ $instance:$REMOTE_BASE/dynamic_config_items/
+</code></pre><p>Im ersten Aufruf wird das allgemeine Konfigurationsverzeichnis
+synchronisiert, der Teil für die dynamische Konfiguration aber ausgenommen
+und keine Datei auf dem Zielsystem gelöscht.  Der zweite Aufruf
+synchronisiert speziell das Verzeichnis der dynamischen
+Konfigurationsdateien und löscht dabei auf dem Zielsystem auch Dateien und
+Verzeichnisse, die auf dem Quellsystem nicht (mehr) vorhanden sind.</p>
+
+<p class="footer"><a href="/impressum/">Impressum</a></p>
+</div>
+</body>
+</html>
+
+
+
