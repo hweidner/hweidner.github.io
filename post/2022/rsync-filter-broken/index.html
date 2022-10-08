@@ -46,7 +46,8 @@ abgelegt, teilweise aus Templates und Datenbankabfragen dynamisch
 zusammengesetzt.  Die resultierenden Verzeichnisbäume werden mit rsync an
 die einzelnen Instanzen übertragen.  Ein solcher Aufruf sieht (vereinfacht)
 etwa so aus:</p>
-<pre><code>rsync --recursive --delete --filter R_/dynamic_config_items/ --filter P_/ $LOCAL_BASE/$instance/ $instance:$REMOTE_BASE/
+<pre><code>rsync --recursive --delete --filter R_/dynamic/ --filter P_/ \
+      $LOCAL_BASE/$instance/ $instance:$REMOTE_BASE/
 </code></pre><p>Der Aufruf soll ein lokales Verzeichnis rekursiv mit einem entfernten
 Verzeichnis synchronisieren.  Dabei sollten Dateien, die auf dem Quellsystem
 nicht existieren, aber auf dem Zielsystem schon, an der Quelle gelöscht
@@ -57,7 +58,7 @@ Default-Konfigurationseinstellungen dieser Software, die nicht
 kundenspezifisch verändert wurde. Dies leisten die rsync-Filter P (protect),
 der Dateien und Verzeichnisse vor dem Löschen beschützt, und R (risk), der
 den Schutz für das angegebene Verzeichnis aufhebt.</p>
-<p>Diese Automatisierung lief anstandslos seit mehreren Jahre.  Ende August
+<p>Diese Automatisierung lief anstandslos mehrere Jahre lang.  Ende August
 2022 gingen plötzlich von mehreren Anwendern Störungsmeldungen ein, die sich
 beklagten, dass die Software einen veralteten Konfigurationsstand aufwies.
 Ein Blick in das Logfile zeigte, dass der obige rsync-Aufruf mit einer
@@ -88,14 +89,14 @@ touch /tmp/a/x
 rsync -r -f P_/x /tmp/a/ /tmp/b/
 </code></pre><p>Auf einem ungepatchten RHEL System, sowie auf anderen Linux-Derivaten läuft
 dieses Beispiel einwandfrei und kopiert die Datei x aus dem Quellverzeichnis
-/tmp/a in das Zielverzeichnis /tmp/b.  Nach dem Einspielen des Security
+<code>/tmp/a</code> in das Zielverzeichnis <code>/tmp/b</code>.  Nach dem Einspielen des Security
 Updates bricht der Transfer dagegen mit der oben genannten Fehlermeldung ab
 und es wird keine Datei synchronisiert. Der Filter P (protect) sorgt also
-neuerdings für einen Abbruch mit Fehlermeldung, wenn ein damit im
+neuerdings für einen Abbruch, wenn ein damit im
 Zielverzeichnis geschützter Dateiname im Quellverzeichnis vorkommt.
-Das ist gleich zweimal unlogisch. Zum einen schützt der P-Filter laut
-Manual Page lediglich vor einer Löschung; dieser Fall tritt aber nicht ein,
-wenn die Datei im Quellverzeichnis vorhanden ist. Zum anderen soll, wenn
+Das ist gleich doppelt unsinnig. Zum einen schützt der P-Filter laut
+Manual Page lediglich vor einer Löschung; dieser Fall tritt aber gerade nicht
+ein, wenn die Datei im Quellverzeichnis vorhanden ist. Zum anderen soll, wenn
 der Protect-Fall eintritt, einfach nur die Datei nicht entfernt werden;
 nicht jedoch die gesamte Synchronisation unverrichteter Dinge abgebrochen
 werden. Also eindeutig ein Fehler, der sich offenbar bei der Beseitigung
@@ -123,8 +124,10 @@ Konfigurationsstand arbeiten.  In meinem Anwendungsfall konnte mit diesem
 Workaround, bei dem der Rsync-Aufruf in zwei getrennte Aufrufe für die
 statischen und die dynamischen Konfigurationsdateien aufgeteilt wurde, das
 Problem umgehen:</p>
-<pre><code>rsync --recursive --exclude /dynamic_config_items/ $LOCAL_BASE/$instance/ $instance:$REMOTE_BASE/
-rsync --recursive --delete $LOCAL_BASE/$instance/dynamic_config_items/ $instance:$REMOTE_BASE/dynamic_config_items/
+<pre><code>rsync --recursive --exclude /dynamic/ \
+      $LOCAL_BASE/$instance/ $instance:$REMOTE_BASE/
+rsync --recursive --delete \
+      $LOCAL_BASE/$instance/dynamic/ $instance:$REMOTE_BASE/dynamic/
 </code></pre><p>Im ersten Aufruf wird das allgemeine Konfigurationsverzeichnis
 synchronisiert, der Teil für die dynamische Konfiguration aber ausgenommen
 und keine Datei auf dem Zielsystem gelöscht.  Der zweite Aufruf
