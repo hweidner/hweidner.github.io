@@ -31,6 +31,7 @@ Ubuntu ist rsync ein Standard-Paket und damit in jeder normalen Installation
 vorhanden.  Auf anderen Distributionen wie Debian oder Red Hat ist rsync
 optional, wird aber von vielen Softwarepaketen als Abhängigkeit referenziert
 und ist daher ebenfalls meistens installiert.</p>
+<h2 id="rsync-verteilt-konfiguration">rsync verteilt Konfiguration&hellip;</h2>
 <p>Bei einem Kunden bin ich für den Betrieb und die Weiterentwicklung einer
 komplexeren Software verantwortlich.  Eine Instanz dieser Software hat ein
 umfangreiches Konfigurationsverzeichnis mit vielen Dateien in mehreren
@@ -58,6 +59,7 @@ Default-Konfigurationseinstellungen dieser Software, die nicht
 kundenspezifisch verändert wurde. Dies leisten die rsync-Filter P (protect),
 der Dateien und Verzeichnisse vor dem Löschen beschützt, und R (risk), der
 den Schutz für das angegebene Verzeichnis aufhebt.</p>
+<h2 id="nach-rhel-security-update-nicht-mehr">&hellip;nach RHEL Security Update nicht mehr</h2>
 <p>Diese Automatisierung lief anstandslos mehrere Jahre lang.  Ende August
 2022 gingen plötzlich von mehreren Anwendern Störungsmeldungen ein, die sich
 beklagten, dass die Software einen veralteten Konfigurationsstand aufwies.
@@ -101,6 +103,7 @@ der Protect-Fall eintritt, einfach nur die Datei vor dem Löschen bewahrt,
 nicht aber die gesamte Synchronisation unverrichteter Dinge abgebrochen
 werden. Also eindeutig ein Fehler, der sich offenbar bei der Behandlung
 der genannten Sicherheitslücke eingeschlichen hat.</p>
+<h2 id="ein-bugfix">Ein Bugfix&hellip;</h2>
 <p>Im Internet finden sich verschiedene Fehlerbeschreibungen zu diesem Thema.
 Offenbar wurde der Fehler in der Upstream rsync Version 3.2.5 eingeführt,
 und Red Hat hatte ihn ungeprüft in ihren Security Patch übernommen.
@@ -121,7 +124,9 @@ Fix als erneutes Security Update getaggt wird, so dass er im Rahmen des
 täglichen Patchens auf die Systeme gelangt, ist aber fraglich.  Auf jeden
 Fall wäre es nicht sinnvoll gewesen, darauf zu warten, denn die Anwender
 wollten nicht mehrere Wochen oder Monate auf einem veralteten
-Konfigurationsstand arbeiten.  In meinem Anwendungsfall konnte mit diesem
+Konfigurationsstand arbeiten.</p>
+<h2 id="oder-ein-workaround">&hellip;oder ein Workaround</h2>
+<p>In meinem Anwendungsfall konnte mit diesem
 Workaround, bei dem der Rsync-Aufruf in zwei getrennte Aufrufe für die
 statischen und die dynamischen Konfigurationsdateien aufgeteilt wurde, das
 Problem umgehen:</p>
