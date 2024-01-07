@@ -47,7 +47,7 @@ abgelegt, teilweise aus Templates und Datenbankabfragen dynamisch
 zusammengesetzt.  Die resultierenden Verzeichnisbäume werden mit rsync an
 die einzelnen Instanzen übertragen.  Ein solcher Aufruf sieht (vereinfacht)
 etwa so aus:</p>
-<pre><code>rsync --recursive --delete --filter R_/dynamic/ --filter P_/ \
+<pre tabindex="0"><code>rsync --recursive --delete --filter R_/dynamic/ --filter P_/ \
       $LOCAL_BASE/$instance/ $instance:$REMOTE_BASE/
 </code></pre><p>Der Aufruf soll ein lokales Verzeichnis rekursiv mit einem entfernten
 Verzeichnis synchronisieren.  Dabei sollten Dateien, die auf dem Quellsystem
@@ -65,7 +65,7 @@ den Schutz für das angegebene Verzeichnis aufhebt.</p>
 beklagten, dass die Software einen veralteten Konfigurationsstand aufwies.
 Ein Blick in das Logfile zeigte, dass der obige rsync-Aufruf mit einer
 Fehlermeldung abbrach:</p>
-<pre><code>ERROR: rejecting excluded file-list name: foobar
+<pre tabindex="0"><code>ERROR: rejecting excluded file-list name: foobar
 rsync error: protocol incompatibility (code 2) at flist.c(912) [Receiver=3.1.3]
 </code></pre><p>Was war geschehen?  Der bemängelte Dateiname, hier <code>foobar</code>, war
 unverdächtig.  Es handelte sich um eine der Dateien, in der eine
@@ -86,7 +86,7 @@ weshalb die Sicherheitslücke gar nicht ausnutzbar gewesen wäre.</p>
 <p>Durch einige Experimente mit gepatchten und ungepatchten Systemen konnte der
 Unterschied auf ein einfaches Beispiel heruntergebrochen werden, das sich
 wie folgt reproduzieren lässt:</p>
-<pre><code>mkdir /tmp/{a,b}
+<pre tabindex="0"><code>mkdir /tmp/{a,b}
 touch /tmp/a/x
 rsync -r -f P_/x /tmp/a/ /tmp/b/
 </code></pre><p>Auf einem ungepatchten RHEL System, sowie auf anderen Linux-Derivaten läuft
@@ -130,7 +130,7 @@ Konfigurationsstand arbeiten.</p>
 Workaround, bei dem der Rsync-Aufruf in zwei getrennte Aufrufe für die
 statischen und die dynamischen Konfigurationsdateien aufgeteilt wurde, das
 Problem umgehen:</p>
-<pre><code>rsync --recursive --exclude /dynamic/ \
+<pre tabindex="0"><code>rsync --recursive --exclude /dynamic/ \
       $LOCAL_BASE/$instance/ $instance:$REMOTE_BASE/
 rsync --recursive --delete \
       $LOCAL_BASE/$instance/dynamic/ $instance:$REMOTE_BASE/dynamic/

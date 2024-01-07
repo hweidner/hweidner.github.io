@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Nochmal Galera Clusterarithmetik -hweidner.de</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="hweidner.de">
+<meta name="author" content="Harald Weidner">
+<meta name="keywords" content="keywords">
+<link rel="stylesheet" href="/css/styles.css" type="text/css">
+</head>
+<body>
+<p class="logo">hweidner.de<br>
+<span class="subtitle">Harald Weidner explaining the world.</span>
+</p>
+<div class="content">
+
+
+
+
+  <p class="date">2024-01-07 02:01</p>
+<h1>Nochmal Galera Clusterarithmetik</h1>
+
+
+<p>In <a href="/post/2021/galera-clusterarithmetik">Galera Clusterarithmetik</a> habe ich
+verschiedene Formen von MariaDB Galera Clustertopologien an drei Standorten
+beschrieben. In der Praxis gibt es aber häufig die Anforderung, mit nur zwei
+Standorten auszukommen.</p>
+<p>Galera Cluster basiert, wie viele Clusterlösungen, auf einem Quorum. Im
+Gegensatz zu anderen Produkten ist aber nicht die Anzahl der Knoten
+entscheidend, sondern die Gewichte, die pro Knoten unterschiedlich
+eingestellt werden können.</p>
+<h2 id="drei-knoten-an-zwei-standorten">Drei Knoten an zwei Standorten</h2>
+<p>Wenn man einen Galera Cluster an nur zwei Standorten betreiben muss, haben
+die Knoten an beiden Standorten entweder die gleiche Summe an Gewichten,
+oder an einem Standort ist die Summe höher als am anderen. Der erste Fall
+sollte immer vermieden werden, denn er führt bei einem Netsplit zwischen
+den beiden Standorten zum Split-Brain, also dazu, dass keine Seite das
+Quorum erreicht, der Cluster also gar nicht mehr arbeitet. Im anderen Fall
+verbleibt das Quorum auf der Seite mit der größeren Summe an Gewichten.</p>
+<pre><code>+---+---+
+| A | B |
++---+---+
+| 1 | 1 |
+| 1 |   |
++---+---+
+</code></pre>
+<p>Im einfachsten Fall erhält jeder Knoten das Gewicht 1. Der Cluster toleriert
+einen Netsplit, kann in diesem Fall aber nur am Standort A noch genutzt
+werden. Wird jedoch ein Knoten zu Wartungsarbeiten aus dem Cluster genommen,
+verbleibt ein Cluster, der weder den Ausfall eines weiteren Knotens noch
+einen Netsplit toleriert. Da Wartungsarbeiten wie ein Update von MariaDB
+oder des Linux-Kernels regelmäßig durchgeführt werden müssen, ist dies keine
+wünschenswerte Situation.</p>
+<pre><code>+---+---+
+| A | B |
++---+---+
+| 4 | 2 |
+| 3 |   |
++---+---+
+</code></pre>
+<p>Mit den hier dargestellten wird eine höhere Fehlertoleranz erreicht.
+Cluster toleriert weiterhin den Ausfall eines beliebigen Knotens oder einen
+Netsplit zwischen den Standorten. Wenn zu Wartungszwecken ein beliebiger
+Knoten herausgenommen wird, toleriert der verbleibende Cluster weiterhin
+den Ausfall des Knotens mit dem geringeren Gewicht oder einen Netsplit.
+In beiden Fällen verbleibt das Quorum am Standort A.</p>
+<p>Da eine Datenbank nicht im luftleeren Raum, sondern immer zusammen mit einer
+Anwendung genutzt wird, ist es bei diesem Cluster sinnvoll, die Anwendung
+ebenfalls am Standort A zu betreiben. Über einen vorgeschalteten Load
+Balancer oder eine virtuelle IP-Adresse, die z.B. mit
+<a href="https://www.keepalived.org/">Keepalived</a> verwaltet
+werden kann, sollte sichergestellt werden, dass die Anwendung immer auf
+einen der beiden Knoten am Standort A zugreift.</p>
+<p>Problematisch ist allerdings der Fall, dass einer der Knoten am Standort A
+gewartet wird und der andere ausfällt. In diesem Fall ist wegen des nicht
+erreichten Quorums auch der Knoten am Standort B nicht mehr operativ.
+Deswegen ist es in diesem Szenario auch nicht sinnvoll, eine Cold-Standby
+Installation der Anwendung am Standort B vorzuhalten.</p>
+<h2 id="vier-knoten">Vier Knoten</h2>
+<p>Dieses Problem lässt sich nur einen 4-Node Knoten lösen.</p>
+<pre><code>+---+---+
+| A | B |
++---+---+
+| 7 | 5 |
+| 6 | 3 |
++---+---+
+</code></pre>
+<p>Der hier gezeigte Cluster ist resistent gegen den Ausfall eines einzigen
+Knotens oder gegen einen Netsplit, in einigen Fällen auch dann, wenn beides
+zusammen eintritt.
+Auch wenn ein beliebiger Knoten in Wartung genommen wird, ist der
+verbleibende 3-Node Cluster in allen Fällen resistent gegen den Ausfall eines
+weiteren Knotens oder gegen einen Netsplit. Es kann allerdings der Fall
+eintreten, dass nur noch Knoten am Standort B nutzbar sind; etwa wenn
+einer der beiden A-Knoten in Wartung genommen wird und danach ein Netsplit
+eintritt. Bei dieser Clustertopologie ist es daher sinnvoll, ein Cold
+Standby der Anwendung am Standort B vorzuhalten, die dann mittels
+Load Balancer oder virtueller IP-Adresse nur auf einen der beiden B-Knoten
+zugreifen kann.</p>
+<pre><code>+---+---+
+| A | B |
++---+---+
+| 4 | 2 |
+| 3 | 0 |
++---+---+
+</code></pre>
+<p>Eine alternative Topologie mit vier Knoten hat gegenüber der oben
+beschriebenen den Vorteil, dass das Quorum in allen Fällen immer am
+Standort A verbleibt. Der Nachteil ist allerdings, dass während einer
+Wartung am Standort A der zweite Knoten dort nicht gleichzeitig ausfallen
+darf. Diese Topologie eignet sich vor allem dann, wenn je zwei Knoten an
+einem Standort betrieben werden sollen, die Anwendung aber nur am Standort A
+betrieben wird und keine Cold-Standby Installation am Standort B möglich
+oder gewünscht ist.</p>
+<pre><code>+---+---+
+| A | B |
++---+---+
+| 8 | 3 |
+| 6 |   |
+| 4 |   |
++---+---+
+</code></pre>
+<p>In diesem Fall kann es allerdings vorteilhaft sein, drei Knoten am Standort
+A und nur einen an B zu betreiben. Die hier gezeigte Topologie toliert den
+gleichzeitigen Ausfall eines beliebigen Knotens und einen Netsplit zwischen
+den Standorten. Auch während ein beliebiger Knoten gewartet wird, verkraftet
+der resultierende 3-Node Cluster den Ausfall eines beliebigen Knotens oder
+alternativ einen Netsplit zwischen den Standorten A und B. In allen
+genannten Fällen verbleibt mindestens ein nutzbarer Knoten am Standort A.</p>
+<h2 id="fünf-knoten">Fünf Knoten</h2>
+<pre><code>+---+---+
+| A | B |
++---+---+
+| 4 | 3 |
+| 4 | 2 |
+| 4 |   |
++---+---+
+</code></pre>
+<p>Mit einem 5-Node Cluster lässt sich eine noch höhere Fehlertoleranz
+erreichen. Die hier gezeigte Topologie toliert den Ausfall eines beliebigen
+Knotens und gleichzeitig einen Netsplit zwischen A und B, wobei immer zwei Knoten
+am Standort A weiterhin nutzbar sind. Darüber hinaus verkraftet sie den
+Ausfall zweier beliebiger Knoten. Wenn ein Knoten in Wartung genommen wird,
+kann ein weiterer Knoten ausfallen oder ein Netsplit eintreten. Im letzteren
+Fall ist es allerdings möglich, dass die Datenbank nur noch am Standort B
+nutzbar ist, so dass eine Cold-Standby Installation der Anwendung bei B
+sinnvoll ist.</p>
+<p>Möchte man darauf verzichten, eignet sich diese Variante.</p>
+<pre><code>+---+---+
+| A | B |
++---+---+
+| 6 | 3 |
+| 6 | 2 |
+| 6 |   |
++---+---+
+</code></pre>
+<p>Sie hat den Vorteil, dass in allen Ausfallszenarien, die der Cluster
+übersteht, mindestens ein Knoten am Standort A weiterhin nutzbar ist. Der
+Nachteil gegenüber der oben vorgestellten Variante ist allerdings, dass
+nicht in allen Fällen ein gleichzeitiger Ausfall zweier Knoten tolieriert
+wird.</p>
+
+<p class="footer"><a href="/impressum/">Impressum</a></p>
+</div>
+</body>
+</html>
+
+
+

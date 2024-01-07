@@ -6,7 +6,19 @@
     <description>Recent content in Posts on hweidner.de</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Mon, 24 Jul 2023 23:57:11 +0200</lastBuildDate><atom:link href="http://hweidner.de/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Jan 2024 02:01:20 +0100</lastBuildDate><atom:link href="http://hweidner.de/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nochmal Galera Clusterarithmetik</title>
+      <link>http://hweidner.de/post/2024/galera-cluster-revisited/</link>
+      <pubDate>Sun, 07 Jan 2024 02:01:20 +0100</pubDate>
+      
+      <guid>http://hweidner.de/post/2024/galera-cluster-revisited/</guid>
+      <description>&lt;p&gt;In &lt;a href=&#34;http://hweidner.de/post/2021/galera-clusterarithmetik&#34;&gt;Galera Clusterarithmetik&lt;/a&gt; habe ich
+verschiedene Formen von MariaDB Galera Clustertopologien an drei Standorten
+beschrieben. In der Praxis gibt es aber häufig die Anforderung, mit nur zwei
+Standorten auszukommen.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>30 Jahre Slackware Linux</title>
       <link>http://hweidner.de/post/2023/30-jahre-slackware/</link>
@@ -524,7 +536,7 @@ Ich unterstütze diese Aufforderung ausdrücklich, auch wenn ich an den Erfolg n
       
       <guid>http://hweidner.de/post/2015/Schaltsekunde/</guid>
       <description>Du weißt, dass dein Linux-Server die Schaltsekunde überlebt hat, wenn die Anwendungen noch funktionieren und im kern.log die Meldung erscheint:
-Jul 1 01:59:59 jadis kernel: [361764.175466] Clock: inserting leap second 23:59:60 UTC  </description>
+Jul 1 01:59:59 jadis kernel: [361764.175466] Clock: inserting leap second 23:59:60 UTC </description>
     </item>
     
     <item>
@@ -620,7 +632,7 @@ Die wesentlichen Änderungen betreffen Interna. So wurden viele Teile der Runtim
       <guid>http://hweidner.de/post/2014/Wikipedia_Spendenaufruf/</guid>
       <description>Alle Jahre wieder finden nicht nur diverse Adventskalender Einzug in meine News. Es kommt auch der jährliche Wikipedia-Spendenaufruf und sorgt dafür, dass mein Artikel Wikipedia Spendenaufruf blocken von vor drei Jahren zum meistgesuchten Beitrag dieser Site wird.
 Für diejenigen, die sich genervt fühlen: das Pattern für Adblock Plus ist dieses Mal
-de.wikipedia.org###WMDE_FR2014_Banner  Auch wenn ich generell dafür bin, dass sich unabhängige Projekte durch Spenden finanzieren, tut sich Wikipedia mit dieser aufdringlichen Kampagne keinen Gefallen.</description>
+de.wikipedia.org###WMDE_FR2014_Banner Auch wenn ich generell dafür bin, dass sich unabhängige Projekte durch Spenden finanzieren, tut sich Wikipedia mit dieser aufdringlichen Kampagne keinen Gefallen.</description>
     </item>
     
     <item>
@@ -745,7 +757,7 @@ Docker ist ein Tool, mit dem man mittels einer einfachen, textbasierten Konfigur
       
       <guid>http://hweidner.de/post/2014/Neues_Raspberry_Pi_Modell_B&#43;/</guid>
       <description>Am Wochenende wurde ein neues Modell des beliebten Lern- und Bastelrechners Raspberry Pi vorgestellt. Es trägt die Bezeichnung B+. Die hauptsächlichen Unterschiede gegenüber dem bisher angebotenen Modell B sind
- vier statt zwei USB-Ports Micro-SD statt SD Kartenslot 40 statt 26 GPIO Pins  Daneben wurde die Leistungsaufnahme verringert und die Klangqualität am analogen Audioausgang verbessert. Die Form hat sich geringfügig geändert, so dass die für den B angebotenen Gehäuse nicht mit dem B+ verwendbar sind.</description>
+vier statt zwei USB-Ports Micro-SD statt SD Kartenslot 40 statt 26 GPIO Pins Daneben wurde die Leistungsaufnahme verringert und die Klangqualität am analogen Audioausgang verbessert. Die Form hat sich geringfügig geändert, so dass die für den B angebotenen Gehäuse nicht mit dem B+ verwendbar sind.</description>
     </item>
     
     <item>
@@ -867,7 +879,7 @@ Der Support wird nicht vom Debian Security Team geleistet, sondern von Drittfirm
       
       <guid>http://hweidner.de/post/2014/Raspberry_Pi_interaktiv/</guid>
       <description>Diese interaktive Karte des Raspberry Pi (Modell B) erklärt alle Komponenten, wenn man mit der Maus darüber fährt
- vom Widerstand bis zum ARM Prozessor.  </description>
+vom Widerstand bis zum ARM Prozessor. </description>
     </item>
     
     <item>
@@ -895,7 +907,7 @@ Der Support wird nicht vom Debian Security Team geleistet, sondern von Drittfirm
       
       <guid>http://hweidner.de/post/2014/Git_lernen/</guid>
       <description>Das Versionsverwaltungssystem Git wurde von Linus Torvalds geschrieben, nachdem das vorher für die Kernelentwicklung genutzte Bitkeeper nicht mehr zur Verfügung stand. Es erfreute sich von Anfang an einer großen Beliebtheit im Open Source Umfeld. Dementsprechend gibt es viel Dokumentation dazu online. Hier eine Auswahl.
- Git - der einfache Einstieg Git Tutorial Git Magic Pro Git Webcast: The Basics of Git and Github  Um Git zu nutzen, kann man auf öffentliche Git Hosting Dienste zurückgreifen oder Dienste wie GitWeb, GitPrep oder GitLab auf einem eigenen Server installieren.</description>
+Git - der einfache Einstieg Git Tutorial Git Magic Pro Git Webcast: The Basics of Git and Github Um Git zu nutzen, kann man auf öffentliche Git Hosting Dienste zurückgreifen oder Dienste wie GitWeb, GitPrep oder GitLab auf einem eigenen Server installieren.</description>
     </item>
     
     <item>
@@ -1102,7 +1114,7 @@ Eine Liste der am häufigsten genutzten Shell-Aliase findet sich auf alias.sh. E
       <description>Heute wurde von Oracle die neue MySQL Version 5.6 veröffentlicht.
 Laut diverser Pressemeldungen (z.B. Golem, Heise oder Computerworld) bietet die neue Version beachtliche Performanceverbesserungen und neue Features. Zu den interessantesten gehören die Volltextsuche für die Storage Engine InnoDB, die Möglichkeit, InnoDB Tabellendefinitionen im laufenden Betrieb zu verändern und Verbesserungen bei der Replikation.
 Die neue Version ist allerdings auch mühsamer zu administrieren. Beim Update einer ersten Datenbank-Instanz fiel folgendes auf:
- Beim Einrichten der Replikation muss man darauf achten, nach der Übertragung des Data Directories vom Master zum Slave dort die Datei auto.</description>
+Beim Einrichten der Replikation muss man darauf achten, nach der Übertragung des Data Directories vom Master zum Slave dort die Datei auto.</description>
     </item>
     
     <item>
@@ -1121,7 +1133,7 @@ Die neue Version ist allerdings auch mühsamer zu administrieren. Beim Update ei
       
       <guid>http://hweidner.de/post/2013/Neue_Linux-Distributionen/</guid>
       <description>Bei Extreme Tech gibt es einen Artikel 5 Ubuntu Alternatives worth checking out. Vorgestellt werden fünf Ubuntu-Derivate mit unterschiedlichen Schwerpunkten. Vier davon stammen von Ubuntu 12.04 LTS ab.
- BackBox Linux setz den Schwerpunkt auf Security und Vulnerability Scanning Tools. BioLinux wendet sich an Wissenschaftler und Statistiker, insbesondere dem Thema Datenanalyse in der Biologie. PinguyOS legt den Fokus auf Einfachheit und Ähnlichkeit zu Mac OSX und Windows, was Umsteiger von diesen Betriebssystemen ansprechen soll.</description>
+BackBox Linux setz den Schwerpunkt auf Security und Vulnerability Scanning Tools. BioLinux wendet sich an Wissenschaftler und Statistiker, insbesondere dem Thema Datenanalyse in der Biologie. PinguyOS legt den Fokus auf Einfachheit und Ähnlichkeit zu Mac OSX und Windows, was Umsteiger von diesen Betriebssystemen ansprechen soll.</description>
     </item>
     
     <item>
@@ -1151,7 +1163,7 @@ OverAPI ist eine Sammlung von Cheat Sheets zu zahlreichen Programmiersprachen, D
       <guid>http://hweidner.de/post/2012/Wikipedia_Spendenaufruf_blockieren_2/</guid>
       <description>Wieder mal gibt es einen aufdringlich platzierten Spendenaufruf von Wikipedia, und wieder mal bezieht sich die Hälfte der Suchanfragen, die die User auf meine Seiten führen, auf die Frage, wie man den Aufruf blockt.
 Diesmal lautet der Eintrag für die Filterliste von Adblock Plus:
-de.wikipedia.org###centralNotice  </description>
+de.wikipedia.org###centralNotice </description>
     </item>
     
     <item>
@@ -1180,7 +1192,7 @@ Auf dieser Webseite gibt es Tipps zur Optimierung der Schrifteneinstellung bei D
       
       <guid>http://hweidner.de/post/2012/RAID_Monitoring_von_SUN_x86_Servern/</guid>
       <description>Die x86-basierten Server von SUN verwenden LSI Logic RAID Controller. Beim SUN Fire X4150 ist das zum Beispiel:
-# lspci -k -s 07:00.0 07:00.0 SCSI storage controller: LSI Logic / Symbios Logic SAS1068E PCI-Express Fusion-MPT SAS (rev 04) Subsystem: LSI Logic / Symbios Logic Device 3150 Kernel driver in use: mptsas  Der RAID Status lässt sich mit dem Tool mpt-status aus dem gleichnamigen Debian-Paket abfragen. Dazu muss das Kernel-Modul mptctl geladen sein.</description>
+# lspci -k -s 07:00.0 07:00.0 SCSI storage controller: LSI Logic / Symbios Logic SAS1068E PCI-Express Fusion-MPT SAS (rev 04) Subsystem: LSI Logic / Symbios Logic Device 3150 Kernel driver in use: mptsas Der RAID Status lässt sich mit dem Tool mpt-status aus dem gleichnamigen Debian-Paket abfragen. Dazu muss das Kernel-Modul mptctl geladen sein.</description>
     </item>
     
     <item>
@@ -1190,7 +1202,7 @@ Auf dieser Webseite gibt es Tipps zur Optimierung der Schrifteneinstellung bei D
       
       <guid>http://hweidner.de/post/2012/Ubuntu_12.04_LTS_Precise_Pangolin/</guid>
       <description>Als ich noch Ubuntu auf dem Desktop genutzt habe, habe ich nur ein einziges Mal eine neue Version auf dem produktiven Arbeitsplatzrechner installiert, bevor sie offiziell freigegeben wurde. Das war Ubuntu 12.04 LTS Precise Pangolin. Hier einige Anmerkungen in Bezug auf den Installationsbericht zur Version 11.10.
-  Unity ist weiterhin der Standard-Desktop, es stehen aber die Gnome 3 Shell und der Gnome 3 Classic Mode zur Auswahl. Beides funktioniert mit und ohne 3D-Unterstützung seitens der Grafikkarte.</description>
+Unity ist weiterhin der Standard-Desktop, es stehen aber die Gnome 3 Shell und der Gnome 3 Classic Mode zur Auswahl. Beides funktioniert mit und ohne 3D-Unterstützung seitens der Grafikkarte.</description>
     </item>
     
     <item>
@@ -1222,7 +1234,7 @@ Im Linux Journal gibt es eine Einführung in den Bau elektronischer Schaltungen 
       <guid>http://hweidner.de/post/2012/Monitoring_von_HP_Proliant_Servern_mit_Debian_GNU_Linux_6.0/</guid>
       <description>Debian Software Repository von HP mit Monitoring und System Management Tools
 Die Monitoring- und System Management Tools von Hewlett Packard für die Proliant Server Serie sind nun als Debian Repository verfügbar. Dazu muss folgendes in die Datei /etc/apt/sources.list.d/proliant.list eingetragen werden:
-# HP Management Software deb http://downloads.linux.hp.com/SDR/downloads/ProLiantSupportPack/Debian squeeze/current non-free  Der passende Signing Key kann hier herunter geladen und mit apt-key add &amp;lt;Filename&amp;gt; importiert werden. Anschließend können die Tools installiert werden, z.</description>
+# HP Management Software deb http://downloads.linux.hp.com/SDR/downloads/ProLiantSupportPack/Debian squeeze/current non-free Der passende Signing Key kann hier herunter geladen und mit apt-key add &amp;lt;Filename&amp;gt; importiert werden. Anschließend können die Tools installiert werden, z.B.</description>
     </item>
     
     <item>
@@ -1252,7 +1264,7 @@ Am 20. März 1987, also heute vor 25 Jahren, wurde in der Newsgruppe net.sources
       
       <guid>http://hweidner.de/post/2012/Grafik-Benchmarks_unter_Ubuntu_12.04_LTS/</guid>
       <description>Auf Phoronix ist ein Artikel erschienen, in dem die Performance von graphischen Anwendungen (v.a. Spielen) mit verschiedenen Grafikkarten, Treibern und Desktop-Umgebungen verglichen werden. Als Basis dient die aktuelle Beta von Ubuntu 12.04 LTS (Long Term Support) (Precise Pangolin). Es werden folgende Komponenten getestet:
- Grafik-Chipsätze: Nvidia Geforce 9800 GTX 512MB und AMD Radeon 5700 1024MB Hersteller-Grafiktreiber nvidia und fglrx sowie freie Treiber noveau und radeon Desktop Umgebungen Unity, Unity2D, Gnome 3 Shell, Gnome 3 Classic, KDE 4.</description>
+Grafik-Chipsätze: Nvidia Geforce 9800 GTX 512MB und AMD Radeon 5700 1024MB Hersteller-Grafiktreiber nvidia und fglrx sowie freie Treiber noveau und radeon Desktop Umgebungen Unity, Unity2D, Gnome 3 Shell, Gnome 3 Classic, KDE 4.</description>
     </item>
     
     <item>
@@ -1331,7 +1343,7 @@ Writing Device Drivers under Linux: A brief tutorial ist ein interessanter Artik
       <guid>http://hweidner.de/post/2011/Wikipedia_Spendenaufruf_blocken/</guid>
       <description>Mit Firefox und Adblock Plus den penetranten Spendenaufruf von Wikipedia-Gründer Jimmy Wales blockieren.
 Für alle, die sich von dem “persönlichen Aufruf von Wikipedia Gründer Jimmy Wales”, der derzeit über jedem Wikipedia-Artikel thront, genervt fühlen: Mozilla Firefox benutzen, die Erweiterung Adblock Plus installieren und folgendes in die Filterliste eintragen:
-wikipedia.org###siteNotice  </description>
+wikipedia.org###siteNotice </description>
     </item>
     
     <item>
@@ -1343,8 +1355,8 @@ wikipedia.org###siteNotice  </description>
       <description>Meine Planung der zu besuchenden Vorträge auf der ORR 2011.
 Voraussichtlich bin ich auch in diesem Jahr wieder auf der OpenRheinRuhr dabei. Hier eine ungefähre Planung, welche Vorträge ich besuchen möchte.
 Samstag:
- 12:20-13:20 BIND 10 14:40-15:40 Puppet oder Bacula 15:50-16:20 Arduino 16:20-16:50 Railunio 17:00-18:00 Kajona oder Git  Sonntag:
- 10:00-11:00 Perl 6 13:30-14:30 MySQL nach PostgreSQL 15:20-16:40 Starbasic  </description>
+12:20-13:20 BIND 10 14:40-15:40 Puppet oder Bacula 15:50-16:20 Arduino 16:20-16:50 Railunio 17:00-18:00 Kajona oder Git Sonntag:
+10:00-11:00 Perl 6 13:30-14:30 MySQL nach PostgreSQL 15:20-16:40 Starbasic </description>
     </item>
     
     <item>
@@ -1418,7 +1430,7 @@ Im meinem Vortragsarchiv gibt es dazu ab sofort das Manuskript und die Linksamml
       <guid>http://hweidner.de/post/2011/Lessfs_ein_Dateisystem_mit_Deduplication/</guid>
       <description>Ein Dateisystem für Linux auf Basis von FUSE. Es bietet Deduplication, Verschlüsselung und Replikation.
 Lessfs ist ein Dateisystem für Linux, das auf dem FUSE (File System in Userspace) Mechanismus beruht. Das Hauptaugenmerk liegt auf effizienten Umgang mit dem Speicherplatz. Die Feature-Liste ist beeindruckend.
- Online Deduplication Kompression mit LZH und Google snappy On-the-fly Verschlüsselung von Metadaten und/oder Daten Synchrone und Asynchrone Replikation über das Netzwerk  In der Computerwoche gibt es einen Workshop zu Lessfs.</description>
+Online Deduplication Kompression mit LZH und Google snappy On-the-fly Verschlüsselung von Metadaten und/oder Daten Synchrone und Asynchrone Replikation über das Netzwerk In der Computerwoche gibt es einen Workshop zu Lessfs.</description>
     </item>
     
     <item>

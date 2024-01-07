@@ -123,31 +123,31 @@ Startup-Zeit des Interpreters ein entscheidender Faktor für die
 Gesamtperformance. Auf einem System mit dem Ryzen 7-1700 Prozessor
 unter Ubuntu 20.04 LTS dauert die Ausführung eines leeren Programmes
 wie folgt:</p>
-<pre><code>$ time bash -c ''
+<pre tabindex="0"><code>$ time bash -c &#39;&#39;
 
 real	0m0,003s
 user	0m0,002s
 sys	0m0,000s
 
-$ time perl -e ''
+$ time perl -e &#39;&#39;
 
 real	0m0,003s
 user	0m0,003s
 sys	0m0,001s
 
-$ time php -r ''
+$ time php -r &#39;&#39;
 
 real	0m0,017s
 user	0m0,008s
 sys	0m0,009s
 
-$ time python3 -c ''
+$ time python3 -c &#39;&#39;
 
 real	0m0,027s
 user	0m0,023s
 sys	0m0,004s
 
-$ time ruby -e ''
+$ time ruby -e &#39;&#39;
 
 real	0m0,057s
 user	0m0,040s
@@ -159,7 +159,7 @@ bereits knapp 30 Millisekunden, Ruby sogar nochmal das doppelte.</p>
 höhere Genauigkeit als Millisekunden ausgeben lässt. Eine Tendenz ist aber
 durchaus erkennbar. Ein Lauf mit <code>strace -c</code> zeigt die Häufigkeit und Dauer
 von Syscalls und liefert eine Begründung für die Unterschiede:</p>
-<pre><code>$ strace -c bash -c ''
+<pre tabindex="0"><code>$ strace -c bash -c &#39;&#39;
 
 % time     seconds  usecs/call     calls    errors syscall
 ------ ----------- ----------- --------- --------- ----------------
@@ -194,9 +194,9 @@ von Syscalls und liefert eine Begründung für die Unterschiede:</p>
 100.00    0,000576                   135        13 total
 
 
-$ strace -c perl -e ''
+$ strace -c perl -e &#39;&#39;
 
-harald@moonrise:~$ strace -c perl -e ''
+harald@moonrise:~$ strace -c perl -e &#39;&#39;
 % time     seconds  usecs/call     calls    errors syscall
 ------ ----------- ----------- --------- --------- ----------------
  30,29    0,000495           7        69           rt_sigaction
@@ -229,7 +229,7 @@ harald@moonrise:~$ strace -c perl -e ''
 100.00    0,001634                   189        12 total
 
 
-$ strace -c php -r ''
+$ strace -c php -r &#39;&#39;
 
 % time     seconds  usecs/call     calls    errors syscall
 ------ ----------- ----------- --------- --------- ----------------
@@ -264,7 +264,7 @@ $ strace -c php -r ''
 100.00    0,000790                  1198        42 total
 
 
-$ strace -c python3 -c ''
+$ strace -c python3 -c &#39;&#39;
 
 % time     seconds  usecs/call     calls    errors syscall
 ------ ----------- ----------- --------- --------- ----------------
@@ -304,7 +304,7 @@ $ strace -c python3 -c ''
 100.00    0,000999                   748        81 total
 
 
-$ strace -c ruby -e ''
+$ strace -c ruby -e &#39;&#39;
 
 % time     seconds  usecs/call     calls    errors syscall
 ------ ----------- ----------- --------- --------- ----------------
