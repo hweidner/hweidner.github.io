@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Wie ich 2025/26 arbeite -hweidner.de</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="hweidner.de">
+<meta name="author" content="Harald Weidner">
+<meta name="keywords" content="keywords">
+<link rel="stylesheet" href="/css/styles.css" type="text/css">
+</head>
+<body>
+<p class="logo">hweidner.de<br>
+<span class="subtitle">Harald Weidner explaining the world.</span>
+</p>
+<div class="content">
+
+
+
+
+  <p class="date">2026-01-01 15:15</p>
+<h1>Wie ich 2025/26 arbeite</h1>
+
+
+<p>Der <a href="/post/2022/arbeiten-2021-22/">letzte Artikel</a> dazu ist bereits vier
+Jahre her. Aber so viel hat sich gar nicht geändert.</p>
+<h2 id="hardware">Hardware</h2>
+<p>An meinem grundsätzlichen Setup mit dem privaten Desktop-PC, dem Notebook
+des Arbeitgebers und dem Kundennotebook mit Dockingstation und externem
+Bildschirm hat sich nichs geändert. Die einzelnen Geräte haben aber z.T.
+Updates erfahren.</p>
+<p>Sowohl das Firmen- als auch das Kundennotebook wurde seit dem letzten
+Artikel ausgetauscht. Mein Arbeitgeber ist von Lenovo zu HP gewechselt, das
+aktuelle Gerät ist ein HP ZBook Firefly G10. Vom Kunden habe ich ein
+wieder ein Lenovo Thinkpad der T-Serie im Einsatz.</p>
+<p>Mein privater PC ist weiterhin der aus dem c&rsquo;t Bauvorschlag 2019 entstandene
+mit AMD Ryzen 7-1700 Prozessor, 64GB RAM, 1TB SSD und 4TB HDD. Die
+Harddisk zeigt erste Ausfallerscheinungen, was sich durch Kernelmeldungen
+und Hänger bei der Audio-Wiedergabe bemerkbar macht. Die Ersatzplatte liegt
+bereits hier und wird in den nächsten Tagen verbaut.</p>
+<p>Ein Update gibt es beim Homeserver. Hier wurde der betagte Shuttle DS47
+durch einen gebraucht gekauften <a href="https://archive.shuttle.eu/2020/www1.shuttle.eu/de/produkte/discontinued/barebones/ds77u7/index.html">Shuttle
+DS77U7</a>
+mit 32GB RAM, 500GB NVME M2 SSD und 500GB SATA 2.5&quot; SSD ersetzt. Auch dies
+ist wieder ein lüfterloses unt theoretisch völlig geräuschloses System;
+praktisch ist allerdings ein Spulenfiepen zu hören, stört aber nicht unter
+dem Schreibtisch.</p>
+<p>Auch das private Mobiltelefon (jetzt ein Google Pixel 6) und das
+Diesttelefon (jetzt iPhone 13) haben Updates erfahren.</p>
+<h2 id="software">Software</h2>
+<p>Der Server ist nun leistungsfähig genug für Proxmox VE mit mehreren VMs und
+LXC-Containern. Dabei läuft der Großteil der Dienste in nur zwei Containern:
+einem nichtprivilegierten für alle Software, die direkt aus den Debian
+Repositories kommt, und einen privilegierten für Docker-Container.</p>
+<p>Daneben gibt es einige Container für Software mit speziellen Anforderungen,
+die nicht mit anderen Andwendungen vermischt werden sollen. Dazu gehört etwa
+Nextcloud mit der Vorgabe, die MariaDB Datenbank mit dem Transaction
+Isolation Level READ COMMITTED anstelle des Defaults REPEATABLE READ zu
+betreiben.</p>
+<p>Neben den LXC-Containern gibt es derzeit nur eine einzige dauerhaft laufende VM,
+nämlich ein <a href="https://alpinelinux.org/">Alpine Linux</a>
+mit der <a href="https://kubernetes.io/">Kubernetes</a> Distribtion
+<a href="https://k3s.io/">K3s</a> von den mittlerweile zu SUSE Linux gehörenden Rancher
+Labs. K3s lässt sich prinzipiell auch in einem LXC Container betreiben,
+jedoch müssen diesem zahlreiche zusätzliche Berechtigungen gegeben werden,
+so dass die logische Trennung von Container und Hostsystem stark verwässert
+wird. Dank Alpine ist der Ressourcenbedarf jedoch auch als VM recht niedrig.</p>
+<p>Neben dem Shuttle, der dauerhaft läuft und die für mich wichtigen
+Serverdienste bereitstellt, habe ich noch einen zweiten Proxmox VE Host auf
+Basis eines <a href="https://www.asrock.com/nettop/AMD/DeskMeet%20X300%20Series/index.de.asp">ASRock DeskMeet
+X600</a>
+eingerichtet. Der Server ist mit einem AMD Ryzen 7-5700 und 128 GB RAM
+deutlich leistungsfähiger als der Shuttle, aber auch stromhungriger und
+lauter. Als reines Test- und Experimentiersystem läuft der Server nur bei Bedarf.</p>
+<h2 id="betriebssysteme">Betriebssysteme</h2>
+<p>Insgesamt arbeite ich derzeit mit diesen Betriebssystemen:</p>
+<ul>
+<li><a href="https://www.debian.org/">Debian GNU/Linux</a> als Basis für Proxmox VE, auf
+Servern, dem Notebook (mit MATE Desktop) und den meisten LXC-Containern und VMs.</li>
+<li><a href="https://ubuntu.com/">Ubuntu Linux</a> mit
+<a href="https://ubuntu-mate.org/">MATE Desktop</a> auf dem Desktop PC.</li>
+<li><a href="https://alpinelinux.org/">Alpine Linux</a> auf einigen VMs und
+LXC-Containern, hauptsächlich als Host für Docker und Kubernetes,
+sowie als Basis für alle Container Images.</li>
+<li>Auf dem Proxmox Testsystem gibt es auch VMs mit Software auf Basis eines
+<a href="https://de.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD Unix</a>,
+z.B. <a href="https://www.pfsense.org/">pfSense</a> und
+<a href="https://opnsense.org/">OPNsense</a>.</li>
+<li>Beruflich bin ich weiterhin auch auf Windows angewiesen.</li>
+</ul>
+<h2 id="serverdienste">Serverdienste</h2>
+<p>Zu den essentiellen, täglich genutzten Serverdiensten gehören bei mir:</p>
+<ul>
+<li>[Checkmk Server Raw Edition](<a href="https://checkmk.com/%5D">https://checkmk.com/]</a> Monitoring Server für
+meine gesamte Infrastruktur.</li>
+<li><a href="https://about.gitea.com/products/gitea/">Gitea</a> als leichtgewichtiger
+Git Repository Service.</li>
+<li><a href="https://www.bookstackapp.com/">Bookstack</a> als Wiki für die persönliche
+Dokumentation.</li>
+<li><a href="https://nextcloud.com/">Nextcloud</a> als reine Dokumentenablage;
+zusätzliche Plugins mit Sonderfunktionen nutze ich nicht.</li>
+<li><a href="https://opencloud.eu/de">OpenCloud</a> soll perpektivisch Nextlouc abklösen;
+dazu vielleicht demnächst mal ein eigener Artikel.</li>
+<li><a href="https://mattermost.com/">Mattermost</a> als Chatsystem für verschiedene
+Arbeitsgruppen. Leider hat der Hesteller die Fähigkeiten der Open Source
+Version stark eingeschränkt, daher bin ich auf der Suche nach einer
+Alternative; auch hierzu vielleicht mal ein eigener Artikel.</li>
+<li><a href="https://pi-hole.net/">Pi-Hole</a> ist der DNS-Server in meinem Netzwerk und
+hat frühere Installationen von PowerDNS und anderen abgelöst.</li>
+<li><a href="https://zotregistry.dev/">Zot Registry</a> als Docker Image Registry</li>
+<li><a href="https://grafana.com/">Grafana</a> mit den Backends
+<a href="https://prometheus.io/">Prometheus</a> und <a href="https://mariadb.org/">MariaDB</a>
+für Visualisierungen.</li>
+<li><a href="https://www.portainer.io/">Portainer</a> für die Verwaltung der Docker und
+Kubernetes Installationen. Ich nutze für die Administration die CLI
+Interfaces, Portainer dient eher dazu, die Installation anderen Leuten zu
+zeigen und zu erklären.</li>
+</ul>
+<p>Dazu kommen die üblichen Infrastrukturdienste wie Postfix, Dovecot, Chrony,
+Squid, Apache HTTPD und OpenLDAP, die ich hier nicht einzeln erklären muss.
+Diese Tools verrichten seit Jahrzehnten zuverlässig ihren Dienst und sind
+aus dem Stack nicht mehr wegzudenken.
+Noch keine Jahrzehnte, aber immerhin einigen Jahren gehört auch Wireguard dazu.</p>
+<h2 id="desktop-und-apps">Desktop und Apps</h2>
+<p>Bei den Desktop-Anwendungen und Handy/Tablet Apps bin ich wohl ein eher
+langweiliger User.</p>
+<p>Der meistgenutzte Browser ist Firefox, für einige Anwendungen wie Big Blue
+Button verwende ich aber den Chromium wegen der besseren Kompatiblität.
+Früher habe ich für Google Maps wegen der besten Performance noch Vivaldi
+verwendet, aber mittlerweile ist Maps auch in den erstgenannten Browsern
+hinreichend schnell.</p>
+<p>Office-Anwendungen (Text, Tabellen, Präsentation) mache ich fast immer in
+LibreOffice, mit seltenen Ausflügen zu Abiword, Gnumeric und Softmaker
+Office. In der OpenCloud ist auch Collabora Office im Einsatz.</p>
+<p>Weitere viel genutzte Tools sind Thunderbird, Keepass XC, Zim Desktop Wiki,
+Oracle VirtualBox, Virt-Manager, Gajim (XMPP Chat), Asunder (CDs rippen) und
+die Electron Apps für Mattermost und Signal Chat. Als Entwicklungsumgebung bin
+ich weitgehend auf VS Code umgestiegen, da ich das auch beruflich nutze. Die
+einzige Windows-Anwendung, die ich regelmäßig unter Wine nutze, ist HeidiSQL.</p>
+<p>Zu den regelmäßig verwendeten CLI Tools gehören mutt, git, GNU screen,
+k9s für Kubernetes, ctop (top für Docker Container) und htop.</p>
+
+<p class="footer"><a href="/impressum/">Impressum</a></p>
+</div>
+</body>
+</html>
+
+
+
