@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Linux und der Swap -hweidner.de</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="hweidner.de">
+<meta name="author" content="Harald Weidner">
+<meta name="keywords" content="keywords">
+<link rel="stylesheet" href="/css/styles.css" type="text/css">
+</head>
+<body>
+<p class="logo">hweidner.de<br>
+<span class="subtitle">Harald Weidner explaining the world.</span>
+</p>
+<div class="content">
+
+
+
+
+  <p class="date">2026-11-18 23:03</p>
+<h1>Linux und der Swap</h1>
+
+
+<p>Darf man unter Linux noch Swap einrichten, wie groß soll er sein und wie
+soll man seine Nutzung konfigurieren?</p>
+<p>Diese Fragen tauchen immer wieder in Foren und sozialen Netzwerken auf und
+werden oft mit Eifer diskutiert.</p>
+<h2 id="was-ist-swap">Was ist Swap?</h2>
+<p>Auf klassischen Computersystemen gibt es eine strikte Trennung zwischen
+Hauptspeicher (RAM) und Disk.  RAM ist eng begrenzt und flüchtig, aber sehr
+schnell zu lesen und zu beschreiben.  Diskspeicher ist meist wesentlich
+größer und persistent auch über den Neustart des Programmes oder des
+Rechners, aber der Zugriff ist erheblich langsamer.  Softwareentwickler
+müssen aktiv entscheiden, welchen Speicher sie für welchen Zweck nutzen,
+denn die Programmbefehle dafür sind unterschiedlich.  Wenn ein Programm z.B.
+mehr RAM benötigt, als dafür vorhanden ist, ist es nicht lauffähig, auch
+wenn die Disk-Ressourcen noch zahlreich verfügbar sind.</p>
+<p>Modernere Systeme lassen die Unterscheidung von RAM und Disk verschwimmen.
+Einerseits stellen sie ungenutztes RAM als Disk-Cache zur
+Verfügung, um den Zugriff auf häufiger genutzte Teile der Disk zu
+beschleunigen und die Anzahl der Festplattenzugriffe zu reduzieren.  Auf der
+anderen Seite erlauben sie, mehr Hauptspeicher zu adressieren, als
+tatsächlich als RAM vorhanden ist, indem selten genutzte Teile des RAM
+vorübergehend auf den Diskspeicher ausgelagert werden.  Der letztgenannten
+Mechanismus wird dabei als Swapping und der dafür auf der Disk reservierte
+Speicherbereich als Swapspace oder kurz Swap bezeichnet.</p>
+<h2 id="wie-viel-swap-ist-sinnvoll">Wie viel Swap ist sinnvoll?</h2>
+<p>Die einache Anwort auf die Frage nach der benötigten Swap Kapazität lautet:</p>
+<blockquote>
+<p>so viel, wie die genutzten Programme maximal benötigen, minus dem, was an
+RAM vorhanden ist.</p>
+</blockquote>
+<p>Dies ist theoretisch richtig, praktisch aber wenig hilfreich.
+Nur bei sehr wenigen Programmen lässt sich tatsächlich genau
+beziffern, wie viel RAM sie maximal benötigen.  In der Praxis
+entscheiden zwei Faktoren die Swap-Größe: einerseits den Platz auf der Disk,
+den man für Swap entbehren kann, andererseits setzt das verfügbare RAM eine
+sinnvolle Obergrenze.  In der frühren Zeit von Linux war die Faustregel,
+dass der Swap nicht mehr als vier mal so groß wie das RAM sein darf, weil
+bei einem derart großen Speicherbedarf die Software durch die vielen Aus-
+und Einlagerungsvorgänge derart gebremst wird, dass man damit nicht mehr
+vernünftig arbeiten kann.  Manche Quellen sehen diese Grenze sogar bei
+Faktor 2,5 erreicht.</p>
+<p>Bei heutigen PCs ist dagegen der RAM-Speicher meistens größer als die
+meisten Programme einzeln nutzen.  Swap benötigt man allenfalls für das
+parallele Ausführen mehrerer Programme oder um Platz für Disk-Buffer
+bereitzuhalten, der die Ausführung beschleunigt.  Viele sehen deshalb Swap
+mittlerweile als überflüssig an, und bei einigen Anwendungen, vor allem im
+Desktop-Bereich, stimmt das auch.</p>
+<p>Es gibt aber neben akutem Platzmangel auch andere Gründe für das
+Vorhandensein von Swap.  Beispielsweise benötigt der Ruhezustand
+(Suspend-to-Disk) so viel freien Swap, wie zuvor Hauptspeicher genutzt
+wurde, um das System persistent auf der Festplatte einzufrieren.  Wie viel
+man dann genau braucht, hängt von den genutzten Anwendungen ab, ganz ohne
+Swap funktioniert der Ruhezustand aber nicht.</p>
+<p>Auf Serversystemen ist Swap auch hilfreich, um einen Mangel an RAM schon im
+Vorfeld zu entdecken.  Ohne Swap funktioniert ein System völlig normal,
+solange alle Anfragen nach RAM Speicher noch bedient werden könnnen, und
+dann ohne Vorwarnung gar nicht mehr, sobald dies nicht mehr der Fall ist.
+Mit Swap gibt es dagegen einen Zwischenzustand, wo die Software
+grundsätzlich noch arbeitet, aber eine Verlangsamung oder andere Indikatoren
+wie die Auslastung des Swap Platzes darauf hindeuten, dass es bald zu knapp
+werden könnte.  Somit können Anwender bzw.  Administratoren von Servern
+eventuell noch reagieren, z.B.  durch Stoppen weniger wichtiger Prozesse
+oder Sichern der Daten vor dem Crash.</p>
+<p>Zu der alten Regel bzgl. der Obergrenze kommt also heute eine Empfehlung
+zur Untergrenze hinzu: der Swap sollte nicht größer als das Vierfache, aber
+auch nicht kleiner als ein Viertel des vorhandenen RAM Speichers sein.</p>
+<h2 id="swappiness-proaktiv-swappen">Swappiness: proaktiv swappen</h2>
+<p>Der klassische Weg zur Nutzung von Swap bestand lange Zeit darin, dass der
+Kernel den Speicherbedarf aus dem physischen RAM deckt und erst, wenn das
+nicht mehr möglich ist, die am seltensten genutzten Speicherbereiche auf die
+Disk auslagert.  Dieses Vorgehen hat aber zwei Nachteile: zum einen steht in
+diesem Fall kaum noch oder gar kein ungenutztes RAM mehr zur Verfügung, und
+damit kein Disk Buffer/Cache, der Lese- und Schreiboperationen auf die Disk
+beschleunigen könnte.  Das System wird daher sehr langsam.  Zum anderen
+findet das Swapping oft genau in dem Moment statt, wo der Benutzer in einer
+Software eine Aktion auslöst, die Speicher benötigt.  Damit verzögert sich
+die Ausführung genau in dem Moment, wo der Benutzer auf ein Ergebnis wartet,
+während vor allem bei Desktop-Rechnern in 99% der  Zeit die
+Leistungsreserven ungenutzt bleiben.</p>
+<p>Daher wurde in Linux bereits vor vielen Jahren die Swappiness eingeführt.
+Dabei handelt es sich um eine proaktive Strategie der Swap-Nutzung.  Belegte
+Speicherbereiche, auf die selten zugegriffen wird, werden vorausschauend
+bereits auf die Disk ausgelagert, auch wenn dafür noch kein aktuer Bedarf
+existiert.  Somit bleibt mehr RAM für den Buffer/Cache frei und akute
+Engpässe werden abgemildert.</p>
+<p>Mit der Sysctl-Variablen <code>vm.swappiness</code> lässt sich das Verhalten steuern.
+Der Wert ist eine (ganzzahlige) Prozentzahl, der gültige Wertebereich also
+von 0 bis 100.  0 Bedeutet, dass die Swappiness inaktiv ist, also das o.g.
+klassische Verhalten besteht. Die genaue Implementierung der Swappiness und
+ihre Rahmenbedingungen haben sich mehrfach geändert. Vereinfachend kann man
+sagen, dass bei einer <code>vm.swappiness</code> von 100 das proaktive Verhalten bereits
+beginnt, wenn 50% des vorhandenen RAM belegt sind; je niedriger der Wert,
+desto weiter verschiebt sich diese Grenze nach oben.</p>
+<p>Der Standardwert in Linux ist 60, und die meisten Distributionen übernehmen
+das unverändert.  Das bedeutet, dass ab etwa 70% RAM-Belegung (100 - 60/2)
+mit der proaktiven Auslagerung begonnen wird.  Dieser Wert ist für
+Desktop-Systeme eine ausgewogene Einstellung, um akkuten Speichermangel
+vorausschauend zu verhindern, aber gleichzeitig nicht zu früh mit dem
+Swapping zu beginnen.  Für Serveranwendungen sind dagegen oft kleinere Werte
+im Bereich 20-50 sinnvoll, da diese oft mit weniger Reserven als ein
+Desktop-PC &ldquo;von der Stange&rdquo; dimensioniert sind und eine CPU-/RAM-Auslastung
+von 80% durchaus noch ein Normalfall sein kann, der nicht zu erhöhter
+Disk-Aktivität führen sollte.</p>
+<p>Beim Einsatz von virtuellen Maschinen (VM) sinkt der empfohlene Wert noch
+weiter nach unten.  Denn I/O Aktivität geht hier durch mehr Layer als bei
+Bare-Metal Hardware, so dass &ldquo;unnötige&rdquo; Plattenzugriffe weniger erwünscht
+sind.  Außerdem kann man VMs bei sorgfältiger Konfiguration oft so
+dimensionieren, dass sie im Regelfall mit 80-90% ihrer verfügbarer Kapazität
+betrieben werden.</p>
+<p>Ein weiterer Spezialfall sind Datenbanksysteme.  Diese haben die
+Besonderheit, dass man den Bedarf an Speicher direkt in der Software sehr
+genau tunen und damit vorbestimmen kann.  Bei sorgfältiger Konfiguration
+nutzen Datenbankserver ihren verfügbaren Hauptspeicher voll aus, ohne je an
+die Grenzen zu stoßen.  Jedoch gibt es auch hier Unwägbarkeiten.  denn auch
+auf Datenbankservern laufen im Unternehmenseinsatz nebenher andere Tools wie
+Monitoring- und  Logging-Agents, Konfigurationsmanagement (z.B.  Puppet
+Agent), CIS Compliance Scanner oder Intrusion Detection Systeme, deren
+Speicherbedarf schlecht vorhersagbar ist, insbesondere wenn sie parallel
+ausgeführt werden.</p>
+<p>Insgesamt sollte die Swappiness bei Desktop-Systemen auf der Voreinstellung
+von 60 bleiben, auf Servern sind oft kleinere Werte sinnvoll.  Werte unter
+10 sollten allerdings nie gesetzt werden.</p>
+<p>Swap und die Swappiness sind im Grundsatz richtige Features mit sinnvollen
+Use Cases, auch wenn die konkrete Größe und Parametrisierung vom Einsatzfall
+abhängig ist.</p>
+
+<p class="footer"><a href="/impressum/">Impressum</a></p>
+</div>
+</body>
+</html>
+
+
+
