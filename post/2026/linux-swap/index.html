@@ -25,6 +25,8 @@
 soll man seine Nutzung konfigurieren?</p>
 <p>Diese Fragen tauchen immer wieder in Foren und sozialen Netzwerken auf und
 werden oft mit Eifer diskutiert.</p>
+<p>Update: der Artikel wurde an jüngere Entwicklungen im Kernel angepasst und
+die Kerneldokumention sowie ein Grundlagenartikel verklinkt.</p>
 <h2 id="was-ist-swap">Was ist Swap?</h2>
 <p>Auf klassischen Computersystemen gibt es eine strikte Trennung zwischen
 Hauptspeicher (RAM) und Disk.  RAM ist eng begrenzt und flüchtig, aber sehr
@@ -47,8 +49,8 @@ Speicherbereich als Swapspace oder kurz Swap bezeichnet.</p>
 <h2 id="wie-viel-swap-ist-sinnvoll">Wie viel Swap ist sinnvoll?</h2>
 <p>Die einache Anwort auf die Frage nach der benötigten Swap Kapazität lautet:</p>
 <blockquote>
-<p>so viel, wie die genutzten Programme maximal benötigen, minus dem, was an
-RAM vorhanden ist.</p>
+<p>So viel Swap, wie die genutzten Programme maximal benötigen, minus dem
+vorhandenen RAM.</p>
 </blockquote>
 <p>Dies ist theoretisch richtig, praktisch aber wenig hilfreich.
 Nur bei sehr wenigen Programmen lässt sich tatsächlich genau
@@ -65,8 +67,8 @@ Faktor 2,5 erreicht.</p>
 meisten Programme einzeln nutzen.  Swap benötigt man allenfalls für das
 parallele Ausführen mehrerer Programme oder um Platz für Disk-Buffer
 bereitzuhalten, der die Ausführung beschleunigt.  Viele sehen deshalb Swap
-mittlerweile als überflüssig an, und bei einigen Anwendungen, vor allem im
-Desktop-Bereich, stimmt das auch.</p>
+mittlerweile als überflüssig an, und bei sehr speziellen Anwendungen
+kann das auch stimmen.</p>
 <p>Es gibt aber neben akutem Platzmangel auch andere Gründe für das
 Vorhandensein von Swap.  Beispielsweise benötigt der Ruhezustand
 (Suspend-to-Disk) so viel freien Swap, wie zuvor Hauptspeicher genutzt
@@ -106,45 +108,34 @@ bereits auf die Disk ausgelagert, auch wenn dafür noch kein aktuer Bedarf
 existiert.  Somit bleibt mehr RAM für den Buffer/Cache frei und akute
 Engpässe werden abgemildert.</p>
 <p>Mit der Sysctl-Variablen <code>vm.swappiness</code> lässt sich das Verhalten steuern.
-Der Wert ist eine (ganzzahlige) Prozentzahl, der gültige Wertebereich also
-von 0 bis 100.  0 Bedeutet, dass die Swappiness inaktiv ist, also das o.g.
-klassische Verhalten besteht. Die genaue Implementierung der Swappiness und
-ihre Rahmenbedingungen haben sich mehrfach geändert. Vereinfachend kann man
-sagen, dass bei einer <code>vm.swappiness</code> von 100 das proaktive Verhalten bereits
-beginnt, wenn 50% des vorhandenen RAM belegt sind; je niedriger der Wert,
-desto weiter verschiebt sich diese Grenze nach oben.</p>
+Der Wert ist eine Integer-Zahl, derzeit im erlaubten Wertebereich von 0 bis 200.
+0 Bedeutet, dass die Swappiness inaktiv ist, also auf das klassische
+Verhalten zurückgeschwenkt wird.</p>
+<p>Die genaue Implementierung der Swappiness und ihre Rahmenbedingungen haben
+sich mehrfach geändert. Die aktuelle Spezifikation kann der <a href="https://www.kernel.org/doc/html/latest/admin-guide/sysctl/vm.html">offiziellen
+Kernel-Dokumentation</a>
+entnommen werden.
+Vereinfachend gesagt gibt die Swappniess das Verhältnis der I/O &ldquo;Kosten&rdquo; von
+Diskzugriffen für Swap und Paging, also das Vorhalten von Filesystem-Inhalten
+im Hauptspeicher an.
+Die Einstellung 100 bedeutet, dass Swappen und Pagen gleich teuer ist und
+deshalb bei der Entscheidung, wie RAM-Speicher freigemacht werden kann,
+gleich stark berücksichtigt werden.
+Kleinere Werte bedeuten, dass swappen teurer ist, größere stehen für billiger.</p>
 <p>Der Standardwert in Linux ist 60, und die meisten Distributionen übernehmen
-das unverändert.  Das bedeutet, dass ab etwa 70% RAM-Belegung (100 - 60/2)
-mit der proaktiven Auslagerung begonnen wird.  Dieser Wert ist für
-Desktop-Systeme eine ausgewogene Einstellung, um akuten Speichermangel
-vorausschauend zu verhindern, aber gleichzeitig nicht zu früh mit dem
-Swapping zu beginnen.  Für Serveranwendungen sind dagegen oft kleinere Werte
-im Bereich 20-50 sinnvoll, da diese oft mit weniger Reserven als ein
-Desktop-PC &ldquo;von der Stange&rdquo; dimensioniert sind und eine CPU-/RAM-Auslastung
-von 80% durchaus noch ein Normalfall sein kann, der nicht zu erhöhter
-Disk-Aktivität führen sollte.</p>
-<p>Beim Einsatz von virtuellen Maschinen (VM) sinkt der empfohlene Wert noch
-weiter nach unten.  Denn I/O Aktivität geht hier durch mehr Layer als bei
-Bare-Metal Hardware, so dass &ldquo;unnötige&rdquo; Plattenzugriffe weniger erwünscht
-sind.  Außerdem kann man VMs bei sorgfältiger Konfiguration oft so
-dimensionieren, dass sie im Regelfall mit 80-90% ihrer verfügbarer Kapazität
-betrieben werden.</p>
-<p>Ein weiterer Spezialfall sind Datenbanksysteme.  Diese haben die
-Besonderheit, dass man den Bedarf an Speicher direkt in der Software sehr
-genau tunen und damit vorbestimmen kann.  Bei sorgfältiger Konfiguration
-nutzen Datenbankserver ihren verfügbaren Hauptspeicher voll aus, ohne je an
-die Grenzen zu stoßen.  Jedoch gibt es auch hier Unwägbarkeiten.  denn auch
-auf Datenbankservern laufen im Unternehmenseinsatz nebenher andere Tools wie
-Monitoring- und  Logging-Agents, Konfigurationsmanagement (z.B.  Puppet
-Agent), CIS Compliance Scanner oder Intrusion Detection Systeme, deren
-Speicherbedarf schlecht vorhersagbar ist, insbesondere wenn sie parallel
-ausgeführt werden.</p>
-<p>Insgesamt sollte die Swappiness bei Desktop-Systemen auf der Voreinstellung
-von 60 bleiben, auf Servern sind oft kleinere Werte sinnvoll.  Werte unter
-10 sollten allerdings nie gesetzt werden.</p>
-<p>Swap und die Swappiness sind im Grundsatz richtige Features mit sinnvollen
-Use Cases, auch wenn die konkrete Größe und Parametrisierung vom Einsatzfall
-abhängig ist.</p>
+das unverändert.
+Dieser Wert ist für durchschnittliche Desktop-Systeme und viele Serveranwendungen
+eine ausgewogene Einstellung, um akuten Speichermangel vorausschauend zu verhindern.
+Verschiedene Faktoren beeinflussen die optimale Wahl des Parameters. Bei
+modernen SSDs mit sehr geringen Random Seek Latenzen sind Swapping und
+Paging faktisch gleich teuer, so die Swappiness in der Gegend um 100
+empfohlen wird. Klassische Festplatten mit hohem Durchsatz, aber schlechten
+Random Seeks erfordern kleine Werte. Unter 10 sollte der Parameter aber nie
+gesetzt werden.</p>
+<p>Einen guten Überblick über Swap unter Linux liefert
+<a href="https://chrisdown.name/2018/01/02/in-defence-of-swap.html">In defence of swap: common misconceptions</a>.
+Der Artikel geht auch auch weitere Einstellungsmöglichkeiten im Kontext
+der Linux Cgroups v2 ein.</p>
 
 <p class="footer"><a href="/impressum/">Impressum</a></p>
 </div>
